@@ -18,3 +18,4 @@
 
 ## Issues
 - Use the `bug`, `task`, `feature`, `improvement`, and `docs` labels
+- Please add all new issues to the proper `milestone` in GH, i.e. `Deliverable 1`
