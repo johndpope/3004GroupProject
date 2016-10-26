@@ -1,0 +1,2 @@
+Week 6:
+	Began learning how to use GCDAsyncServer and created rough mockups of UI for host and client apps

@@ -1,0 +1,2 @@
+Week 2:
+	Choose stream-it as our App idea. App will display a feed of information contributed by observers at an event.

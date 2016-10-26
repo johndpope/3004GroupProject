@@ -1,0 +1,2 @@
+Week 5:
+	Created xcodeproj for Stream-It, began roughing out frameworks for app components (UI, server, client, etc.)
