@@ -12,6 +12,7 @@
 		393F1A091DA2C89300A903DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A071DA2C89300A903DF /* Main.storyboard */; };
 		393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0A1DA2C89300A903DF /* Assets.xcassets */; };
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
+		79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		393F1A0A1DA2C89300A903DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393F1A0D1DA2C89300A903DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68E9F728CAFD55A632C93820 /* Pods-StreamIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt.debug.xcconfig"; sourceTree = "<group>"; };
+		8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				393F1A021DA2C89300A903DF /* StreamIt */,
 				393F1A011DA2C89300A903DF /* Products */,
+				FBF52ECC09629873CDBD2D64 /* Pods */,
+				45C3F2BFD8DE9309C3229143 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = StreamIt;
 			sourceTree = "<group>";
 		};
+		45C3F2BFD8DE9309C3229143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBF52ECC09629873CDBD2D64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68E9F728CAFD55A632C93820 /* Pods-StreamIt.debug.xcconfig */,
+				8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 393F1A121DA2C89300A903DF /* Build configuration list for PBXNativeTarget "StreamIt" */;
 			buildPhases = (
+				AF2490B4D8CFAC950DEE2E28 /* [CP] Check Pods Manifest.lock */,
 				393F19FC1DA2C89100A903DF /* Sources */,
 				393F19FD1DA2C89100A903DF /* Frameworks */,
 				393F19FE1DA2C89100A903DF /* Resources */,
+				4806A162916514356AA11CA1 /* [CP] Embed Pods Frameworks */,
+				F18798F7BF590D525F90197E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4806A162916514356AA11CA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF2490B4D8CFAC950DEE2E28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F18798F7BF590D525F90197E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		393F19FC1DA2C89100A903DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -181,6 +256,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -230,6 +306,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -256,6 +333,7 @@
 		};
 		393F1A131DA2C89300A903DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68E9F728CAFD55A632C93820 /* Pods-StreamIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -269,6 +347,7 @@
 		};
 		393F1A141DA2C89300A903DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -299,6 +378,7 @@
 				393F1A141DA2C89300A903DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
