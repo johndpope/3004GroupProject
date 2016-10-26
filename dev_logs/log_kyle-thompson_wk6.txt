@@ -1,0 +1,3 @@
+Further API research
+
+Tested and played around with chromecast development now that I have a chromecast.

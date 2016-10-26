@@ -1,0 +1,5 @@
+Architecture design meeting
+
+Task distribution meeting
+
+I was assigned chromecast development
