@@ -1,0 +1,4 @@
+- Architecture design discussion
+- Task distribution
+- I was in charge of the server database
+- Polished the domain model
