@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3924E75F1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E75E1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift */; };
+		3924E7611DC7C1A600B04C7F /* UIButton+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7601DC7C1A600B04C7F /* UIButton+StreamIt.swift */; };
+		3924E7631DC7C1D200B04C7F /* UIImageView+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7621DC7C1D200B04C7F /* UIImageView+StreamIt.swift */; };
+		3924E7651DC7C20500B04C7F /* UILabel+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7641DC7C20500B04C7F /* UILabel+StreamIt.swift */; };
+		3924E7671DC7C22400B04C7F /* UIView+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */; };
 		393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F1A031DA2C89300A903DF /* AppDelegate.swift */; };
 		393F1A061DA2C89300A903DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F1A051DA2C89300A903DF /* ViewController.swift */; };
 		393F1A091DA2C89300A903DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A071DA2C89300A903DF /* Main.storyboard */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3924E75E1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+StreamIt.swift"; sourceTree = "<group>"; };
+		3924E7601DC7C1A600B04C7F /* UIButton+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+StreamIt.swift"; sourceTree = "<group>"; };
+		3924E7621DC7C1D200B04C7F /* UIImageView+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+StreamIt.swift"; sourceTree = "<group>"; };
+		3924E7641DC7C20500B04C7F /* UILabel+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+StreamIt.swift"; sourceTree = "<group>"; };
+		3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StreamIt.swift"; sourceTree = "<group>"; };
 		393F1A001DA2C89300A903DF /* StreamIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393F1A031DA2C89300A903DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393F1A051DA2C89300A903DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +45,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3924E75C1DC7C0FA00B04C7F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3924E75D1DC7C10100B04C7F /* UIKit Extensions */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		3924E75D1DC7C10100B04C7F /* UIKit Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3924E75E1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift */,
+				3924E7601DC7C1A600B04C7F /* UIButton+StreamIt.swift */,
+				3924E7621DC7C1D200B04C7F /* UIImageView+StreamIt.swift */,
+				3924E7641DC7C20500B04C7F /* UILabel+StreamIt.swift */,
+				3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */,
+			);
+			name = "UIKit Extensions";
+			sourceTree = "<group>";
+		};
 		393F19F71DA2C89100A903DF = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +84,7 @@
 		393F1A021DA2C89300A903DF /* StreamIt */ = {
 			isa = PBXGroup;
 			children = (
+				3924E75C1DC7C0FA00B04C7F /* Util */,
 				393F1A031DA2C89300A903DF /* AppDelegate.swift */,
 				393F1A051DA2C89300A903DF /* ViewController.swift */,
 				393F1A071DA2C89300A903DF /* Main.storyboard */,
@@ -96,6 +127,7 @@
 				TargetAttributes = {
 					393F19FF1DA2C89100A903DF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BF7URC6ZPU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3924E7611DC7C1A600B04C7F /* UIButton+StreamIt.swift in Sources */,
 				393F1A061DA2C89300A903DF /* ViewController.swift in Sources */,
 				393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */,
+				3924E7651DC7C20500B04C7F /* UILabel+StreamIt.swift in Sources */,
+				3924E7631DC7C1D200B04C7F /* UIImageView+StreamIt.swift in Sources */,
+				3924E7671DC7C22400B04C7F /* UIView+StreamIt.swift in Sources */,
+				3924E75F1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,12 +295,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
 				INFOPLIST_FILE = StreamIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3004group.StreamIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -271,12 +309,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
 				INFOPLIST_FILE = StreamIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3004group.StreamIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -299,6 +338,7 @@
 				393F1A141DA2C89300A903DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
