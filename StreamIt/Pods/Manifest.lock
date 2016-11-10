@@ -2,13 +2,21 @@ PODS:
   - GCDWebServer (3.3.3):
     - GCDWebServer/Core (= 3.3.3)
   - GCDWebServer/Core (3.3.3)
+  - Realm (2.0.3):
+    - Realm/Headers (= 2.0.3)
+  - Realm/Headers (2.0.3)
+  - RealmSwift (2.0.3):
+    - Realm (= 2.0.3)
 
 DEPENDENCIES:
   - GCDWebServer (~> 3.0)
+  - RealmSwift
 
 SPEC CHECKSUMS:
   GCDWebServer: 1c39a1f0763e4eb492bee021e4270fce097d3555
+  Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
+  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
 
-PODFILE CHECKSUM: f0b962e5c1eb736f02849eafe96c0b473a33c7ba
+PODFILE CHECKSUM: cd14a45d5a531221451bca1c3d953304486a41ac
 
 COCOAPODS: 1.1.1

@@ -12,10 +12,59 @@
 		393F1A091DA2C89300A903DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A071DA2C89300A903DF /* Main.storyboard */; };
 		393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0A1DA2C89300A903DF /* Assets.xcassets */; };
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
+		3C2EB1891DD50F09000CC7FD /* STDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* STDatabase.framework */; };
+		3C2EB1901DD50F09000CC7FD /* STDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB18F1DD50F09000CC7FD /* STDatabaseTests.swift */; };
+		3C2EB1921DD50F09000CC7FD /* STDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2EB1821DD50F09000CC7FD /* STDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C2EB1951DD50F09000CC7FD /* STDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* STDatabase.framework */; };
+		3C2EB1961DD50F09000CC7FD /* STDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* STDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C2EB19F1DD51C24000CC7FD /* STClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB19E1DD51C24000CC7FD /* STClients.swift */; };
+		3C2EB1A11DD51C44000CC7FD /* STPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A01DD51C44000CC7FD /* STPosts.swift */; };
+		3C2EB1A31DD51C92000CC7FD /* STSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A21DD51C92000CC7FD /* STSession.swift */; };
+		4D5F6453F9A2231BBDB81254 /* Pods_STDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA2CF1F9612C525051D598 /* Pods_STDatabase.framework */; };
 		79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3C2EB18A1DD50F09000CC7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 393F19F81DA2C89100A903DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C2EB17F1DD50F09000CC7FD;
+			remoteInfo = STDatabase;
+		};
+		3C2EB18C1DD50F09000CC7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 393F19F81DA2C89100A903DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 393F19FF1DA2C89100A903DF;
+			remoteInfo = StreamIt;
+		};
+		3C2EB1931DD50F09000CC7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 393F19F81DA2C89100A903DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C2EB17F1DD50F09000CC7FD;
+			remoteInfo = STDatabase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C2EB19C1DD50F09000CC7FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C2EB1961DD50F09000CC7FD /* STDatabase.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		02A8A0A53E8F62ED8529D30A /* Pods-STDatabase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STDatabase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STDatabase/Pods-STDatabase.debug.xcconfig"; sourceTree = "<group>"; };
+		03B58E1686C9AF79351AAF8C /* Pods-STDatabase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STDatabase.release.xcconfig"; path = "Pods/Target Support Files/Pods-STDatabase/Pods-STDatabase.release.xcconfig"; sourceTree = "<group>"; };
 		393F1A001DA2C89300A903DF /* StreamIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393F1A031DA2C89300A903DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393F1A051DA2C89300A903DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,9 +72,19 @@
 		393F1A0A1DA2C89300A903DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393F1A0D1DA2C89300A903DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C2EB1801DD50F09000CC7FD /* STDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2EB1821DD50F09000CC7FD /* STDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDatabase.h; sourceTree = "<group>"; };
+		3C2EB1831DD50F09000CC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C2EB1881DD50F09000CC7FD /* STDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2EB18F1DD50F09000CC7FD /* STDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STDatabaseTests.swift; sourceTree = "<group>"; };
+		3C2EB1911DD50F09000CC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C2EB19E1DD51C24000CC7FD /* STClients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STClients.swift; sourceTree = "<group>"; };
+		3C2EB1A01DD51C44000CC7FD /* STPosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPosts.swift; sourceTree = "<group>"; };
+		3C2EB1A21DD51C92000CC7FD /* STSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSession.swift; sourceTree = "<group>"; };
 		3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E9F728CAFD55A632C93820 /* Pods-StreamIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt.release.xcconfig"; sourceTree = "<group>"; };
+		B8CA2CF1F9612C525051D598 /* Pods_STDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +92,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2EB1951DD50F09000CC7FD /* STDatabase.framework in Frameworks */,
 				79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2EB17C1DD50F09000CC7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D5F6453F9A2231BBDB81254 /* Pods_STDatabase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2EB1851DD50F09000CC7FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2EB1891DD50F09000CC7FD /* STDatabase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				393F1A021DA2C89300A903DF /* StreamIt */,
+				3C2EB1811DD50F09000CC7FD /* STDatabase */,
+				3C2EB18E1DD50F09000CC7FD /* STDatabaseTests */,
 				393F1A011DA2C89300A903DF /* Products */,
 				FBF52ECC09629873CDBD2D64 /* Pods */,
 				45C3F2BFD8DE9309C3229143 /* Frameworks */,
@@ -54,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				393F1A001DA2C89300A903DF /* StreamIt.app */,
+				3C2EB1801DD50F09000CC7FD /* STDatabase.framework */,
+				3C2EB1881DD50F09000CC7FD /* STDatabaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,10 +151,32 @@
 			path = StreamIt;
 			sourceTree = "<group>";
 		};
+		3C2EB1811DD50F09000CC7FD /* STDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				3C2EB1821DD50F09000CC7FD /* STDatabase.h */,
+				3C2EB19E1DD51C24000CC7FD /* STClients.swift */,
+				3C2EB1A01DD51C44000CC7FD /* STPosts.swift */,
+				3C2EB1A21DD51C92000CC7FD /* STSession.swift */,
+				3C2EB1831DD50F09000CC7FD /* Info.plist */,
+			);
+			path = STDatabase;
+			sourceTree = "<group>";
+		};
+		3C2EB18E1DD50F09000CC7FD /* STDatabaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C2EB18F1DD50F09000CC7FD /* STDatabaseTests.swift */,
+				3C2EB1911DD50F09000CC7FD /* Info.plist */,
+			);
+			path = STDatabaseTests;
+			sourceTree = "<group>";
+		};
 		45C3F2BFD8DE9309C3229143 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */,
+				B8CA2CF1F9612C525051D598 /* Pods_STDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,11 +186,24 @@
 			children = (
 				68E9F728CAFD55A632C93820 /* Pods-StreamIt.debug.xcconfig */,
 				8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */,
+				02A8A0A53E8F62ED8529D30A /* Pods-STDatabase.debug.xcconfig */,
+				03B58E1686C9AF79351AAF8C /* Pods-STDatabase.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3C2EB17D1DD50F09000CC7FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2EB1921DD50F09000CC7FD /* STDatabase.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		393F19FF1DA2C89100A903DF /* StreamIt */ = {
@@ -101,15 +216,56 @@
 				393F19FE1DA2C89100A903DF /* Resources */,
 				4806A162916514356AA11CA1 /* [CP] Embed Pods Frameworks */,
 				F18798F7BF590D525F90197E /* [CP] Copy Pods Resources */,
+				3C2EB19C1DD50F09000CC7FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3C2EB1941DD50F09000CC7FD /* PBXTargetDependency */,
 			);
 			name = StreamIt;
 			productName = StreamIt;
 			productReference = 393F1A001DA2C89300A903DF /* StreamIt.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3C2EB17F1DD50F09000CC7FD /* STDatabase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C2EB19B1DD50F09000CC7FD /* Build configuration list for PBXNativeTarget "STDatabase" */;
+			buildPhases = (
+				20EA0D43FC3B2E87D14951C2 /* [CP] Check Pods Manifest.lock */,
+				3C2EB17B1DD50F09000CC7FD /* Sources */,
+				3C2EB17C1DD50F09000CC7FD /* Frameworks */,
+				3C2EB17D1DD50F09000CC7FD /* Headers */,
+				3C2EB17E1DD50F09000CC7FD /* Resources */,
+				78E7A9962A9D87921A73F73E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STDatabase;
+			productName = STDatabase;
+			productReference = 3C2EB1801DD50F09000CC7FD /* STDatabase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3C2EB1871DD50F09000CC7FD /* STDatabaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C2EB19D1DD50F09000CC7FD /* Build configuration list for PBXNativeTarget "STDatabaseTests" */;
+			buildPhases = (
+				3C2EB1841DD50F09000CC7FD /* Sources */,
+				3C2EB1851DD50F09000CC7FD /* Frameworks */,
+				3C2EB1861DD50F09000CC7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C2EB18B1DD50F09000CC7FD /* PBXTargetDependency */,
+				3C2EB18D1DD50F09000CC7FD /* PBXTargetDependency */,
+			);
+			name = STDatabaseTests;
+			productName = STDatabaseTests;
+			productReference = 3C2EB1881DD50F09000CC7FD /* STDatabaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -117,13 +273,23 @@
 		393F19F81DA2C89100A903DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = 3004Group;
 				TargetAttributes = {
 					393F19FF1DA2C89100A903DF = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+					};
+					3C2EB17F1DD50F09000CC7FD = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					3C2EB1871DD50F09000CC7FD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 393F19FF1DA2C89100A903DF;
 					};
 				};
 			};
@@ -141,6 +307,8 @@
 			projectRoot = "";
 			targets = (
 				393F19FF1DA2C89100A903DF /* StreamIt */,
+				3C2EB17F1DD50F09000CC7FD /* STDatabase */,
+				3C2EB1871DD50F09000CC7FD /* STDatabaseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -156,9 +324,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C2EB17E1DD50F09000CC7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2EB1861DD50F09000CC7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		20EA0D43FC3B2E87D14951C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		4806A162916514356AA11CA1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,6 +369,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78E7A9962A9D87921A73F73E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-STDatabase/Pods-STDatabase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AF2490B4D8CFAC950DEE2E28 /* [CP] Check Pods Manifest.lock */ = {
@@ -216,7 +428,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C2EB17B1DD50F09000CC7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2EB1A31DD51C92000CC7FD /* STSession.swift in Sources */,
+				3C2EB1A11DD51C44000CC7FD /* STPosts.swift in Sources */,
+				3C2EB19F1DD51C24000CC7FD /* STClients.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2EB1841DD50F09000CC7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2EB1901DD50F09000CC7FD /* STDatabaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C2EB18B1DD50F09000CC7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C2EB17F1DD50F09000CC7FD /* STDatabase */;
+			targetProxy = 3C2EB18A1DD50F09000CC7FD /* PBXContainerItemProxy */;
+		};
+		3C2EB18D1DD50F09000CC7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 393F19FF1DA2C89100A903DF /* StreamIt */;
+			targetProxy = 3C2EB18C1DD50F09000CC7FD /* PBXContainerItemProxy */;
+		};
+		3C2EB1941DD50F09000CC7FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C2EB17F1DD50F09000CC7FD /* STDatabase */;
+			targetProxy = 3C2EB1931DD50F09000CC7FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		393F1A071DA2C89300A903DF /* Main.storyboard */ = {
@@ -279,12 +527,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -323,10 +572,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -335,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 68E9F728CAFD55A632C93820 /* Pods-StreamIt.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StreamIt/Info.plist;
@@ -349,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StreamIt/Info.plist;
@@ -356,6 +608,87 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.3004group.StreamIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3C2EB1971DD50F09000CC7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A8A0A53E8F62ED8529D30A /* Pods-STDatabase.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = STDatabase/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STDatabase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C2EB1981DD50F09000CC7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B58E1686C9AF79351AAF8C /* Pods-STDatabase.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = STDatabase/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STDatabase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C2EB1991DD50F09000CC7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = STDatabaseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STDatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamIt.app/StreamIt";
+			};
+			name = Debug;
+		};
+		3C2EB19A1DD50F09000CC7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = STDatabaseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STDatabaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamIt.app/StreamIt";
 			};
 			name = Release;
 		};
@@ -376,6 +709,24 @@
 			buildConfigurations = (
 				393F1A131DA2C89300A903DF /* Debug */,
 				393F1A141DA2C89300A903DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C2EB19B1DD50F09000CC7FD /* Build configuration list for PBXNativeTarget "STDatabase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2EB1971DD50F09000CC7FD /* Debug */,
+				3C2EB1981DD50F09000CC7FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C2EB19D1DD50F09000CC7FD /* Build configuration list for PBXNativeTarget "STDatabaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2EB1991DD50F09000CC7FD /* Debug */,
+				3C2EB19A1DD50F09000CC7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
