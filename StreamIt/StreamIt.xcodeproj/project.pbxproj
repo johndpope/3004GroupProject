@@ -7,16 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3924E75F1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E75E1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift */; };
-		3924E7611DC7C1A600B04C7F /* UIButton+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7601DC7C1A600B04C7F /* UIButton+StreamIt.swift */; };
-		3924E7631DC7C1D200B04C7F /* UIImageView+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7621DC7C1D200B04C7F /* UIImageView+StreamIt.swift */; };
-		3924E7651DC7C20500B04C7F /* UILabel+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7641DC7C20500B04C7F /* UILabel+StreamIt.swift */; };
-		3924E7671DC7C22400B04C7F /* UIView+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */; };
+		3924E75F1DC7C12000B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		3924E7611DC7C1A600B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		3924E7631DC7C1D200B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		3924E7651DC7C20500B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
+		3924E7671DC7C22400B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F1A031DA2C89300A903DF /* AppDelegate.swift */; };
 		393F1A061DA2C89300A903DF /* STInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F1A051DA2C89300A903DF /* STInitialViewController.swift */; };
 		393F1A091DA2C89300A903DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A071DA2C89300A903DF /* Main.storyboard */; };
 		393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0A1DA2C89300A903DF /* Assets.xcassets */; };
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
+		39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift */; };
+		39E308CF1DD63E2F00A1EA89 /* UIButton+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C91DD63E2F00A1EA89 /* UIButton+StreamIt.swift */; };
+		39E308D01DD63E2F00A1EA89 /* UIColor+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308CA1DD63E2F00A1EA89 /* UIColor+StreamIt.swift */; };
+		39E308D11DD63E2F00A1EA89 /* UIImageView+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308CB1DD63E2F00A1EA89 /* UIImageView+StreamIt.swift */; };
+		39E308D21DD63E2F00A1EA89 /* UILabel+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308CC1DD63E2F00A1EA89 /* UILabel+StreamIt.swift */; };
+		39E308D31DD63E2F00A1EA89 /* UIView+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308CD1DD63E2F00A1EA89 /* UIView+StreamIt.swift */; };
+		39E308D61DD6425700A1EA89 /* STGenericCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308D51DD6425700A1EA89 /* STGenericCardView.swift */; };
+		39E308D81DD6447900A1EA89 /* STInitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308D71DD6447900A1EA89 /* STInitialController.swift */; };
+		39E308DB1DD644B700A1EA89 /* STBonjourManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308DA1DD644B700A1EA89 /* STBonjourManager.swift */; };
+		39E308E51DD6461400A1EA89 /* STCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E308E31DD6461400A1EA89 /* STCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39E308E81DD6461400A1EA89 /* STCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; };
+		39E308E91DD6461400A1EA89 /* STCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		39E308EE1DD6463900A1EA89 /* STConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308ED1DD6463900A1EA89 /* STConstants.swift */; };
 		3C2EB1891DD50F09000CC7FD /* STDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* STDatabase.framework */; };
 		3C2EB1901DD50F09000CC7FD /* STDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB18F1DD50F09000CC7FD /* STDatabaseTests.swift */; };
 		3C2EB1921DD50F09000CC7FD /* STDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2EB1821DD50F09000CC7FD /* STDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		39E308E61DD6461400A1EA89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 393F19F81DA2C89100A903DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39E308E01DD6461400A1EA89;
+			remoteInfo = STCommon;
+		};
 		3C2EB18A1DD50F09000CC7FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 393F19F81DA2C89100A903DF /* Project object */;
@@ -60,6 +80,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				39E308E91DD6461400A1EA89 /* STCommon.framework in Embed Frameworks */,
 				3C2EB1961DD50F09000CC7FD /* STDatabase.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +98,19 @@
 		393F1A0A1DA2C89300A903DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393F1A0D1DA2C89300A903DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+StreamIt.swift"; sourceTree = "<group>"; };
+		39E308C91DD63E2F00A1EA89 /* UIButton+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+StreamIt.swift"; sourceTree = "<group>"; };
+		39E308CA1DD63E2F00A1EA89 /* UIColor+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+StreamIt.swift"; sourceTree = "<group>"; };
+		39E308CB1DD63E2F00A1EA89 /* UIImageView+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+StreamIt.swift"; sourceTree = "<group>"; };
+		39E308CC1DD63E2F00A1EA89 /* UILabel+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+StreamIt.swift"; sourceTree = "<group>"; };
+		39E308CD1DD63E2F00A1EA89 /* UIView+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StreamIt.swift"; sourceTree = "<group>"; };
+		39E308D51DD6425700A1EA89 /* STGenericCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STGenericCardView.swift; sourceTree = "<group>"; };
+		39E308D71DD6447900A1EA89 /* STInitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STInitialController.swift; sourceTree = "<group>"; };
+		39E308DA1DD644B700A1EA89 /* STBonjourManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STBonjourManager.swift; sourceTree = "<group>"; };
+		39E308E11DD6461400A1EA89 /* STCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E308E31DD6461400A1EA89 /* STCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommon.h; sourceTree = "<group>"; };
+		39E308E41DD6461400A1EA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E308ED1DD6463900A1EA89 /* STConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STConstants.swift; sourceTree = "<group>"; };
 		3C2EB1801DD50F09000CC7FD /* STDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2EB1821DD50F09000CC7FD /* STDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDatabase.h; sourceTree = "<group>"; };
 		3C2EB1831DD50F09000CC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +133,14 @@
 			files = (
 				3C2EB1951DD50F09000CC7FD /* STDatabase.framework in Frameworks */,
 				79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */,
+				39E308E81DD6461400A1EA89 /* STCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39E308DD1DD6461400A1EA89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,12 +174,12 @@
 		3924E75D1DC7C10100B04C7F /* UIKit Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3924E75E1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift */,
-				3924E7621DC7C1D200B04C7F /* UIImageView+StreamIt.swift */,
-				3924E7601DC7C1A600B04C7F /* UIButton+StreamIt.swift */,
-				3924E7641DC7C20500B04C7F /* UILabel+StreamIt.swift */,
-				3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */,
-				3960C6DF1DD1CB3A005CAFE5 /* UIColor+StreamIt.swift */,
+				39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift */,
+				39E308C91DD63E2F00A1EA89 /* UIButton+StreamIt.swift */,
+				39E308CA1DD63E2F00A1EA89 /* UIColor+StreamIt.swift */,
+				39E308CB1DD63E2F00A1EA89 /* UIImageView+StreamIt.swift */,
+				39E308CC1DD63E2F00A1EA89 /* UILabel+StreamIt.swift */,
+				39E308CD1DD63E2F00A1EA89 /* UIView+StreamIt.swift */,
 			);
 			name = "UIKit Extensions";
 			sourceTree = "<group>";
@@ -146,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				393F1A051DA2C89300A903DF /* STInitialViewController.swift */,
+				39E308D71DD6447900A1EA89 /* STInitialController.swift */,
 			);
 			name = "Root UI";
 			sourceTree = "<group>";
@@ -166,6 +209,7 @@
 				393F1A021DA2C89300A903DF /* StreamIt */,
 				3C2EB1811DD50F09000CC7FD /* STDatabase */,
 				3C2EB18E1DD50F09000CC7FD /* STDatabaseTests */,
+				39E308E21DD6461400A1EA89 /* STCommon */,
 				393F1A011DA2C89300A903DF /* Products */,
 				FBF52ECC09629873CDBD2D64 /* Pods */,
 				45C3F2BFD8DE9309C3229143 /* Frameworks */,
@@ -178,6 +222,7 @@
 				393F1A001DA2C89300A903DF /* StreamIt.app */,
 				3C2EB1801DD50F09000CC7FD /* STDatabase.framework */,
 				3C2EB1881DD50F09000CC7FD /* STDatabaseTests.xctest */,
+				39E308E11DD6461400A1EA89 /* STCommon.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,12 +232,39 @@
 			children = (
 				393F1A031DA2C89300A903DF /* AppDelegate.swift */,
 				3924E7681DC7C7BD00B04C7F /* Root UI */,
-				3970AB5E1DD0FD7B00BC6AB3 /* Common Views */,
+				39E308D41DD6424300A1EA89 /* Common Views */,
+				39E308D91DD6447F00A1EA89 /* Bonjour */,
 				3924E75C1DC7C0FA00B04C7F /* Util */,
 				3924E7691DC7C7D200B04C7F /* Supporting Files */,
 				393F1A0A1DA2C89300A903DF /* Assets.xcassets */,
 			);
 			path = StreamIt;
+			sourceTree = "<group>";
+		};
+		39E308D41DD6424300A1EA89 /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				39E308D51DD6425700A1EA89 /* STGenericCardView.swift */,
+			);
+			name = "Common Views";
+			sourceTree = "<group>";
+		};
+		39E308D91DD6447F00A1EA89 /* Bonjour */ = {
+			isa = PBXGroup;
+			children = (
+				39E308DA1DD644B700A1EA89 /* STBonjourManager.swift */,
+			);
+			name = Bonjour;
+			sourceTree = "<group>";
+		};
+		39E308E21DD6461400A1EA89 /* STCommon */ = {
+			isa = PBXGroup;
+			children = (
+				39E308E31DD6461400A1EA89 /* STCommon.h */,
+				39E308E41DD6461400A1EA89 /* Info.plist */,
+				39E308ED1DD6463900A1EA89 /* STConstants.swift */,
+			);
+			path = STCommon;
 			sourceTree = "<group>";
 		};
 		3C2EB1811DD50F09000CC7FD /* STDatabase */ = {
@@ -239,6 +311,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		39E308DE1DD6461400A1EA89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E308E51DD6461400A1EA89 /* STCommon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C2EB17D1DD50F09000CC7FD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,11 +346,30 @@
 			);
 			dependencies = (
 				3C2EB1941DD50F09000CC7FD /* PBXTargetDependency */,
+				39E308E71DD6461400A1EA89 /* PBXTargetDependency */,
 			);
 			name = StreamIt;
 			productName = StreamIt;
 			productReference = 393F1A001DA2C89300A903DF /* StreamIt.app */;
 			productType = "com.apple.product-type.application";
+		};
+		39E308E01DD6461400A1EA89 /* STCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39E308EA1DD6461400A1EA89 /* Build configuration list for PBXNativeTarget "STCommon" */;
+			buildPhases = (
+				39E308DC1DD6461400A1EA89 /* Sources */,
+				39E308DD1DD6461400A1EA89 /* Frameworks */,
+				39E308DE1DD6461400A1EA89 /* Headers */,
+				39E308DF1DD6461400A1EA89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STCommon;
+			productName = STCommon;
+			productReference = 39E308E11DD6461400A1EA89 /* STCommon.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		3C2EB17F1DD50F09000CC7FD /* STDatabase */ = {
 			isa = PBXNativeTarget;
@@ -326,6 +425,12 @@
 						DevelopmentTeam = BF7URC6ZPU;
 						ProvisioningStyle = Automatic;
 					};
+					39E308E01DD6461400A1EA89 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = BF7URC6ZPU;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
 					3C2EB17F1DD50F09000CC7FD = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0810;
@@ -354,6 +459,7 @@
 				393F19FF1DA2C89100A903DF /* StreamIt */,
 				3C2EB17F1DD50F09000CC7FD /* STDatabase */,
 				3C2EB1871DD50F09000CC7FD /* STDatabaseTests */,
+				39E308E01DD6461400A1EA89 /* STCommon */,
 			);
 		};
 /* End PBXProject section */
@@ -366,6 +472,13 @@
 				393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */,
 				393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */,
 				393F1A091DA2C89300A903DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39E308DF1DD6461400A1EA89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,15 +581,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3924E7611DC7C1A600B04C7F /* UIButton+StreamIt.swift in Sources */,
-				3960C6E01DD1CB3A005CAFE5 /* UIColor+StreamIt.swift in Sources */,
+				3924E7611DC7C1A600B04C7F /* (null) in Sources */,
 				393F1A061DA2C89300A903DF /* STInitialViewController.swift in Sources */,
+				39E308DB1DD644B700A1EA89 /* STBonjourManager.swift in Sources */,
 				393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */,
-				3970AB601DD0FD9D00BC6AB3 /* STGenericCardView.swift in Sources */,
-				3924E7651DC7C20500B04C7F /* UILabel+StreamIt.swift in Sources */,
-				3924E7631DC7C1D200B04C7F /* UIImageView+StreamIt.swift in Sources */,
-				3924E7671DC7C22400B04C7F /* UIView+StreamIt.swift in Sources */,
-				3924E75F1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift in Sources */,
+				39E308D31DD63E2F00A1EA89 /* UIView+StreamIt.swift in Sources */,
+				39E308D21DD63E2F00A1EA89 /* UILabel+StreamIt.swift in Sources */,
+				3924E7651DC7C20500B04C7F /* (null) in Sources */,
+				39E308D81DD6447900A1EA89 /* STInitialController.swift in Sources */,
+				39E308D01DD63E2F00A1EA89 /* UIColor+StreamIt.swift in Sources */,
+				39E308D61DD6425700A1EA89 /* STGenericCardView.swift in Sources */,
+				39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift in Sources */,
+				3924E7631DC7C1D200B04C7F /* (null) in Sources */,
+				3924E7671DC7C22400B04C7F /* (null) in Sources */,
+				39E308D11DD63E2F00A1EA89 /* UIImageView+StreamIt.swift in Sources */,
+				3924E75F1DC7C12000B04C7F /* (null) in Sources */,
+				39E308CF1DD63E2F00A1EA89 /* UIButton+StreamIt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39E308DC1DD6461400A1EA89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E308EE1DD6463900A1EA89 /* STConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +629,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		39E308E71DD6461400A1EA89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39E308E01DD6461400A1EA89 /* STCommon */;
+			targetProxy = 39E308E61DD6461400A1EA89 /* PBXContainerItemProxy */;
+		};
 		3C2EB18B1DD50F09000CC7FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3C2EB17F1DD50F09000CC7FD /* STDatabase */;
@@ -665,6 +798,55 @@
 			};
 			name = Release;
 		};
+		39E308EB1DD6461400A1EA89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = STCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STCommon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39E308EC1DD6461400A1EA89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = STCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STCommon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3C2EB1971DD50F09000CC7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 02A8A0A53E8F62ED8529D30A /* Pods-STDatabase.debug.xcconfig */;
@@ -685,7 +867,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -711,7 +893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -766,6 +948,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		39E308EA1DD6461400A1EA89 /* Build configuration list for PBXNativeTarget "STCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39E308EB1DD6461400A1EA89 /* Debug */,
+				39E308EC1DD6461400A1EA89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		3C2EB19B1DD50F09000CC7FD /* Build configuration list for PBXNativeTarget "STDatabase" */ = {
 			isa = XCConfigurationList;
