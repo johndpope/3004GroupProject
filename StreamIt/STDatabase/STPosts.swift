@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import RealmSwift
+
+public class STPosts: RLMObject {
+    
+}

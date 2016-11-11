@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
+
+
+public class STClients: RLMObject {
+    
+}

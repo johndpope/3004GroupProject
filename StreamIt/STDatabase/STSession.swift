@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
+
+public class STSession: RLMObject {
+    dynamic var session_name = ""
+    dynamic var session_pass = ""
+    let content_type = [String]
+    dynamic var num_items_onscreen = 0
+    dynamic var chromecast_id = "" //STChromecastConfig
+    dynamic var auto_mod = true
+}
+
+
+
+
+
