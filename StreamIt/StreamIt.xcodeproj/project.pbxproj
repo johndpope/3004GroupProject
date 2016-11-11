@@ -13,10 +13,12 @@
 		3924E7651DC7C20500B04C7F /* UILabel+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7641DC7C20500B04C7F /* UILabel+StreamIt.swift */; };
 		3924E7671DC7C22400B04C7F /* UIView+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */; };
 		393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F1A031DA2C89300A903DF /* AppDelegate.swift */; };
-		393F1A061DA2C89300A903DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F1A051DA2C89300A903DF /* ViewController.swift */; };
+		393F1A061DA2C89300A903DF /* STInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393F1A051DA2C89300A903DF /* STInitialViewController.swift */; };
 		393F1A091DA2C89300A903DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A071DA2C89300A903DF /* Main.storyboard */; };
 		393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0A1DA2C89300A903DF /* Assets.xcassets */; };
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
+		3960C6E01DD1CB3A005CAFE5 /* UIColor+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3960C6DF1DD1CB3A005CAFE5 /* UIColor+StreamIt.swift */; };
+		3970AB601DD0FD9D00BC6AB3 /* STGenericCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3970AB5F1DD0FD9D00BC6AB3 /* STGenericCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +29,13 @@
 		3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+StreamIt.swift"; sourceTree = "<group>"; };
 		393F1A001DA2C89300A903DF /* StreamIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393F1A031DA2C89300A903DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		393F1A051DA2C89300A903DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		393F1A051DA2C89300A903DF /* STInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STInitialViewController.swift; sourceTree = "<group>"; };
 		393F1A081DA2C89300A903DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		393F1A0A1DA2C89300A903DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393F1A0D1DA2C89300A903DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3960C6DF1DD1CB3A005CAFE5 /* UIColor+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+StreamIt.swift"; sourceTree = "<group>"; };
+		3970AB5F1DD0FD9D00BC6AB3 /* STGenericCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STGenericCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,31 @@
 			isa = PBXGroup;
 			children = (
 				3924E75E1DC7C12000B04C7F /* NSLayoutConstraint+StreamIt.swift */,
-				3924E7601DC7C1A600B04C7F /* UIButton+StreamIt.swift */,
 				3924E7621DC7C1D200B04C7F /* UIImageView+StreamIt.swift */,
+				3924E7601DC7C1A600B04C7F /* UIButton+StreamIt.swift */,
 				3924E7641DC7C20500B04C7F /* UILabel+StreamIt.swift */,
 				3924E7661DC7C22400B04C7F /* UIView+StreamIt.swift */,
+				3960C6DF1DD1CB3A005CAFE5 /* UIColor+StreamIt.swift */,
 			);
 			name = "UIKit Extensions";
+			sourceTree = "<group>";
+		};
+		3924E7681DC7C7BD00B04C7F /* Root UI */ = {
+			isa = PBXGroup;
+			children = (
+				393F1A051DA2C89300A903DF /* STInitialViewController.swift */,
+			);
+			name = "Root UI";
+			sourceTree = "<group>";
+		};
+		3924E7691DC7C7D200B04C7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				393F1A0F1DA2C89300A903DF /* Info.plist */,
+				393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */,
+				393F1A071DA2C89300A903DF /* Main.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		393F19F71DA2C89100A903DF = {
@@ -84,15 +107,22 @@
 		393F1A021DA2C89300A903DF /* StreamIt */ = {
 			isa = PBXGroup;
 			children = (
-				3924E75C1DC7C0FA00B04C7F /* Util */,
 				393F1A031DA2C89300A903DF /* AppDelegate.swift */,
-				393F1A051DA2C89300A903DF /* ViewController.swift */,
-				393F1A071DA2C89300A903DF /* Main.storyboard */,
+				3924E7681DC7C7BD00B04C7F /* Root UI */,
+				3970AB5E1DD0FD7B00BC6AB3 /* Common Views */,
+				3924E75C1DC7C0FA00B04C7F /* Util */,
+				3924E7691DC7C7D200B04C7F /* Supporting Files */,
 				393F1A0A1DA2C89300A903DF /* Assets.xcassets */,
-				393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */,
-				393F1A0F1DA2C89300A903DF /* Info.plist */,
 			);
 			path = StreamIt;
+			sourceTree = "<group>";
+		};
+		3970AB5E1DD0FD7B00BC6AB3 /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				3970AB5F1DD0FD9D00BC6AB3 /* STGenericCardView.swift */,
+			);
+			name = "Common Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3924E7611DC7C1A600B04C7F /* UIButton+StreamIt.swift in Sources */,
-				393F1A061DA2C89300A903DF /* ViewController.swift in Sources */,
+				3960C6E01DD1CB3A005CAFE5 /* UIColor+StreamIt.swift in Sources */,
+				393F1A061DA2C89300A903DF /* STInitialViewController.swift in Sources */,
 				393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */,
+				3970AB601DD0FD9D00BC6AB3 /* STGenericCardView.swift in Sources */,
 				3924E7651DC7C20500B04C7F /* UILabel+StreamIt.swift in Sources */,
 				3924E7631DC7C1D200B04C7F /* UIImageView+StreamIt.swift in Sources */,
 				3924E7671DC7C22400B04C7F /* UIView+StreamIt.swift in Sources */,
@@ -246,6 +278,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -287,6 +320,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

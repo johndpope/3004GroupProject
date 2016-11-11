@@ -29,7 +29,18 @@ extension NSLayoutConstraint {
 		
 		constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:|-\(space)-[view]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
 		
-		constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(space)-[view]-\(space)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		
+		
+		return constraints
+	}
+	
+	static func constraintsPinningViewInsideSuperViewBottom(view: UIView, space: CGFloat) -> [NSLayoutConstraint] {
+		var constraints = [NSLayoutConstraint]()
+		
+		constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-\(space)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		
+		constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(space)-[view]-\(space)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
 		
 		
 		return constraints
@@ -41,6 +52,15 @@ extension NSLayoutConstraint {
 		
 		constraints +=  NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["view": view])
 		constraints +=  NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: ["view": view])
+		
+		return constraints
+	}
+	
+	static func constraintsPinningToTopLeftOfSuperview(view: UIView, padding: CGFloat) -> [NSLayoutConstraint] {
+		var constraints = [NSLayoutConstraint]()
+		
+		constraints +=  NSLayoutConstraint.constraintsWithVisualFormat("V:|-\(padding)-[view]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		constraints +=  NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(padding)-[view]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
 		
 		return constraints
 	}
