@@ -1,0 +1,2 @@
+- Final proposal presentation preparation.
+- Domain model created

@@ -1,0 +1,3 @@
+- Gathered ideas.
+- Platform decisions
+- Decided on an iOS application
