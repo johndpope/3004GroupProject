@@ -7,8 +7,14 @@
 //
 
 import Foundation
-import RealmSwift
+import Realm
 
-public class STPosts: RLMObject {
-    
+public class STPost: RLMObject {
+    dynamic var post_type = ""
+    dynamic var body = ""
+    dynamic var image_url = ""
+    dynamic var image_data = ""
+    dynamic var video_url = ""
+    dynamic var mod_status = ""
+    dynamic var submission_time = ""
 }

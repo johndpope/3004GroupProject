@@ -7,9 +7,10 @@
 //
 
 import Foundation
-import RealmSwift
+import Realm
 
 
 public class STClients: RLMObject {
-    
+    dynamic var username = ""
+    dynamic var session_id = ""
 }

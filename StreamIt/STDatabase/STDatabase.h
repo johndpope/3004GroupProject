@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import RealmSwift
-
-#import <STDatabase/STClients.swift>
-#import <STDatabase/STPosts.swift>
-#import <STDatabase/STSession.swift>
+@import RealmSwift;
 
 //! Project version number for STDatabase.
 FOUNDATION_EXPORT double STDatabaseVersionNumber;
@@ -21,36 +17,60 @@ FOUNDATION_EXPORT const unsigned char STDatabaseVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <STDatabase/PublicHeader.h>
 
+typedef enum {
+    textContent,
+    photoContent,
+    videoContent
+} ContentType;
+
+@interface STChromecastConfig
+
+@end
+
+
+@interface STPostType
+
+
+
+@end
+
+
+@interface STModStatus
+
+@property _Bool     isApproved;
+
+@end
+
 
 @interface STSession : NSObject
 
-@property NSString  session_name
-@property NSString  session_password
-@property NSArray   content_type[NSString]
-@property Int       num_items_onscreen
-@property STChromecastConfig chromecast_id
-@property Bool      auto_mod
+@property NSString  * session_name;
+@property NSString  * session_password;
+@property (nonatomic, assign) ContentType content_type;
+@property int       num_items_onscreen;
+@property STChromecastConfig * chromecast_id;
+@property _Bool     auto_mod;
+
+@end
+
+
+@interface STPost : NSObject
+
+@property STPostType    * post_type;
+@property NSString      * body;
+@property NSURL         * image_url;
+@property NSData        * image_data;
+@property NSURL         * video_url;
+@property STModStatus   * mod_status;
+@property NSDate        * submission_time;
 
 
 @end
 
 
-@interface STPosts : NSObject
+@interface STClient : NSObject
 
-@property STPostType    post_type
-@property NSString      body
-@property NSURL         image_url
-@property NSData        image_data
-@property NSURL         video_url
-@property STModStatus   mod_status
-@property NSDate        submission_time
-
-@end
-
-
-@interface STClients : NSObject
-
-@property NSString      username
-@property NSUUID        session_id
+@property NSString      * username;
+@property NSUUID        * session_id;
 
 @end
