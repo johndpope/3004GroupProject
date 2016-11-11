@@ -17,11 +17,7 @@ FOUNDATION_EXPORT const unsigned char STDatabaseVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <STDatabase/PublicHeader.h>
 
-typedef enum {
-    textContent,
-    photoContent,
-    videoContent
-} ContentType;
+//#import RealmSwift
 
 @interface STChromecastConfig
 
