@@ -8,16 +8,18 @@
 
 import Foundation
 import Realm
+import STCommon
 
 public class STSession: RLMObject {
-    dynamic var session_name = ""
-    dynamic var session_pass = ""
-    dynamic var num_items_onscreen = 0
-    dynamic var chromecast_id = "" //STChromecastConfig
-    dynamic var auto_mod = true
+    var session_name: NSString?
+    var session_pass: NSString?
+    var num_items_onscreen: Int8 = 0
+    var chromecast_id: STChromecastConfig? //STChromecastConfig
+    var auto_mod: Bool?
+    
 }
 
-public class STChromcastConfig : RLMObject {
+public class STChromecastConfig : RLMObject {
     
 }
 

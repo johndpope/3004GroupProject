@@ -8,9 +8,9 @@
 
 import Foundation
 import Realm
-
+import STCommon
 
 public class STClients: RLMObject {
-    dynamic var username = ""
-    dynamic var session_id = ""
+    var username : String?
+    var session_id : String?
 }
