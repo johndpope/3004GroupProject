@@ -26,11 +26,7 @@ public class STPost: RLMObject {
         super.init()
     }
     
-    //function returning entire collection
-    func resultCollection() -> RLMResults {
-        return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: nil)
-    }
-
+ 
     //function to add or update submission to realm
     func addOrUpdateSubmission(newSubmission: STPost) {
         if (newSubmission.uuid == nil) {
@@ -38,6 +34,22 @@ public class STPost: RLMObject {
         }
         RLMRealm.defaultRealm().addOrUpdateObject(newSubmission)
     }
+    
+    //function to delete submission
+    func deleteSubmission(submission: STPost) {
+        if (submission.uuid != nil) {
+            RLMRealm.defaultRealm().deleteObject(submission)
+        } else {
+            print("submission does not exist")
+        }
+    }
+    
+    
+    //function returning entire collection
+    func collection() -> RLMResults {
+        return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: nil)
+    }
+
     
     
     //function returning submissions marked as accepted
@@ -51,10 +63,12 @@ public class STPost: RLMObject {
         return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: NSPredicate(format: "mod_status = true")).sortedResultsUsingProperty("mod_acceptance_time", ascending: false)
     }
     
+    
     //function returning submissions marked as NOT accepted (sorted in order of most recent submission first)
     func getUnacceptedSubmissions() -> RLMResults {
         return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: NSPredicate(format: "mod_status = false")).sortedResultsUsingProperty("submission_time", ascending: false)
     }
+    
     
     //function returning most submissions ordered by most recent unacceptance first
     func getSubmissionsUnacceptanceTime() -> RLMResults {

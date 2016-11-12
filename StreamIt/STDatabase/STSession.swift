@@ -17,10 +17,19 @@ public class STSession: RLMObject {
     var chromecast_id: STChromecastConfig? //STChromecastConfig
     var auto_mod: Bool?
     
+    override init() {
+        super.init()
+    }
+    
+    
+    
 }
 
 public class STChromecastConfig : RLMObject {
     
+    override init() {
+        super.init()
+    }
 }
 
 
