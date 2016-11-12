@@ -1,3 +1,5 @@
+var bonjour = require('bonjour')([])
+var host = null;
 
 
 window.mediaElement = document.getElementById('media'); // likely not needed
@@ -16,3 +18,24 @@ window.castReceiverManager.onSenderDisconnected = function(event) {
 		window.close();
 	}
 }
+
+window.castReceiverManager.onSenderConnected = function(senderID, userAgent) {
+
+}
+
+
+
+
+setInterval(function(){
+	$.getJSON(host, {}, function(data, status){
+		var type = (data.content === "img" ? "img" : "video");
+		$(".media").append("<" + type + " src='" + data.src + "'></" + type + ">");
+	});
+}, 3000);
+
+
+
+
+
+
+
