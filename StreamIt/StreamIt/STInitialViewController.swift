@@ -13,15 +13,19 @@ class STInitialViewController: UIViewController {
 	var joinCard: STGenericCardView!
 	var startCard: STGenericCardView!
 	
+	var controller: STInitialController!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		self.controller = STInitialController(delegate: self)
 		
 		self.edgesForExtendedLayout = UIRectEdge.None
 		self.title = "StreamIt"
 		
-		self.joinCard = STGenericCardView(title: "Join a StreamIt Session")
+		self.joinCard = STTableCardView(title: "Join a StreamIt Session", tableDelegate: self.controller)
 		self.view.addSubview(self.joinCard)
-		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperView(self.joinCard, space: 20))
+		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperView(self.joinCard, topSpace: 20, sideSpace: 20))
 		
 		self.startCard = STGenericCardView(title: "Start a StreamIt Session")
 		self.view.addSubview(self.startCard)
@@ -32,6 +36,9 @@ class STInitialViewController: UIViewController {
 		self.view.layoutSubviews()
 	}
 	
+	func pushJoinSessionViewController(viewController: STJoinSessionViewController) {
+		self.navigationController?.pushViewController(viewController, animated: true)
+	}
 	
 	func generateCardHeightConstraints(join: STGenericCardView, start: STGenericCardView) -> [NSLayoutConstraint] {
 		var constraints = [NSLayoutConstraint]()

@@ -30,6 +30,9 @@
 		39E308E81DD6461400A1EA89 /* STCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; };
 		39E308E91DD6461400A1EA89 /* STCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39E308EE1DD6463900A1EA89 /* STConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308ED1DD6463900A1EA89 /* STConstants.swift */; };
+		39E308F01DD677E600A1EA89 /* STTableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308EF1DD677E600A1EA89 /* STTableCardView.swift */; };
+		39E308F31DD680DD00A1EA89 /* STJoinSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F21DD680DD00A1EA89 /* STJoinSessionViewController.swift */; };
+		39E308F61DD6811200A1EA89 /* STSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F51DD6811200A1EA89 /* STSessionConfig.swift */; };
 		3C2EB1891DD50F09000CC7FD /* STDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* STDatabase.framework */; };
 		3C2EB1901DD50F09000CC7FD /* STDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB18F1DD50F09000CC7FD /* STDatabaseTests.swift */; };
 		3C2EB1921DD50F09000CC7FD /* STDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2EB1821DD50F09000CC7FD /* STDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -111,6 +114,9 @@
 		39E308E31DD6461400A1EA89 /* STCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommon.h; sourceTree = "<group>"; };
 		39E308E41DD6461400A1EA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E308ED1DD6463900A1EA89 /* STConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STConstants.swift; sourceTree = "<group>"; };
+		39E308EF1DD677E600A1EA89 /* STTableCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableCardView.swift; sourceTree = "<group>"; };
+		39E308F21DD680DD00A1EA89 /* STJoinSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STJoinSessionViewController.swift; sourceTree = "<group>"; };
+		39E308F51DD6811200A1EA89 /* STSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSessionConfig.swift; sourceTree = "<group>"; };
 		3C2EB1801DD50F09000CC7FD /* STDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2EB1821DD50F09000CC7FD /* STDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDatabase.h; sourceTree = "<group>"; };
 		3C2EB1831DD50F09000CC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 			children = (
 				393F1A051DA2C89300A903DF /* STInitialViewController.swift */,
 				39E308D71DD6447900A1EA89 /* STInitialController.swift */,
+				39E308EF1DD677E600A1EA89 /* STTableCardView.swift */,
 			);
 			name = "Root UI";
 			sourceTree = "<group>";
@@ -232,6 +239,8 @@
 			children = (
 				393F1A031DA2C89300A903DF /* AppDelegate.swift */,
 				3924E7681DC7C7BD00B04C7F /* Root UI */,
+				39E308F11DD680C700A1EA89 /* Join Session */,
+				39E308F41DD6810200A1EA89 /* Session */,
 				39E308D41DD6424300A1EA89 /* Common Views */,
 				39E308D91DD6447F00A1EA89 /* Bonjour */,
 				3924E75C1DC7C0FA00B04C7F /* Util */,
@@ -265,6 +274,22 @@
 				39E308ED1DD6463900A1EA89 /* STConstants.swift */,
 			);
 			path = STCommon;
+			sourceTree = "<group>";
+		};
+		39E308F11DD680C700A1EA89 /* Join Session */ = {
+			isa = PBXGroup;
+			children = (
+				39E308F21DD680DD00A1EA89 /* STJoinSessionViewController.swift */,
+			);
+			name = "Join Session";
+			sourceTree = "<group>";
+		};
+		39E308F41DD6810200A1EA89 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				39E308F51DD6811200A1EA89 /* STSessionConfig.swift */,
+			);
+			name = Session;
 			sourceTree = "<group>";
 		};
 		3C2EB1811DD50F09000CC7FD /* STDatabase */ = {
@@ -587,11 +612,14 @@
 				393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */,
 				39E308D31DD63E2F00A1EA89 /* UIView+StreamIt.swift in Sources */,
 				39E308D21DD63E2F00A1EA89 /* UILabel+StreamIt.swift in Sources */,
+				39E308F61DD6811200A1EA89 /* STSessionConfig.swift in Sources */,
 				3924E7651DC7C20500B04C7F /* (null) in Sources */,
 				39E308D81DD6447900A1EA89 /* STInitialController.swift in Sources */,
 				39E308D01DD63E2F00A1EA89 /* UIColor+StreamIt.swift in Sources */,
 				39E308D61DD6425700A1EA89 /* STGenericCardView.swift in Sources */,
+				39E308F31DD680DD00A1EA89 /* STJoinSessionViewController.swift in Sources */,
 				39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift in Sources */,
+				39E308F01DD677E600A1EA89 /* STTableCardView.swift in Sources */,
 				3924E7631DC7C1D200B04C7F /* (null) in Sources */,
 				3924E7671DC7C22400B04C7F /* (null) in Sources */,
 				39E308D11DD63E2F00A1EA89 /* UIImageView+StreamIt.swift in Sources */,
