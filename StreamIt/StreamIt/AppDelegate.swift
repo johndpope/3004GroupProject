@@ -13,12 +13,8 @@ import STHTTPServer
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-    let sv = STWebServer()
-
-
+	
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-        print("test")
-        sv.start()
 		return true
 	}
 

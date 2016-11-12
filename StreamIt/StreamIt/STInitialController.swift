@@ -8,12 +8,20 @@
 
 import Foundation
 import UIKit
+import STHTTPServer
+import STCommon
 
 class STInitialController: NSObject, UITableViewDataSource, UITableViewDelegate {
 	
 	weak var delegate: STInitialViewController?
 	
-	let titles = ["kyle", "jagger", "ryan"]
+	var bonjourManager = STBonjourManager.sharedManager
+	
+	var server = STWebServer() // TODO: Singleton this bitch
+	
+	var services: [NSNetService] {
+		return self.bonjourManager.services
+	}
 	
 	init(delegate: STInitialViewController) {
 		super.init()
@@ -26,21 +34,21 @@ class STInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 3
+		return self.services.count
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = UITableViewCell(style: .Default, reuseIdentifier: "")
 		
-		cell.textLabel?.text = self.titles[indexPath.row]
+		cell.textLabel?.text = self.services[indexPath.row].name
 		
 		return cell
 	}
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		let title = self.titles[indexPath.row]
+		let title = self.services[indexPath.row].name
 		
-		let sessionConfig = STSessionConfig(title: title, service: NSNetService(domain: "aasdf", type: "asdf", name: title))
+		let sessionConfig = STSessionConfig(title: title, service: self.services[indexPath.row])
 		let joinSessionViewController = STJoinSessionViewController(config: sessionConfig)
 		
 		if let del = self.delegate {
@@ -48,5 +56,12 @@ class STInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 		}
 		
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	}
+}
+
+// MARK - New Session Controller
+extension STInitialController {
+	func startServerPressed() {
+		self.server.start()
 	}
 }

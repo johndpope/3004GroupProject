@@ -21,9 +21,16 @@ public class STWebServer: NSObject {
         server.addDefaultHandlerForMethod("GET",
                                           requestClass: GCDWebServerRequest.self,
                                           asyncProcessBlock: {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
-                                            completion(GCDWebServerDataResponse(HTML: "<html><p>Hello, World!</p></html>")!)
+												completion(GCDWebServerDataResponse(HTML: "<html><p>Hello, World!</p></html>")!)
                                           })
-        
+		
+		server.addHandlerForMethod("GET",
+		                           path: "/about",
+		                           requestClass: GCDWebServerRequest.self,
+		                           asyncProcessBlock: {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
+										completion(GCDWebServerDataResponse(HTML: "<html> <p> About me! </p> </html>")!)
+									})
+		
         server.startWithPort(10000, bonjourName: STConstBonjourName())
         print("hello?")
     }

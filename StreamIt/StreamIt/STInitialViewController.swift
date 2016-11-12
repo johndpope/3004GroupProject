@@ -27,7 +27,7 @@ class STInitialViewController: UIViewController {
 		self.view.addSubview(self.joinCard)
 		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperView(self.joinCard, topSpace: 20, sideSpace: 20))
 		
-		self.startCard = STGenericCardView(title: "Start a StreamIt Session")
+		self.startCard = STStartSessionCardView(title: "Start a StreamIt Session", controller: self.controller)
 		self.view.addSubview(self.startCard)
 		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperViewBottom(self.startCard, space: 20))
 		

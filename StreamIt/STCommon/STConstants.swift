@@ -12,6 +12,10 @@ public func STConstBonjourName() -> String {
 	return "com.streamit.httpserver"
 }
 
+public func STConstBonjourType() -> String {
+	return "_streamit._tcp"
+}
+
 public func STNotifBonjourServiceAdded() -> String {
 	return "com.streamit.serviceadded"
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import STCommon
 
 class STTableCardView: STGenericCardView {
 	
@@ -17,6 +18,8 @@ class STTableCardView: STGenericCardView {
 	init(title: String, tableDelegate: STInitialController) {
 		super.init(title: title)
 		
+		self.subscribe()
+		
 		self.tableDelegate = tableDelegate
 		self.tableView = self.generateTableView()
 		
@@ -24,6 +27,15 @@ class STTableCardView: STGenericCardView {
 		self.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperView(self.tableView, topSpace: 40))
 		
 		self.layoutSubviews()
+	}
+	
+	func subscribe() {
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(STTableCardView.reloadTableData(_:)), name: STNotifBonjourServiceAdded(), object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(STTableCardView.reloadTableData(_:)), name: STNotifBonjourServiceRemoved(), object: nil)
+	}
+	
+	func reloadTableData(sender: NSNotification) {
+		self.tableView.reloadData()
 	}
 	
 	func generateTableView() -> UITableView {

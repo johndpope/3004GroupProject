@@ -13,12 +13,45 @@ class STJoinSessionViewController: UIViewController {
 	
 	var config: STSessionConfig!
 	
+	var testLabel: UILabel!
+	
 	init(config: STSessionConfig) {
 		super.init(nibName: nil, bundle: nil)
 		
 		self.config = config
 		
 		self.title = self.config.title
+	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		self.view.backgroundColor = UIColor.whiteColor()
+		
+		self.testLabel = self.generateTestLabel()
+		self.view.addSubview(self.testLabel)
+		self.view.addConstraints(self.generateTestLabelConstraints(self.testLabel))
+		
+		self.view.layoutSubviews()
+		
+		let APIClient = STAPIClient(service: self.config.service)
+		APIClient.getRootURLString({(body: String) in
+			self.testLabel.text = body
+		})
+	}
+	
+	func generateTestLabel() -> UILabel {
+		let label = UILabel.st_flexibleTitleLabel("")
+		
+		return label
+	}
+	
+	func generateTestLabelConstraints(label: UILabel) -> [NSLayoutConstraint] {
+		var constraints = [NSLayoutConstraint]()
+		
+		constraints += NSLayoutConstraint.constraintsFillingSuperViewWithView(label)
+		
+		return constraints
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
