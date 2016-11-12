@@ -14,40 +14,6 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright (c) 2012-2014, Pierre-Olivier Latour
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * The name of Pierre-Olivier Latour may not be used to endorse
-      or promote products derived from this software without specific
-      prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL PIERRE-OLIVIER LATOUR BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</string>
-			<key>License</key>
-			<string>BSD</string>
-			<key>Title</key>
-			<string>GCDWebServer</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>TABLE OF CONTENTS
 
 1. Apache License version 2.0
@@ -277,13 +243,13 @@ EXPORT COMPLIANCE
 You understand that the Software may contain cryptographic functions that may be
 subject to export restrictions, and you represent and warrant that you are not
 (i) located in a jurisdiction that is subject to United States economic
-sanctions (&#8220;Prohibited Jurisdiction&#8221;), including Cuba, Iran, North Korea,
+sanctions (“Prohibited Jurisdiction”), including Cuba, Iran, North Korea,
 Sudan, Syria or the Crimea region, (ii) a person listed on any U.S. government
 blacklist (to include the List of Specially Designated Nationals and Blocked
 Persons or the Consolidated Sanctions List administered by the U.S. Department
-of the Treasury&#8217;s Office of Foreign Assets Control, or the Denied Persons List
+of the Treasury’s Office of Foreign Assets Control, or the Denied Persons List
 or Entity List administered by the U.S. Department of Commerce)
-(&#8220;Sanctioned Person&#8221;), or (iii) controlled or 50% or more owned by a Sanctioned
+(“Sanctioned Person”), or (iii) controlled or 50% or more owned by a Sanctioned
 Person.
 
 You agree to comply with all export, re-export and import restrictions and
@@ -531,13 +497,13 @@ EXPORT COMPLIANCE
 You understand that the Software may contain cryptographic functions that may be
 subject to export restrictions, and you represent and warrant that you are not
 (i) located in a jurisdiction that is subject to United States economic
-sanctions (&#8220;Prohibited Jurisdiction&#8221;), including Cuba, Iran, North Korea,
+sanctions (“Prohibited Jurisdiction”), including Cuba, Iran, North Korea,
 Sudan, Syria or the Crimea region, (ii) a person listed on any U.S. government
 blacklist (to include the List of Specially Designated Nationals and Blocked
 Persons or the Consolidated Sanctions List administered by the U.S. Department
-of the Treasury&#8217;s Office of Foreign Assets Control, or the Denied Persons List
+of the Treasury’s Office of Foreign Assets Control, or the Denied Persons List
 or Entity List administered by the U.S. Department of Commerce)
-(&#8220;Sanctioned Person&#8221;), or (iii) controlled or 50% or more owned by a Sanctioned
+(“Sanctioned Person”), or (iii) controlled or 50% or more owned by a Sanctioned
 Person.
 
 You agree to comply with all export, re-export and import restrictions and
@@ -551,6 +517,40 @@ regulations.
 			<string>Apache 2.0</string>
 			<key>Title</key>
 			<string>RealmSwift</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Copyright (c) 2012-2014, Pierre-Olivier Latour
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * The name of Pierre-Olivier Latour may not be used to endorse
+      or promote products derived from this software without specific
+      prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL PIERRE-OLIVIER LATOUR BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</string>
+			<key>License</key>
+			<string>BSD</string>
+			<key>Title</key>
+			<string>GCDWebServer</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
