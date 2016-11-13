@@ -1,0 +1,6 @@
+framework module Pods_CHHTTPServer {
+  umbrella header "Pods-CHHTTPServer-umbrella.h"
+
+  export *
+  module * { export * }
+}
