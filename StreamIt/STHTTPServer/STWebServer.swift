@@ -11,7 +11,9 @@ import GCDWebServer
 import STCommon
 
 public class STWebServer: NSObject {
-    let server: GCDWebServer = GCDWebServer()
+    var server: GCDWebServer = GCDWebServer()
+
+    public static var defaultServer = STWebServer()
     
     public override init() {
         super.init()
@@ -20,11 +22,25 @@ public class STWebServer: NSObject {
     public func start() {
         server.addDefaultHandlerForMethod("GET",
                                           requestClass: GCDWebServerRequest.self,
-                                          asyncProcessBlock: {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
-                                            completion(GCDWebServerDataResponse(HTML: "<html><p>Hello, World!</p></html>")!)
-                                          })
+                                          asyncProcessBlock: STRouter.defaultHandler())
         
-        server.startWithPort(10000, bonjourName: STConstBonjourName())
-        print("hello?")
+        
+        server.addHandlerForMethod("GET", path: "/",
+                                   requestClass: GCDWebServerRequest.self,
+                                   asyncProcessBlock: STRouter.indexHandler())
+        
+        
+        let options: [NSObject: AnyObject] =
+            [GCDWebServerOption_BonjourName: STConstBonjourName() + ".Jagger",
+             //GCDWebServerOption_BonjourType: "_streamit_.tcp", // STConstBonjourType()
+             GCDWebServerOption_Port: 10000,
+             GCDWebServerOption_AutomaticallySuspendInBackground: false]
+
+        do {
+            try server.startWithOptions(options)
+            
+        } catch {
+            print("We did something wrong")
+        }
     }
 }
