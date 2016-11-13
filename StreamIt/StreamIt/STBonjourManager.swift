@@ -13,6 +13,8 @@ class STBonjourManager: NSObject, NSNetServiceBrowserDelegate {
 	
 	private let serviceBrowser = NSNetServiceBrowser()
 	
+	
+	private var unresolvedServices = [NSNetService]()
 	var services = [NSNetService]()
 	
 	
@@ -27,13 +29,12 @@ class STBonjourManager: NSObject, NSNetServiceBrowserDelegate {
 	private func startBrowser() {
 		self.serviceBrowser.delegate = self
 		
-		self.serviceBrowser.searchForServicesOfType(STConstBonjourName(), inDomain: "")
+		self.serviceBrowser.searchForServicesOfType("_http._tcp", inDomain: "")
 	}
 	
 	func netServiceBrowser(browser: NSNetServiceBrowser, didFindService service: NSNetService, moreComing: Bool) {
-		self.services.append(service)
-		
-		NSNotificationCenter.defaultCenter().postNotificationName(STNotifBonjourServiceAdded(), object: service)
+		service.delegate = self
+		service.resolveWithTimeout(3000)
 	}
 	
 	func netServiceBrowser(browser: NSNetServiceBrowser, didRemoveService service: NSNetService, moreComing: Bool) {
@@ -49,5 +50,13 @@ class STBonjourManager: NSObject, NSNetServiceBrowserDelegate {
 		self.services.removeAtIndex(indexToDelete)
 		
 		NSNotificationCenter.defaultCenter().postNotificationName(STNotifBonjourServiceRemoved(), object: service)
+	}
+}
+
+extension STBonjourManager: NSNetServiceDelegate {
+	func netServiceWillResolve(sender: NSNetService) {
+		self.services.append(sender)
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(STNotifBonjourServiceAdded(), object: sender)
 	}
 }

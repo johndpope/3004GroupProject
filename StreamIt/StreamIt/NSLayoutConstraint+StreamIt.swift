@@ -24,12 +24,24 @@ extension NSLayoutConstraint {
 	}
 	
 	// Pins the top of 'view' to the top of its container, with an optional space. Also constrains leading/trailing to the container
-	static func constraintsPinningViewInsideSuperView(view: UIView, space: CGFloat) -> [NSLayoutConstraint] {
+	static func constraintsPinningViewInsideSuperView(view: UIView, topSpace: CGFloat) -> [NSLayoutConstraint] {
 		var constraints = [NSLayoutConstraint]()
 		
-		constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:|-\(space)-[view]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:|-\(topSpace)-[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
 		
-		constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(space)-[view]-\(space)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		
+		
+		return constraints
+	}
+	
+	// Pins the top of 'view' to the top of its container, with an optional space. Also constrains leading/trailing to the container
+	static func constraintsPinningViewInsideSuperView(view: UIView, topSpace: CGFloat, sideSpace: CGFloat) -> [NSLayoutConstraint] {
+		var constraints = [NSLayoutConstraint]()
+		
+		constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:|-\(topSpace)-[view]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
+		
+		constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(sideSpace)-[view]-\(sideSpace)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": view])
 		
 		
 		return constraints

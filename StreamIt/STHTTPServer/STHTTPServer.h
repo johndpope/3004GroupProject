@@ -16,5 +16,3 @@ FOUNDATION_EXPORT const unsigned char STHTTPServerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <STHTTPServer/PublicHeader.h>
 
-
-#import "STHTTPServer-Swift.h"

@@ -17,6 +17,8 @@
 		393F1A091DA2C89300A903DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A071DA2C89300A903DF /* Main.storyboard */; };
 		393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0A1DA2C89300A903DF /* Assets.xcassets */; };
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
+		394B531B1DD7AB1800C249A5 /* STStartSessionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531A1DD7AB1800C249A5 /* STStartSessionCardView.swift */; };
+		394B531E1DD7BCDF00C249A5 /* STAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531D1DD7BCDF00C249A5 /* STAPIClient.swift */; };
 		39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift */; };
 		39E308CF1DD63E2F00A1EA89 /* UIButton+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C91DD63E2F00A1EA89 /* UIButton+StreamIt.swift */; };
 		39E308D01DD63E2F00A1EA89 /* UIColor+StreamIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308CA1DD63E2F00A1EA89 /* UIColor+StreamIt.swift */; };
@@ -30,6 +32,9 @@
 		39E308E81DD6461400A1EA89 /* STCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; };
 		39E308E91DD6461400A1EA89 /* STCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39E308EE1DD6463900A1EA89 /* STConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308ED1DD6463900A1EA89 /* STConstants.swift */; };
+		39E308F01DD677E600A1EA89 /* STTableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308EF1DD677E600A1EA89 /* STTableCardView.swift */; };
+		39E308F31DD680DD00A1EA89 /* STJoinSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F21DD680DD00A1EA89 /* STJoinSessionViewController.swift */; };
+		39E308F61DD6811200A1EA89 /* STSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F51DD6811200A1EA89 /* STSessionConfig.swift */; };
 		3C2EB1891DD50F09000CC7FD /* STDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* STDatabase.framework */; };
 		3C2EB1901DD50F09000CC7FD /* STDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB18F1DD50F09000CC7FD /* STDatabaseTests.swift */; };
 		3C2EB1921DD50F09000CC7FD /* STDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2EB1821DD50F09000CC7FD /* STDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +53,7 @@
 		708623E61DD687AC006550DA /* STCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; };
 		708623E81DD7A9E6006550DA /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708623E71DD7A9E6006550DA /* STRouter.swift */; };
 		79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */; };
+		D57C51219381B88520C50E8A /* Pods_STHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41EFE0D40DDF8E25B2AE602 /* Pods_STHTTPServer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +135,8 @@
 		393F1A0A1DA2C89300A903DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393F1A0D1DA2C89300A903DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		394B531A1DD7AB1800C249A5 /* STStartSessionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STStartSessionCardView.swift; sourceTree = "<group>"; };
+		394B531D1DD7BCDF00C249A5 /* STAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STAPIClient.swift; sourceTree = "<group>"; };
 		39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+StreamIt.swift"; sourceTree = "<group>"; };
 		39E308C91DD63E2F00A1EA89 /* UIButton+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+StreamIt.swift"; sourceTree = "<group>"; };
 		39E308CA1DD63E2F00A1EA89 /* UIColor+StreamIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+StreamIt.swift"; sourceTree = "<group>"; };
@@ -142,6 +150,9 @@
 		39E308E31DD6461400A1EA89 /* STCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommon.h; sourceTree = "<group>"; };
 		39E308E41DD6461400A1EA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E308ED1DD6463900A1EA89 /* STConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STConstants.swift; sourceTree = "<group>"; };
+		39E308EF1DD677E600A1EA89 /* STTableCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableCardView.swift; sourceTree = "<group>"; };
+		39E308F21DD680DD00A1EA89 /* STJoinSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STJoinSessionViewController.swift; sourceTree = "<group>"; };
+		39E308F51DD6811200A1EA89 /* STSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSessionConfig.swift; sourceTree = "<group>"; };
 		3C2EB1801DD50F09000CC7FD /* STDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2EB1821DD50F09000CC7FD /* STDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STDatabase.h; sourceTree = "<group>"; };
 		3C2EB1831DD50F09000CC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				708623E61DD687AC006550DA /* STCommon.framework in Frameworks */,
+				D57C51219381B88520C50E8A /* Pods_STHTTPServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +259,8 @@
 			children = (
 				393F1A051DA2C89300A903DF /* STInitialViewController.swift */,
 				39E308D71DD6447900A1EA89 /* STInitialController.swift */,
+				39E308EF1DD677E600A1EA89 /* STTableCardView.swift */,
+				394B531A1DD7AB1800C249A5 /* STStartSessionCardView.swift */,
 			);
 			name = "Root UI";
 			sourceTree = "<group>";
@@ -294,13 +308,24 @@
 			children = (
 				393F1A031DA2C89300A903DF /* AppDelegate.swift */,
 				3924E7681DC7C7BD00B04C7F /* Root UI */,
+				39E308F11DD680C700A1EA89 /* Join Session */,
+				39E308F41DD6810200A1EA89 /* Session */,
 				39E308D41DD6424300A1EA89 /* Common Views */,
+				394B531C1DD7BCB400C249A5 /* API */,
 				39E308D91DD6447F00A1EA89 /* Bonjour */,
 				3924E75C1DC7C0FA00B04C7F /* Util */,
 				3924E7691DC7C7D200B04C7F /* Supporting Files */,
 				393F1A0A1DA2C89300A903DF /* Assets.xcassets */,
 			);
 			path = StreamIt;
+			sourceTree = "<group>";
+		};
+		394B531C1DD7BCB400C249A5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				394B531D1DD7BCDF00C249A5 /* STAPIClient.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		39E308D41DD6424300A1EA89 /* Common Views */ = {
@@ -327,6 +352,22 @@
 				39E308ED1DD6463900A1EA89 /* STConstants.swift */,
 			);
 			path = STCommon;
+			sourceTree = "<group>";
+		};
+		39E308F11DD680C700A1EA89 /* Join Session */ = {
+			isa = PBXGroup;
+			children = (
+				39E308F21DD680DD00A1EA89 /* STJoinSessionViewController.swift */,
+			);
+			name = "Join Session";
+			sourceTree = "<group>";
+		};
+		39E308F41DD6810200A1EA89 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				39E308F51DD6811200A1EA89 /* STSessionConfig.swift */,
+			);
+			name = Session;
 			sourceTree = "<group>";
 		};
 		3C2EB1811DD50F09000CC7FD /* STDatabase */ = {
@@ -555,7 +596,7 @@
 				TargetAttributes = {
 					393F19FF1DA2C89100A903DF = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = YWY79Y4UH2;
+						DevelopmentTeam = BF7URC6ZPU;
 						ProvisioningStyle = Automatic;
 					};
 					39E308E01DD6461400A1EA89 = {
@@ -566,6 +607,7 @@
 					};
 					3C2EB17F1DD50F09000CC7FD = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = BF7URC6ZPU;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -776,17 +818,22 @@
 				39E308DB1DD644B700A1EA89 /* STBonjourManager.swift in Sources */,
 				393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */,
 				39E308D31DD63E2F00A1EA89 /* UIView+StreamIt.swift in Sources */,
+				394B531B1DD7AB1800C249A5 /* STStartSessionCardView.swift in Sources */,
 				39E308D21DD63E2F00A1EA89 /* UILabel+StreamIt.swift in Sources */,
+				39E308F61DD6811200A1EA89 /* STSessionConfig.swift in Sources */,
 				3924E7651DC7C20500B04C7F /* (null) in Sources */,
 				39E308D81DD6447900A1EA89 /* STInitialController.swift in Sources */,
 				39E308D01DD63E2F00A1EA89 /* UIColor+StreamIt.swift in Sources */,
 				39E308D61DD6425700A1EA89 /* STGenericCardView.swift in Sources */,
+				39E308F31DD680DD00A1EA89 /* STJoinSessionViewController.swift in Sources */,
 				39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+StreamIt.swift in Sources */,
+				39E308F01DD677E600A1EA89 /* STTableCardView.swift in Sources */,
 				3924E7631DC7C1D200B04C7F /* (null) in Sources */,
 				3924E7671DC7C22400B04C7F /* (null) in Sources */,
 				39E308D11DD63E2F00A1EA89 /* UIImageView+StreamIt.swift in Sources */,
 				3924E75F1DC7C12000B04C7F /* (null) in Sources */,
 				39E308CF1DD63E2F00A1EA89 /* UIButton+StreamIt.swift in Sources */,
+				394B531E1DD7BCDF00C249A5 /* STAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,10 +1042,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = YWY79Y4UH2;
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
 				INFOPLIST_FILE = StreamIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.StreamIt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.StreamIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -1011,10 +1058,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = YWY79Y4UH2;
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
 				INFOPLIST_FILE = StreamIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.StreamIt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.StreamIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -1034,7 +1081,7 @@
 				INFOPLIST_FILE = STCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STCommon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.STCommon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1059,7 +1106,7 @@
 				INFOPLIST_FILE = STCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STCommon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.STCommon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 2.3;
@@ -1075,9 +1122,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1085,7 +1133,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STDatabase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.STDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1104,7 +1152,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = BF7URC6ZPU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1112,7 +1160,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STDatabase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.STDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 2.3;
@@ -1156,6 +1204,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BF7URC6ZPU;
@@ -1165,7 +1214,7 @@
 				INFOPLIST_FILE = STHTTPServer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STHTTPServer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.STHTTPServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1182,6 +1231,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = BF7URC6ZPU;
@@ -1191,7 +1241,7 @@
 				INFOPLIST_FILE = STHTTPServer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3004team.STHTTPServer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorhicks.STHTTPServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 2.3;
