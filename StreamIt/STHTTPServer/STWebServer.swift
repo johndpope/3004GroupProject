@@ -13,7 +13,7 @@ import STCommon
 public class STWebServer: NSObject {
     var server: GCDWebServer = GCDWebServer()
 
-    public static var DefaultInstance = STWebServer()
+    public static var defaultServer = STWebServer()
     
     public override init() {
         super.init()
