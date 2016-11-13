@@ -28,7 +28,7 @@ public class STPost: RLMObject {
     
  
     //function to add or update submission to realm
-    func addOrUpdateSubmission(newSubmission: STPost) {
+    func addOrUpdatePost(newSubmission: STPost) {
         if (newSubmission.uuid == nil) {
             newSubmission.uuid = NSUUID().UUIDString
         }
@@ -36,7 +36,7 @@ public class STPost: RLMObject {
     }
     
     //function to delete submission
-    func deleteSubmission(submission: STPost) {
+    func deletePost(submission: STPost) {
         if (submission.uuid != nil) {
             RLMRealm.defaultRealm().deleteObject(submission)
         } else {
@@ -46,36 +46,34 @@ public class STPost: RLMObject {
     
     
     //function returning entire collection
-    func collection() -> RLMResults {
+    func getAllPosts() -> RLMResults {
         return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: nil)
     }
 
     
     
     //function returning submissions marked as accepted
-    func getModSubmissions() -> RLMResults {
+    func getAllModeratedPosts() -> RLMResults {
         return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: NSPredicate(format: "mod_status = true"))
     }
     
     
     //function returning submissions ordered by acceptance time
-    func getSubmissionsAcceptanceTime() -> RLMResults {
+    func getPostsAcceptanceTimeSorted() -> RLMResults {
         return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: NSPredicate(format: "mod_status = true")).sortedResultsUsingProperty("mod_acceptance_time", ascending: false)
     }
     
     
     //function returning submissions marked as NOT accepted (sorted in order of most recent submission first)
-    func getUnacceptedSubmissions() -> RLMResults {
+    func getAllPostsToModerate() -> RLMResults {
         return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: NSPredicate(format: "mod_status = false")).sortedResultsUsingProperty("submission_time", ascending: false)
     }
     
-    
+    /*
     //function returning most submissions ordered by most recent unacceptance first
-    func getSubmissionsUnacceptanceTime() -> RLMResults {
+    func getPostUnacceptanceTime() -> RLMResults {
         return STPost.objectsInRealm(RLMRealm.defaultRealm(), withPredicate: NSPredicate(format: "mod_status = false")).sortedResultsUsingProperty("mod_acceptance_time", ascending: false)
     }
-    
-    
-    
+    */
     
 }

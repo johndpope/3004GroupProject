@@ -19,7 +19,7 @@ FOUNDATION_EXPORT const unsigned char STDatabaseVersionString[];
 
 //#import RealmSwift
 
-#import "STDatabase-Swift.h"
+//#import "STDatabase-Swift.h"
 
 //@interface STChromecastConfig
 //

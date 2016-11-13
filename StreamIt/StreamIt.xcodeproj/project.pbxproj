@@ -39,6 +39,7 @@
 		3C2EB1A11DD51C44000CC7FD /* STPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A01DD51C44000CC7FD /* STPosts.swift */; };
 		3C2EB1A31DD51C92000CC7FD /* STSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A21DD51C92000CC7FD /* STSession.swift */; };
 		3C2EB1A51DD65E6A000CC7FD /* STPostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A41DD65E6A000CC7FD /* STPostType.swift */; };
+		3C2EB1A71DD7D691000CC7FD /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A61DD7D691000CC7FD /* README.txt */; };
 		4D5F6453F9A2231BBDB81254 /* Pods_STDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA2CF1F9612C525051D598 /* Pods_STDatabase.framework */; };
 		79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		3C2EB1A01DD51C44000CC7FD /* STPosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPosts.swift; sourceTree = "<group>"; };
 		3C2EB1A21DD51C92000CC7FD /* STSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSession.swift; sourceTree = "<group>"; };
 		3C2EB1A41DD65E6A000CC7FD /* STPostType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPostType.swift; sourceTree = "<group>"; };
+		3C2EB1A61DD7D691000CC7FD /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E9F728CAFD55A632C93820 /* Pods-StreamIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 		3C2EB1811DD50F09000CC7FD /* STDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				3C2EB1A61DD7D691000CC7FD /* README.txt */,
 				3C2EB1821DD50F09000CC7FD /* STDatabase.h */,
 				3C2EB19E1DD51C24000CC7FD /* STClients.swift */,
 				3C2EB1A01DD51C44000CC7FD /* STPosts.swift */,
@@ -489,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2EB1A71DD7D691000CC7FD /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
