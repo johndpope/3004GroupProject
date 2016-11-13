@@ -51,6 +51,7 @@
 		708623DD1DD65F3E006550DA /* STHTTPServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708623C71DD65F3E006550DA /* STHTTPServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		708623E51DD6608B006550DA /* STWebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708623E41DD6608B006550DA /* STWebServer.swift */; };
 		708623E61DD687AC006550DA /* STCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* STCommon.framework */; };
+		708623E81DD7A9E6006550DA /* STRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708623E71DD7A9E6006550DA /* STRouter.swift */; };
 		79D8B8F55D5C3D11107972E4 /* Pods_StreamIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9B9EFD18A08555125E8EBB /* Pods_StreamIt.framework */; };
 		D57C51219381B88520C50E8A /* Pods_STHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41EFE0D40DDF8E25B2AE602 /* Pods_STHTTPServer.framework */; };
 /* End PBXBuildFile section */
@@ -170,6 +171,7 @@
 		708623D61DD65F3E006550DA /* STHTTPServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STHTTPServerTests.swift; sourceTree = "<group>"; };
 		708623D81DD65F3E006550DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		708623E41DD6608B006550DA /* STWebServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWebServer.swift; sourceTree = "<group>"; };
+		708623E71DD7A9E6006550DA /* STRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STRouter.swift; sourceTree = "<group>"; };
 		8DB6AA38F34DCB4587513AD0 /* Pods-StreamIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamIt/Pods-StreamIt.release.xcconfig"; sourceTree = "<group>"; };
 		A41EFE0D40DDF8E25B2AE602 /* Pods_STHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE093ACA7BA9954100D3697B /* Pods-STHTTPServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STHTTPServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STHTTPServer/Pods-STHTTPServer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 				708623C91DD65F3E006550DA /* STHTTPServer.h */,
 				708623CA1DD65F3E006550DA /* Info.plist */,
 				708623E41DD6608B006550DA /* STWebServer.swift */,
+				708623E71DD7A9E6006550DA /* STRouter.swift */,
 			);
 			path = STHTTPServer;
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				708623E51DD6608B006550DA /* STWebServer.swift in Sources */,
+				708623E81DD7A9E6006550DA /* STRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
