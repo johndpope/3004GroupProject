@@ -11,18 +11,15 @@ import Realm
 import CHCommon
 
 public class CHSession: RLMObject {
-    var session_name: NSString?
-    var session_pass: NSString?
-    var num_items_onscreen: Int8 = 0
-    var chromecast_id: CHChromecastConfig? //STChromecastConfig
-    var auto_mod: Bool?
+    public var session_name: NSString?
+    public var session_pass: NSString?
+    public var num_items_onscreen: Int8 = 0
+    public var chromecast_id: CHChromecastConfig? //STChromecastConfig
+    public var auto_mod: Bool?
     
-    override init() {
+    public override init() {
         super.init()
     }
-    
-    
-    
 }
 
 public class CHChromecastConfig : RLMObject {
