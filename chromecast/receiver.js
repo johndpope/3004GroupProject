@@ -25,13 +25,26 @@ messageBus.onMessage = function(event) {
 	var data = JSON.parse(event.data);
 
 	if (data.content) { // Is media message
-		$("#" + cells[cell]).css("background-image", "url("+data.src+")");
-		console.log("Adding image with url (" + data.src + ") into cell " + cells[cell]);
-		cell = (cell + 1) % num_cells;
+
 	} else if (data.settings) {
 		applySettings(data.settings);
 	}
 };
+
+function displayContent(content) {
+	$("#" + cells[cell]).css("background-image", "");
+	$("#" + cells[cell]).empty();
+
+	if (content.type == "image") {
+		$("#" + cells[cell]).css("background-image", "url("+data.src+")");
+		console.log("Adding image with url (" + data.src + ") into cell " + cells[cell]);
+	} else if (content.type == "text") {
+		$("#" + cells[cell]).append("<div><h1>" + content.src + "</h1></div>");
+		console.log("Adding text (" + data.src + ") into cell " + cells[cell]);
+	}
+
+	cell = (cell + 1) % num_cells;
+}
 
 function applySettings(settings) {
 	function gen_id(r, c) {
@@ -43,10 +56,8 @@ function applySettings(settings) {
 		var css = "";
 		css += "left:" + (c-1)*(100/Math.ceil(num_cells/2)) + "%;";
 		css += "width:" + 100/Math.ceil(num_cells/2) + "%;";
-		//css += "right:" + c*(100/Math.ceil(num_cells/2)) + "%;";
 		css += "top:" + ((r-1)*50).toString() + "%;";
 		css += "height:" + (num_cells > 1 ? 50 : 100) + "%;";
-		//css += "bottom:" + ((r*(-1)+2)*50).toString() + "%;";
 		console.log("css: " + css);
 
 		return "<div class='cell' id='" + id + "' style='" + css + "'></div>";
