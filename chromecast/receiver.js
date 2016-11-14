@@ -26,6 +26,7 @@ messageBus.onMessage = function(event) {
 
 	if (data.content) { // Is media message
 		$("#" + cells[cell]).css("background-image", "url("+data.src+")");
+		console.log("Adding image with url (" + data.src + ") into cell " + cells[cell]);
 		cell = (cell + 1) % num_cells;
 	} else if (data.settings) {
 		applySettings(data.settings);
