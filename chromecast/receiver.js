@@ -39,7 +39,7 @@ function displayContent(content) {
 		$("#" + cells[cell]).css("background-image", "url("+content.src+")");
 		console.log("Adding image with url (" + content.src + ") into cell " + cells[cell]);
 	} else if (content.type == "text") {
-		$("#" + cells[cell]).append("<div><h1>" + content.src + "</h1></div>");
+		$("#" + cells[cell]).append("<div><h1 class='cell-text'>" + content.src + "</h1></div>");
 		console.log("Adding text (" + content.src + ") into cell " + cells[cell]);
 	}
 

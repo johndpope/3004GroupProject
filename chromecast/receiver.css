@@ -5,6 +5,10 @@
 	background-position: center;
 }
 
+.cell-text {
+	color: white;
+}
+
 #password {
 
 }
