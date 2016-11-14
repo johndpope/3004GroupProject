@@ -14,26 +14,57 @@ window.castReceiverManager.onSenderConnected = function(senderID, userAgent) {
 	console.log("yolo");
 }
 
-// 
 var messageBus = window.castReceiverManager.getCastMessageBus(namespace);
 
-var corner = 0;
-var corners = ["topleft", "topright", "btmleft", "btmright"];
+var cell = 0;
+var num_cells = 4;
+var cells = [];
 
 messageBus.onMessage = function(event) {
 	var sender = event.senderId;
 	var data = JSON.parse(event.data);
 
 	if (data.content) { // Is media message
-		$("#" + corners[corner]).css("background-image", "url("+data.src+")");
-		//$("#" + corners[corner]).append(
-		//	"<" + data.content + " src='" + data.src + "'></" + data.content + ">");
-		corner = (corner + 1) % 4;
-	} else { // Is password setter message
-		$("#password").empty();
-		$("#password").append("Password: " + data.password);
+		$("#" + cells[cell]).css("background-image", "url("+data.src+")");
+		cell = (cell + 1) % 4;
+	} else if (data.settings) {
+		applySettings(data.settings);
 	}
 };
+
+function applySettings(settings) {
+	function gen_id(r, c) {
+		return r.toString() + "-" + c.toString();
+	}
+
+	function gen_div(r, c) { // css is wrong when num_cells=2
+		var id = gen_id(r, c);
+		var css = "";
+		css += "left:" + (c-1)*(100/Math.ceil(num_cells/2)) + "%;";
+		css += "right:" + c*(100/Math.ceil(num_cells/2)) + "%;";
+		css += "top:" + ((r-1)*50).toString() + "%;";
+		css += "bottom:" + ((r*(-1)+2)*50).toString() + "%;";
+		console.log("css: " + css);
+
+		return "<div class='cell' id='" + id + "' style='" + css + "'></div>";
+	}
+
+	$("#password").empty();
+	$("#password").append("Password: " + data.settings.password);
+
+	num_cells = data.settings.numcells;
+	cell = 0;
+	cells = [];
+
+	for (var i = 1; i <= 2 && i < num_cells; ++i) {
+		for (var j = 0; j < Math.ceil(num_cells/2) + 1; ++j) {
+			$("#media").append(gen_div(i, j+1));
+			cells.push(gen_id(i, j+1));
+		}
+	}
+}
+
+
 
 
 // Begin receiving messages from host phone.

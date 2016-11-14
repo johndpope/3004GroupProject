@@ -1,34 +1,6 @@
-.corner {
+.cell {
 	position: absolute;
 	background-size: cover;
-}
-
-#topleft {
-	left: 0;
-	right: 50%;
-	top: 0;
-	bottom: 50%;
-}
-
-#topright {
-	left: 50%;
-	right: 0;
-	top: 0;
-	bottom: 50%;
-}
-
-#btmleft {
-	left: 0;
-	right: 50%;
-	top: 50%;
-	bottom: 0;
-}
-
-#btmright {
-	left: 50%;
-	right: 0;
-	top: 50%;
-	bottom: 0;
 }
 
 #password {
