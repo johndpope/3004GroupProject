@@ -2,8 +2,8 @@ var host = null;
 var namespace = "urn:x-cast:com.chipmunk.chromecast";
 
 
-window.mediaElement = document.getElementById('media'); // likely not needed
-window.mediaManager = new cast.receiver.MediaManager(window.mediaElement); // potentially not needed.
+// window.mediaElement = document.getElementById('media'); // likely not needed
+// window.mediaManager = new cast.receiver.MediaManager(window.mediaElement); // potentially not needed.
 
 
 window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
