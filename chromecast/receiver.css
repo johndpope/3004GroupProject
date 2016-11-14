@@ -1,6 +1,7 @@
 .cell {
-	position: absolute;
+	position: fixed;
 	background-size: contain;
+	background-repeat: no-repeat; 
 }
 
 #password {
