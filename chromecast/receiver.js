@@ -36,11 +36,11 @@ function displayContent(content) {
 	$("#" + cells[cell]).empty();
 
 	if (content.type == "image") {
-		$("#" + cells[cell]).css("background-image", "url("+data.src+")");
-		console.log("Adding image with url (" + data.src + ") into cell " + cells[cell]);
+		$("#" + cells[cell]).css("background-image", "url("+content.src+")");
+		console.log("Adding image with url (" + content.src + ") into cell " + cells[cell]);
 	} else if (content.type == "text") {
 		$("#" + cells[cell]).append("<div><h1>" + content.src + "</h1></div>");
-		console.log("Adding text (" + data.src + ") into cell " + cells[cell]);
+		console.log("Adding text (" + content.src + ") into cell " + cells[cell]);
 	}
 
 	cell = (cell + 1) % num_cells;
