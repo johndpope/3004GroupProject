@@ -22,7 +22,7 @@ var corners = ["topleft", "topright", "btmleft", "btmright"];
 
 messageBus.onMessage = function(event) {
 	var sender = event.senderId;
-	var data = event.data;
+	var data = JSON.parse(event.data);
 
 	if (data.content) { // Is media message
 		$("#" + corners[corner]).append(
