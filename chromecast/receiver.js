@@ -42,9 +42,11 @@ function applySettings(settings) {
 		var id = gen_id(r, c);
 		var css = "";
 		css += "left:" + (c-1)*(100/Math.ceil(num_cells/2)) + "%;";
-		css += "right:" + c*(100/Math.ceil(num_cells/2)) + "%;";
+		css += "width:" + 100/Math.ceil(num_cells/2) + "%;";
+		//css += "right:" + c*(100/Math.ceil(num_cells/2)) + "%;";
 		css += "top:" + ((r-1)*50).toString() + "%;";
-		css += "bottom:" + ((r*(-1)+2)*50).toString() + "%;";
+		css += "height:" + (num_cells > 1 ? 50 : 100) + "%;";
+		//css += "bottom:" + ((r*(-1)+2)*50).toString() + "%;";
 		console.log("css: " + css);
 
 		return "<div class='cell' id='" + id + "' style='" + css + "'></div>";
