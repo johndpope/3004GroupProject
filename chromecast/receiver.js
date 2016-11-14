@@ -25,7 +25,7 @@ messageBus.onMessage = function(event) {
 	var data = JSON.parse(event.data);
 
 	if (data.content) { // Is media message
-
+		displayContent(data.content)
 	} else if (data.settings) {
 		applySettings(data.settings);
 	}
