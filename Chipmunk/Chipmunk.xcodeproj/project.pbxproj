@@ -46,6 +46,7 @@
 		3C2EB1A31DD51C92000CC7FD /* CHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A21DD51C92000CC7FD /* CHSession.swift */; };
 		3C2EB1A51DD65E6A000CC7FD /* CHPostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A41DD65E6A000CC7FD /* CHPostType.swift */; };
 		3C2EB1A71DD7D691000CC7FD /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A61DD7D691000CC7FD /* README.txt */; };
+		3C31425D1DD9610E00EC410D /* CHDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C31425C1DD9610E00EC410D /* CHDatabaseManager.swift */; };
 		4D5F6453F9A2231BBDB81254 /* Pods_CHDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA2CF1F9612C525051D598 /* Pods_CHDatabase.framework */; };
 		56C182E7354FEB22956E2B7D /* Pods_Chipmunk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFF88040901254FC185CFFF /* Pods_Chipmunk.framework */; };
 		708623D01DD65F3E006550DA /* CHHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708623C71DD65F3E006550DA /* CHHTTPServer.framework */; };
@@ -172,6 +173,7 @@
 		3C2EB1A21DD51C92000CC7FD /* CHSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHSession.swift; sourceTree = "<group>"; };
 		3C2EB1A41DD65E6A000CC7FD /* CHPostType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPostType.swift; sourceTree = "<group>"; };
 		3C2EB1A61DD7D691000CC7FD /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		3C31425C1DD9610E00EC410D /* CHDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHDatabaseManager.swift; sourceTree = "<group>"; };
 		3E9B9EFD18A08555125E8EBB /* Pods_Chipmunk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chipmunk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5589913EF18D95644D07C10C /* Pods-CHHTTPServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHHTTPServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CHHTTPServer/Pods-CHHTTPServer.debug.xcconfig"; sourceTree = "<group>"; };
 		5CFF88040901254FC185CFFF /* Pods_Chipmunk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chipmunk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +398,7 @@
 				3C2EB1A61DD7D691000CC7FD /* README.txt */,
 				3C2EB1821DD50F09000CC7FD /* CHDatabase.h */,
 				3C2EB19E1DD51C24000CC7FD /* CHClient.swift */,
+				3C31425C1DD9610E00EC410D /* CHDatabaseManager.swift */,
 				3C2EB1A01DD51C44000CC7FD /* CHPost.swift */,
 				3C2EB1A21DD51C92000CC7FD /* CHSession.swift */,
 				3C2EB1831DD50F09000CC7FD /* Info.plist */,
@@ -882,6 +885,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C2EB1A31DD51C92000CC7FD /* CHSession.swift in Sources */,
+				3C31425D1DD9610E00EC410D /* CHDatabaseManager.swift in Sources */,
 				3C2EB1A11DD51C44000CC7FD /* CHPost.swift in Sources */,
 				3C2EB19F1DD51C24000CC7FD /* CHClient.swift in Sources */,
 			);
