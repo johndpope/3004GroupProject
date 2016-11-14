@@ -22,7 +22,7 @@ public class CHPost: RLMObject {
     var mod_acceptance_time: NSDate? //time of acceptance from host
     
     
-    override init() {
+    public override init() {
         super.init()
     }
     

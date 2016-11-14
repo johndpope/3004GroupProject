@@ -10,20 +10,20 @@ import Foundation
 import Realm
 import CHCommon
 
-public class CHClients: RLMObject {
+public class CHClient: RLMObject {
     var username : String?
     var uuid : String?
     var session_id : String?
     var join_time : NSDate?
     
     
-    override init() {
+    public override init() {
         super.init()
     }
     
     
     //function adding new client
-    func addOrUpdateClient(newClient: CHClients) {
+    func addOrUpdateClient(newClient: CHClient) {
         if (newClient.uuid == nil) {
             newClient.uuid = NSUUID().UUIDString
         }
@@ -31,7 +31,7 @@ public class CHClients: RLMObject {
     }
     
     //function deleting client
-    func deleteClient(client: CHClients) {
+    func deleteClient(client: CHClient) {
         if (client.uuid != nil) {
             RLMRealm.defaultRealm().deleteObject(client)
         } else {

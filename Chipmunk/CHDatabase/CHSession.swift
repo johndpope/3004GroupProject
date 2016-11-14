@@ -17,7 +17,7 @@ public class CHSession: RLMObject {
     var chromecast_id: CHChromecastConfig? //STChromecastConfig
     var auto_mod: Bool?
     
-    override init() {
+    public override init() {
         super.init()
     }
     

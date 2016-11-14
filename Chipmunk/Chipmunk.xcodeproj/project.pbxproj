@@ -41,8 +41,8 @@
 		3C2EB1921DD50F09000CC7FD /* CHDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2EB1821DD50F09000CC7FD /* CHDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C2EB1951DD50F09000CC7FD /* CHDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* CHDatabase.framework */; };
 		3C2EB1961DD50F09000CC7FD /* CHDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* CHDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3C2EB19F1DD51C24000CC7FD /* CHClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB19E1DD51C24000CC7FD /* CHClients.swift */; };
-		3C2EB1A11DD51C44000CC7FD /* CHPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A01DD51C44000CC7FD /* CHPosts.swift */; };
+		3C2EB19F1DD51C24000CC7FD /* CHClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB19E1DD51C24000CC7FD /* CHClient.swift */; };
+		3C2EB1A11DD51C44000CC7FD /* CHPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A01DD51C44000CC7FD /* CHPost.swift */; };
 		3C2EB1A31DD51C92000CC7FD /* CHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A21DD51C92000CC7FD /* CHSession.swift */; };
 		3C2EB1A51DD65E6A000CC7FD /* CHPostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A41DD65E6A000CC7FD /* CHPostType.swift */; };
 		3C2EB1A71DD7D691000CC7FD /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C2EB1A61DD7D691000CC7FD /* README.txt */; };
@@ -167,8 +167,8 @@
 		3C2EB1881DD50F09000CC7FD /* CHDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2EB18F1DD50F09000CC7FD /* CHDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHDatabaseTests.swift; sourceTree = "<group>"; };
 		3C2EB1911DD50F09000CC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C2EB19E1DD51C24000CC7FD /* CHClients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHClients.swift; sourceTree = "<group>"; };
-		3C2EB1A01DD51C44000CC7FD /* CHPosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPosts.swift; sourceTree = "<group>"; };
+		3C2EB19E1DD51C24000CC7FD /* CHClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHClient.swift; sourceTree = "<group>"; };
+		3C2EB1A01DD51C44000CC7FD /* CHPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPost.swift; sourceTree = "<group>"; };
 		3C2EB1A21DD51C92000CC7FD /* CHSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHSession.swift; sourceTree = "<group>"; };
 		3C2EB1A41DD65E6A000CC7FD /* CHPostType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPostType.swift; sourceTree = "<group>"; };
 		3C2EB1A61DD7D691000CC7FD /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -336,7 +336,6 @@
 				3924E7691DC7C7D200B04C7F /* Supporting Files */,
 				393F1A0A1DA2C89300A903DF /* Assets.xcassets */,
 			);
-			name = Chipmunk;
 			path = Chipmunk;
 			sourceTree = "<group>";
 		};
@@ -372,7 +371,6 @@
 				39E308ED1DD6463900A1EA89 /* CHConstants.swift */,
 				3C2EB1A41DD65E6A000CC7FD /* CHPostType.swift */,
 			);
-			name = CHCommon;
 			path = CHCommon;
 			sourceTree = "<group>";
 		};
@@ -397,12 +395,11 @@
 			children = (
 				3C2EB1A61DD7D691000CC7FD /* README.txt */,
 				3C2EB1821DD50F09000CC7FD /* CHDatabase.h */,
-				3C2EB19E1DD51C24000CC7FD /* CHClients.swift */,
-				3C2EB1A01DD51C44000CC7FD /* CHPosts.swift */,
+				3C2EB19E1DD51C24000CC7FD /* CHClient.swift */,
+				3C2EB1A01DD51C44000CC7FD /* CHPost.swift */,
 				3C2EB1A21DD51C92000CC7FD /* CHSession.swift */,
 				3C2EB1831DD50F09000CC7FD /* Info.plist */,
 			);
-			name = CHDatabase;
 			path = CHDatabase;
 			sourceTree = "<group>";
 		};
@@ -412,7 +409,6 @@
 				3C2EB18F1DD50F09000CC7FD /* CHDatabaseTests.swift */,
 				3C2EB1911DD50F09000CC7FD /* Info.plist */,
 			);
-			name = CHDatabaseTests;
 			path = CHDatabaseTests;
 			sourceTree = "<group>";
 		};
@@ -437,7 +433,6 @@
 				708623E41DD6608B006550DA /* CHWebServer.swift */,
 				708623E71DD7A9E6006550DA /* CHRouter.swift */,
 			);
-			name = CHHTTPServer;
 			path = CHHTTPServer;
 			sourceTree = "<group>";
 		};
@@ -447,7 +442,6 @@
 				708623D61DD65F3E006550DA /* CHHTTPServerTests.swift */,
 				708623D81DD65F3E006550DA /* Info.plist */,
 			);
-			name = CHHTTPServerTests;
 			path = CHHTTPServerTests;
 			sourceTree = "<group>";
 		};
@@ -888,8 +882,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C2EB1A31DD51C92000CC7FD /* CHSession.swift in Sources */,
-				3C2EB1A11DD51C44000CC7FD /* CHPosts.swift in Sources */,
-				3C2EB19F1DD51C24000CC7FD /* CHClients.swift in Sources */,
+				3C2EB1A11DD51C44000CC7FD /* CHPost.swift in Sources */,
+				3C2EB19F1DD51C24000CC7FD /* CHClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
