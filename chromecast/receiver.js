@@ -25,8 +25,9 @@ messageBus.onMessage = function(event) {
 	var data = JSON.parse(event.data);
 
 	if (data.content) { // Is media message
-		$("#" + corners[corner]).append(
-			"<" + data.content + " src='" + data.src + "'></" + data.content + ">");
+		$("#" + corners[corner]).css("background-image", data.src);
+		//$("#" + corners[corner]).append(
+		//	"<" + data.content + " src='" + data.src + "'></" + data.content + ">");
 		corner = (corner + 1) % 4;
 	} else { // Is password setter message
 		$("#password").empty();
