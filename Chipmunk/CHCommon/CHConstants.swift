@@ -16,6 +16,14 @@ public func CHConstBonjourType() -> String {
 	return "_CHreamit._tcp"
 }
 
+public func CHConstCastAppID() -> String {
+	return "923CAEF8"
+}
+
+public func CHConstCastNamespace() -> String {
+	return "urn:x-cast:com.chipmunk.chromecast"
+}
+
 public func CHNotifBonjourServiceAdded() -> String {
 	return "com.CHreamit.serviceadded"
 }

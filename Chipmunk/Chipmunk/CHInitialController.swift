@@ -48,7 +48,7 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		let title = self.services[indexPath.row].name
 		
-		let sessionConfig = CHSessionConfig(title: title, service: self.services[indexPath.row])
+		let sessionConfig = CHSessionConfig(title: title, password: "", service: self.services[indexPath.row])
 		let joinSessionViewController = CHJoinSessionViewController(config: sessionConfig)
 		
 		if let del = self.delegate {
@@ -61,7 +61,10 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 
 // MARK - New Session Controller
 extension CHInitialController {
-	func startServerPressed() {
-		self.server.start()
+	func startSessionPressed(title: String, password: String) {
+		if let del = self.delegate {
+			let sessionConfig = CHSessionConfig(title: title, password: password, service: nil)
+			del.pushStartSessionViewController(CHStartSessionViewController(config: sessionConfig))
+		}
 	}
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		056C38AD3BFE6D68EF4BA143 /* Pods_CHHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDFE39EB11FE2F2BC20348B /* Pods_CHHTTPServer.framework */; };
+		2537A7AEC9B8228F5E2F55E8 /* Pods_CHCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C522FCA9172C58DEADA8670 /* Pods_CHCommon.framework */; };
 		3924E75F1DC7C12000B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		3924E7611DC7C1A600B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		3924E7631DC7C1D200B04C7F /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -20,6 +21,14 @@
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
 		394B531B1DD7AB1800C249A5 /* CHStartSessionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */; };
 		394B531E1DD7BCDF00C249A5 /* CHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */; };
+		39B4E34F1DD913F900B2AE0A /* CHChooseChromecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E34E1DD913F900B2AE0A /* CHChooseChromecastViewController.swift */; };
+		39B4E3531DDA486600B2AE0A /* CHBottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */; };
+		39B4E3551DDA499F00B2AE0A /* CHStartSessionCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B4E3541DDA499F00B2AE0A /* CHStartSessionCardView.xib */; };
+		39B4E3571DDA4FA400B2AE0A /* CHCastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E3561DDA4FA300B2AE0A /* CHCastManager.swift */; };
+		39B4E35A1DDA50D200B2AE0A /* CHCastChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E34C1DD9139B00B2AE0A /* CHCastChannel.swift */; };
+		39B4E35C1DDA648500B2AE0A /* CHStartSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E35B1DDA648500B2AE0A /* CHStartSessionViewController.swift */; };
+		39B4E35E1DDA649200B2AE0A /* CHStartSessionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B4E35D1DDA649200B2AE0A /* CHStartSessionView.xib */; };
+		39B4E35F1DDA68D100B2AE0A /* CHSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */; };
 		39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift */; };
 		39E308CF1DD63E2F00A1EA89 /* UIButton+Chipmunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C91DD63E2F00A1EA89 /* UIButton+Chipmunk.swift */; };
 		39E308D01DD63E2F00A1EA89 /* UIColor+Chipmunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308CA1DD63E2F00A1EA89 /* UIColor+Chipmunk.swift */; };
@@ -35,7 +44,6 @@
 		39E308EE1DD6463900A1EA89 /* CHConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308ED1DD6463900A1EA89 /* CHConstants.swift */; };
 		39E308F01DD677E600A1EA89 /* CHTableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308EF1DD677E600A1EA89 /* CHTableCardView.swift */; };
 		39E308F31DD680DD00A1EA89 /* ChJoinSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F21DD680DD00A1EA89 /* ChJoinSessionViewController.swift */; };
-		39E308F61DD6811200A1EA89 /* CHSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */; };
 		3C2EB1891DD50F09000CC7FD /* CHDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* CHDatabase.framework */; };
 		3C2EB1901DD50F09000CC7FD /* CHDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB18F1DD50F09000CC7FD /* CHDatabaseTests.swift */; };
 		3C2EB1921DD50F09000CC7FD /* CHDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2EB1821DD50F09000CC7FD /* CHDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -145,6 +153,13 @@
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHStartSessionCardView.swift; sourceTree = "<group>"; };
 		394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHAPIClient.swift; sourceTree = "<group>"; };
+		39B4E34C1DD9139B00B2AE0A /* CHCastChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHCastChannel.swift; path = ../Chipmunk/CHCastChannel.swift; sourceTree = "<group>"; };
+		39B4E34E1DD913F900B2AE0A /* CHChooseChromecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHChooseChromecastViewController.swift; sourceTree = "<group>"; };
+		39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHBottomBorderTextField.swift; sourceTree = "<group>"; };
+		39B4E3541DDA499F00B2AE0A /* CHStartSessionCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHStartSessionCardView.xib; sourceTree = "<group>"; };
+		39B4E3561DDA4FA300B2AE0A /* CHCastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHCastManager.swift; sourceTree = "<group>"; };
+		39B4E35B1DDA648500B2AE0A /* CHStartSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHStartSessionViewController.swift; sourceTree = "<group>"; };
+		39B4E35D1DDA649200B2AE0A /* CHStartSessionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHStartSessionView.xib; sourceTree = "<group>"; };
 		39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Chipmunk.swift"; sourceTree = "<group>"; };
 		39E308C91DD63E2F00A1EA89 /* UIButton+Chipmunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Chipmunk.swift"; sourceTree = "<group>"; };
 		39E308CA1DD63E2F00A1EA89 /* UIColor+Chipmunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Chipmunk.swift"; sourceTree = "<group>"; };
@@ -160,7 +175,7 @@
 		39E308ED1DD6463900A1EA89 /* CHConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHConstants.swift; sourceTree = "<group>"; };
 		39E308EF1DD677E600A1EA89 /* CHTableCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHTableCardView.swift; sourceTree = "<group>"; };
 		39E308F21DD680DD00A1EA89 /* ChJoinSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChJoinSessionViewController.swift; sourceTree = "<group>"; };
-		39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHSessionConfig.swift; sourceTree = "<group>"; };
+		39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHSessionConfig.swift; path = ../Chipmunk/CHSessionConfig.swift; sourceTree = "<group>"; };
 		3C2EB1801DD50F09000CC7FD /* CHDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CHDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2EB1821DD50F09000CC7FD /* CHDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHDatabase.h; sourceTree = "<group>"; };
 		3C2EB1831DD50F09000CC7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +188,7 @@
 		3C2EB1A41DD65E6A000CC7FD /* CHPostType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPostType.swift; sourceTree = "<group>"; };
 		3C2EB1A61DD7D691000CC7FD /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		3E9B9EFD18A08555125E8EBB /* Pods_Chipmunk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chipmunk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		471EF1C384C531953397F49F /* Pods-CHCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHCommon.release.xcconfig"; path = "Pods/Target Support Files/Pods-CHCommon/Pods-CHCommon.release.xcconfig"; sourceTree = "<group>"; };
 		5589913EF18D95644D07C10C /* Pods-CHHTTPServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHHTTPServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CHHTTPServer/Pods-CHHTTPServer.debug.xcconfig"; sourceTree = "<group>"; };
 		5CFF88040901254FC185CFFF /* Pods_Chipmunk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chipmunk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E9F728CAFD55A632C93820 /* Pods-Chipmunk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chipmunk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chipmunk/Pods-Chipmunk.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,10 +200,12 @@
 		708623D81DD65F3E006550DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		708623E41DD6608B006550DA /* CHWebServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHWebServer.swift; sourceTree = "<group>"; };
 		708623E71DD7A9E6006550DA /* CHRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHRouter.swift; sourceTree = "<group>"; };
+		7C522FCA9172C58DEADA8670 /* Pods_CHCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CHCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8788A1A44EF2129D02159656 /* Pods-CHDatabase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHDatabase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CHDatabase/Pods-CHDatabase.debug.xcconfig"; sourceTree = "<group>"; };
 		8DB6AA38F34DCB4587513AD0 /* Pods-Chipmunk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chipmunk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chipmunk/Pods-Chipmunk.release.xcconfig"; sourceTree = "<group>"; };
 		A41EFE0D40DDF8E25B2AE602 /* Pods_CHHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CHHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE093ACA7BA9954100D3697B /* Pods-CHHTTPServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHHTTPServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CHHTTPServer/Pods-CHHTTPServer.debug.xcconfig"; sourceTree = "<group>"; };
+		B221E6F06F00BEDACAAF625C /* Pods-CHCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHCommon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CHCommon/Pods-CHCommon.debug.xcconfig"; sourceTree = "<group>"; };
 		B8CA2CF1F9612C525051D598 /* Pods_CHDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CHDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9053D17A86D8C6A2A44351 /* Pods-Chipmunk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chipmunk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chipmunk/Pods-Chipmunk.release.xcconfig"; sourceTree = "<group>"; };
 		DDC37300F348130E5ADCA291 /* Pods-CHDatabase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHDatabase.release.xcconfig"; path = "Pods/Target Support Files/Pods-CHDatabase/Pods-CHDatabase.release.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +229,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2537A7AEC9B8228F5E2F55E8 /* Pods_CHCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +299,7 @@
 				39E308D71DD6447900A1EA89 /* CHInitialController.swift */,
 				39E308EF1DD677E600A1EA89 /* CHTableCardView.swift */,
 				394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */,
+				39B4E3541DDA499F00B2AE0A /* CHStartSessionCardView.xib */,
 			);
 			name = "Root UI";
 			sourceTree = "<group>";
@@ -328,15 +348,15 @@
 				393F1A031DA2C89300A903DF /* AppDelegate.swift */,
 				3924E7681DC7C7BD00B04C7F /* Root UI */,
 				39E308F11DD680C700A1EA89 /* Join Session */,
-				39E308F41DD6810200A1EA89 /* Session */,
+				39E308F41DD6810200A1EA89 /* Start Session */,
 				39E308D41DD6424300A1EA89 /* Common Views */,
 				394B531C1DD7BCB400C249A5 /* API */,
 				39E308D91DD6447F00A1EA89 /* Bonjour */,
+				39B4E34B1DD9137F00B2AE0A /* Chromecast */,
 				3924E75C1DC7C0FA00B04C7F /* Util */,
 				3924E7691DC7C7D200B04C7F /* Supporting Files */,
 				393F1A0A1DA2C89300A903DF /* Assets.xcassets */,
 			);
-			name = Chipmunk;
 			path = Chipmunk;
 			sourceTree = "<group>";
 		};
@@ -348,10 +368,28 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		39B4E34B1DD9137F00B2AE0A /* Chromecast */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Chromecast;
+			sourceTree = "<group>";
+		};
+		39B4E3581DDA505800B2AE0A /* Chromecast */ = {
+			isa = PBXGroup;
+			children = (
+				39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */,
+				39B4E3561DDA4FA300B2AE0A /* CHCastManager.swift */,
+				39B4E34C1DD9139B00B2AE0A /* CHCastChannel.swift */,
+			);
+			name = Chromecast;
+			sourceTree = "<group>";
+		};
 		39E308D41DD6424300A1EA89 /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
 				39E308D51DD6425700A1EA89 /* CHGenericCardView.swift */,
+				39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */,
 			);
 			name = "Common Views";
 			sourceTree = "<group>";
@@ -368,11 +406,11 @@
 			isa = PBXGroup;
 			children = (
 				39E308E31DD6461400A1EA89 /* CHCommon.h */,
+				39B4E3581DDA505800B2AE0A /* Chromecast */,
 				39E308E41DD6461400A1EA89 /* Info.plist */,
 				39E308ED1DD6463900A1EA89 /* CHConstants.swift */,
 				3C2EB1A41DD65E6A000CC7FD /* CHPostType.swift */,
 			);
-			name = CHCommon;
 			path = CHCommon;
 			sourceTree = "<group>";
 		};
@@ -384,12 +422,14 @@
 			name = "Join Session";
 			sourceTree = "<group>";
 		};
-		39E308F41DD6810200A1EA89 /* Session */ = {
+		39E308F41DD6810200A1EA89 /* Start Session */ = {
 			isa = PBXGroup;
 			children = (
-				39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */,
+				39B4E35B1DDA648500B2AE0A /* CHStartSessionViewController.swift */,
+				39B4E35D1DDA649200B2AE0A /* CHStartSessionView.xib */,
+				39B4E34E1DD913F900B2AE0A /* CHChooseChromecastViewController.swift */,
 			);
-			name = Session;
+			name = "Start Session";
 			sourceTree = "<group>";
 		};
 		3C2EB1811DD50F09000CC7FD /* CHDatabase */ = {
@@ -402,7 +442,6 @@
 				3C2EB1A21DD51C92000CC7FD /* CHSession.swift */,
 				3C2EB1831DD50F09000CC7FD /* Info.plist */,
 			);
-			name = CHDatabase;
 			path = CHDatabase;
 			sourceTree = "<group>";
 		};
@@ -412,7 +451,6 @@
 				3C2EB18F1DD50F09000CC7FD /* CHDatabaseTests.swift */,
 				3C2EB1911DD50F09000CC7FD /* Info.plist */,
 			);
-			name = CHDatabaseTests;
 			path = CHDatabaseTests;
 			sourceTree = "<group>";
 		};
@@ -425,6 +463,7 @@
 				F3706B376692C26940E4D5E1 /* Pods_CHDatabase.framework */,
 				0CDFE39EB11FE2F2BC20348B /* Pods_CHHTTPServer.framework */,
 				5CFF88040901254FC185CFFF /* Pods_Chipmunk.framework */,
+				7C522FCA9172C58DEADA8670 /* Pods_CHCommon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -437,7 +476,6 @@
 				708623E41DD6608B006550DA /* CHWebServer.swift */,
 				708623E71DD7A9E6006550DA /* CHRouter.swift */,
 			);
-			name = CHHTTPServer;
 			path = CHHTTPServer;
 			sourceTree = "<group>";
 		};
@@ -447,7 +485,6 @@
 				708623D61DD65F3E006550DA /* CHHTTPServerTests.swift */,
 				708623D81DD65F3E006550DA /* Info.plist */,
 			);
-			name = CHHTTPServerTests;
 			path = CHHTTPServerTests;
 			sourceTree = "<group>";
 		};
@@ -466,6 +503,8 @@
 				20A2954E0B294CCBC25E1D37 /* Pods-CHHTTPServer.release.xcconfig */,
 				168264D9A10D3A6B08B13162 /* Pods-Chipmunk.debug.xcconfig */,
 				DB9053D17A86D8C6A2A44351 /* Pods-Chipmunk.release.xcconfig */,
+				B221E6F06F00BEDACAAF625C /* Pods-CHCommon.debug.xcconfig */,
+				471EF1C384C531953397F49F /* Pods-CHCommon.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -528,10 +567,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39E308EA1DD6461400A1EA89 /* Build configuration list for PBXNativeTarget "CHCommon" */;
 			buildPhases = (
+				54B744C6FD11D2FEE928155A /* [CP] Check Pods Manifest.lock */,
 				39E308DC1DD6461400A1EA89 /* Sources */,
 				39E308DD1DD6461400A1EA89 /* Frameworks */,
 				39E308DE1DD6461400A1EA89 /* Headers */,
 				39E308DF1DD6461400A1EA89 /* Resources */,
+				7524E329E1DC0BD6F9AB8F29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -694,6 +735,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */,
+				39B4E35E1DDA649200B2AE0A /* CHStartSessionView.xib in Resources */,
+				39B4E3551DDA499F00B2AE0A /* CHStartSessionCardView.xib in Resources */,
 				393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */,
 				393F1A091DA2C89300A903DF /* Main.storyboard in Resources */,
 			);
@@ -783,6 +826,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chipmunk/Pods-Chipmunk-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		54B744C6FD11D2FEE928155A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7524E329E1DC0BD6F9AB8F29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CHCommon/Pods-CHCommon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		78E7A9962A9D87921A73F73E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -855,12 +928,13 @@
 				39E308DB1DD644B700A1EA89 /* CHBonjourManager.swift in Sources */,
 				393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */,
 				39E308D31DD63E2F00A1EA89 /* UIView+Chipmunk.swift in Sources */,
+				39B4E35C1DDA648500B2AE0A /* CHStartSessionViewController.swift in Sources */,
 				394B531B1DD7AB1800C249A5 /* CHStartSessionCardView.swift in Sources */,
 				39E308D21DD63E2F00A1EA89 /* UILabel+Chipmunk.swift in Sources */,
-				39E308F61DD6811200A1EA89 /* CHSessionConfig.swift in Sources */,
 				3924E7651DC7C20500B04C7F /* (null) in Sources */,
 				39E308D81DD6447900A1EA89 /* CHInitialController.swift in Sources */,
 				39E308D01DD63E2F00A1EA89 /* UIColor+Chipmunk.swift in Sources */,
+				39B4E34F1DD913F900B2AE0A /* CHChooseChromecastViewController.swift in Sources */,
 				39E308D61DD6425700A1EA89 /* CHGenericCardView.swift in Sources */,
 				39E308F31DD680DD00A1EA89 /* ChJoinSessionViewController.swift in Sources */,
 				39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift in Sources */,
@@ -871,6 +945,7 @@
 				3924E75F1DC7C12000B04C7F /* (null) in Sources */,
 				39E308CF1DD63E2F00A1EA89 /* UIButton+Chipmunk.swift in Sources */,
 				394B531E1DD7BCDF00C249A5 /* CHAPIClient.swift in Sources */,
+				39B4E3531DDA486600B2AE0A /* CHBottomBorderTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,6 +953,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B4E35F1DDA68D100B2AE0A /* CHSessionConfig.swift in Sources */,
+				39B4E3571DDA4FA400B2AE0A /* CHCastManager.swift in Sources */,
+				39B4E35A1DDA50D200B2AE0A /* CHCastChannel.swift in Sources */,
 				3C2EB1A51DD65E6A000CC7FD /* CHPostType.swift in Sources */,
 				39E308EE1DD6463900A1EA89 /* CHConstants.swift in Sources */,
 			);
@@ -1107,6 +1185,7 @@
 		};
 		39E308EB1DD6461400A1EA89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B221E6F06F00BEDACAAF625C /* Pods-CHCommon.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1132,6 +1211,7 @@
 		};
 		39E308EC1DD6461400A1EA89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 471EF1C384C531953397F49F /* Pods-CHCommon.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

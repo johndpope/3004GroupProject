@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## google-cast-sdk
+
+https://developers.google.com/terms/
+
 ## Realm
 
 TABLE OF CONTENTS

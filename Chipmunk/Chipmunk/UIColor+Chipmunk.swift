@@ -12,7 +12,7 @@ import UIKit
 extension UIColor {
 	
 	static func appTintColor() -> UIColor {
-		return UIColor(red: 0.3621, green: 0.1734, blue: 0.44115, alpha: 1)
+		return UIColor(red: 1, green: 0.45, blue: 0.0039, alpha: 1)
 	}
 	
 	static func dullGreyColor() -> UIColor {

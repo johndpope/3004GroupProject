@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CHCommon
 
 class CHJoinSessionViewController: UIViewController {
 	
@@ -34,7 +35,7 @@ class CHJoinSessionViewController: UIViewController {
 		
 		self.view.layoutSubviews()
 		
-		let APIClient = CHAPIClient(service: self.config.service)
+		let APIClient = CHAPIClient(service: self.config.service!)
 		APIClient.getRootURLString({(body: String) in
 			self.testLabel.text = body
 		})
