@@ -1,0 +1,27 @@
+#topleft {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#topright {
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+
+#btmleft {
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+
+#btmright {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+#password {
+	
+}
