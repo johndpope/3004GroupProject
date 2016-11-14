@@ -1,10 +1,4 @@
-var host = null;
 var namespace = "urn:x-cast:com.chipmunk.chromecast";
-
-
-// window.mediaElement = document.getElementById('media'); // likely not needed
-// window.mediaManager = new cast.receiver.MediaManager(window.mediaElement); // potentially not needed.
-
 
 window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 
@@ -23,10 +17,21 @@ window.castReceiverManager.onSenderConnected = function(senderID, userAgent) {
 // 
 var messageBus = window.castReceiverManager.getCastMessageBus(namespace);
 
+var corner = 0;
+var corners = ["topleft", "topright", "btmleft", "btmright"];
+
 messageBus.onMessage = function(event) {
 	var sender = event.senderId;
 	var data = event.data;
-	$("#media").append("<" + data.content + " src='" + data.src + "'></" + data.content + ">");
+
+	if (data.content) { // Is media message
+		$("#" + corners[corner]).append(
+			"<" + data.content + " src='" + data.src + "'></" + data.content + ">");
+		corner = (corner + 1) % 4;
+	} else { // Is password setter message
+		$("#password").empty();
+		$("#password").append("Password: " + data.password);
+	}
 };
 
 
