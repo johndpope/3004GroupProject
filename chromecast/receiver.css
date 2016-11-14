@@ -1,0 +1,27 @@
+.cell {
+	position: fixed;
+	background-size: contain;
+	background-repeat: no-repeat; 
+	background-position: center;
+}
+
+.cell-text {
+	color: white;
+}
+
+#title {
+	left: 0;
+	width: 50%;
+	top: 0;
+	height: 5%;
+	color: white;
+}
+
+#password {
+	left: 50%;
+	width: 50%;
+	top: 0;
+	height: 5%;
+	color: white;
+	float: right;
+}
