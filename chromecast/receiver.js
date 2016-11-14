@@ -25,10 +25,7 @@ window.castReceiverManager.onSenderConnected = function(senderID, userAgent) {
 }
 
 // 
-var messageBus = window.castReceiverManager.getCastMessageBus(
-    namespace,
-    cast.receiver.CastMessageBus.MessageType.JSON
-);
+var messageBus = window.castReceiverManager.getCastMessageBus(namespace);
 
 messageBus.onMessage = function(event) {
 	var sender = event.senderId;
