@@ -26,7 +26,8 @@ messageBus.onMessage = function(event) {
 
 	if (data.content) { // Is media message
 		$("#" + cells[cell]).css("background-image", "url("+data.src+")");
-		cell = (cell + 1) % 4;
+		console.log("Adding image with url (" + data.src + ") into cell " + cells[cell]);
+		cell = (cell + 1) % num_cells;
 	} else if (data.settings) {
 		applySettings(data.settings);
 	}
@@ -57,7 +58,7 @@ function applySettings(settings) {
 	cells = [];
 
 	for (var i = 1; i <= 2 && i < num_cells; ++i) {
-		for (var j = 0; j < Math.ceil(num_cells/2) + 1; ++j) {
+		for (var j = 0; j < Math.ceil(num_cells/2); ++j) {
 			$("#media").append(gen_div(i, j+1));
 			cells.push(gen_id(i, j+1));
 		}
