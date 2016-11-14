@@ -24,20 +24,8 @@ window.castReceiverManager.onSenderConnected = function(senderID, userAgent) {
 
 }
 
-
-
-
-// setInterval(function(){
-// 	$.getJSON(host, {}, function(data, status){
-// 		var type = (data.content === "img" ? "img" : "video");
-// 		$(".media").append("<" + type + " src='" + data.src + "'></" + type + ">");
-// 	});
-// }, 3000);
-
-
-
-
-var messageBus = castReceiverManager.getCastMessageBus(
+// 
+var messageBus = window.castReceiverManager.getCastMessageBus(
     namespace,
     cast.receiver.CastMessageBus.MessageType.JSON
 );
@@ -45,8 +33,7 @@ var messageBus = castReceiverManager.getCastMessageBus(
 messageBus.onMessage = function(event) {
 	var sender = event.senderId;
 	var data = event.data;
-	var type = (data.content === "img" ? "img" : "video");
-	$(".media").append("<" + type + " src='" + data.src + "'></" + type + ">");
+	$(".media").append("<" + data.content + " src='" + data.src + "'></" + data.content + ">");
 };
 
 
