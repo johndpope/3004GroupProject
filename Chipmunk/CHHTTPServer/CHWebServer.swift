@@ -10,7 +10,6 @@ import Foundation
 import GCDWebServer
 import CHCommon
 
-
 public class CHWebServer: NSObject {
     var server: GCDWebServer = GCDWebServer()
 
@@ -29,7 +28,9 @@ public class CHWebServer: NSObject {
         server.addHandlerForMethod("GET", path: "/",
                                    requestClass: GCDWebServerRequest.self,
                                    asyncProcessBlock: CHRouter.indexHandler())
-        
+
+        server.addHandlerForMethod("POST", path: "/client/register", requestClass: GCDWebServerDataRequest.self,
+                                   asyncProcessBlock: CHRouter.clientHandler())
         
         let options: [NSObject: AnyObject] =
             [GCDWebServerOption_BonjourName: CHConstBonjourName() + ".Jagger",
