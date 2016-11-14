@@ -4,7 +4,6 @@
 	right: 50%;
 	top: 0;
 	bottom: 50%;
-	background: yellow;
 }
 
 #topright {
@@ -13,7 +12,6 @@
 	right: 0;
 	top: 0;
 	bottom: 50%;
-	background: green;
 }
 
 #btmleft {
@@ -22,7 +20,6 @@
 	right: 50%;
 	top: 50%;
 	bottom: 0;
-	background: blue;
 }
 
 #btmright {
@@ -31,8 +28,6 @@
 	right: 0;
 	top: 50%;
 	bottom: 0;
-	background: red;
-
 }
 
 #password {
