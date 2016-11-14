@@ -1,4 +1,3 @@
-var bonjour = require('bonjour')([])
 var host = null;
 var namespace = "urn:x-cast:com.chipmunk.chromecast";
 
