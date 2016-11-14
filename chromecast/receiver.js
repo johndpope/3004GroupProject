@@ -56,7 +56,7 @@ function applySettings(settings) {
 		var css = "";
 		css += "left:" + (c-1)*(100/Math.ceil(num_cells/2)) + "%;";
 		css += "width:" + 100/Math.ceil(num_cells/2) + "%;";
-		css += "top:" + ((r-1)*50 + 2.5*r).toString() + "%;";
+		css += "top:" + ((r-1)*50 + 5/r).toString() + "%;";
 		css += "height:" + (num_cells > 1 ? 47.5 : 95) + "%;";
 		console.log("css: " + css);
 
