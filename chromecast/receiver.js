@@ -17,7 +17,7 @@ window.castReceiverManager.onSenderDisconnected = function(event) {
 }
 
 window.castReceiverManager.onSenderConnected = function(senderID, userAgent) {
-
+	console.log("yolo");
 }
 
 // 
