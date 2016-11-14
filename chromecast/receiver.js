@@ -50,9 +50,9 @@ function applySettings(settings) {
 	}
 
 	$("#password").empty();
-	$("#password").append("Password: " + data.settings.password);
+	$("#password").append("Password: " + settings.password);
 
-	num_cells = data.settings.numcells;
+	num_cells = settings.numcells;
 	cell = 0;
 	cells = [];
 
