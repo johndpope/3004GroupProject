@@ -2,8 +2,8 @@ var host = null;
 var namespace = "urn:x-cast:com.chipmunk.chromecast";
 
 
-window.mediaElement = document.getElementById('media'); // likely not needed
-window.mediaManager = new cast.receiver.MediaManager(window.mediaElement); // potentially not needed.
+// window.mediaElement = document.getElementById('media'); // likely not needed
+// window.mediaManager = new cast.receiver.MediaManager(window.mediaElement); // potentially not needed.
 
 
 window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
@@ -26,7 +26,7 @@ var messageBus = window.castReceiverManager.getCastMessageBus(namespace);
 messageBus.onMessage = function(event) {
 	var sender = event.senderId;
 	var data = event.data;
-	$(".media").append("<" + data.content + " src='" + data.src + "'></" + data.content + ">");
+	$("#media").append("<" + data.content + " src='" + data.src + "'></" + data.content + ">");
 };
 
 
