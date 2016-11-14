@@ -1,5 +1,6 @@
 var bonjour = require('bonjour')([])
 var host = null;
+var namespace = "urn:x-cast:com.chipmunk.chromecast";
 
 
 window.mediaElement = document.getElementById('media'); // likely not needed
@@ -26,16 +27,26 @@ window.castReceiverManager.onSenderConnected = function(senderID, userAgent) {
 
 
 
-setInterval(function(){
-	$.getJSON(host, {}, function(data, status){
-		var type = (data.content === "img" ? "img" : "video");
-		$(".media").append("<" + type + " src='" + data.src + "'></" + type + ">");
-	});
-}, 3000);
+// setInterval(function(){
+// 	$.getJSON(host, {}, function(data, status){
+// 		var type = (data.content === "img" ? "img" : "video");
+// 		$(".media").append("<" + type + " src='" + data.src + "'></" + type + ">");
+// 	});
+// }, 3000);
 
 
 
 
+var messageBus = castReceiverManager.getCastMessageBus(
+    namespace,
+    cast.receiver.CastMessageBus.MessageType.JSON
+);
 
+messageBus.onMessage = function(event) {
+	var sender = event.senderId;
+	var data = event.data;
+	var type = (data.content === "img" ? "img" : "video");
+	$(".media").append("<" + type + " src='" + data.src + "'></" + type + ">");
+};
 
 
