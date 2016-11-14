@@ -26,7 +26,7 @@ var messageBus = window.castReceiverManager.getCastMessageBus(namespace);
 messageBus.onMessage = function(event) {
 	var sender = event.senderId;
 	var data = event.data;
-	$(".media").append("<" + data.content + " src='" + data.src + "'></" + data.content + ">");
+	$("#media").append("<" + data.content + " src='" + data.src + "'></" + data.content + ">");
 };
 
 
