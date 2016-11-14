@@ -8,9 +8,6 @@ window.mediaManager = new cast.receiver.MediaManager(window.mediaElement); // po
 
 window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 
-// Begin receiving messages from host phone.
-window.castReceiverManager.start();
-
 // Handle host disconnecting from chromecast.
 window.castReceiverManager.onSenderDisconnected = function(event) {
 	if(window.castReceiverManager.getSenders().length == 0 &&
@@ -33,3 +30,5 @@ messageBus.onMessage = function(event) {
 };
 
 
+// Begin receiving messages from host phone.
+window.castReceiverManager.start();
