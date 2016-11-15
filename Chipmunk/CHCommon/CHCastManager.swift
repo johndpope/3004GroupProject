@@ -36,6 +36,10 @@ public class CHCastManager: NSObject, GCKDiscoveryManagerListener, GCKSessionMan
 		self.channel = CHCastChannel(namespace: CHConstCastNamespace())
 	}
 	
+	public func isConnected() -> Bool {
+		return self.sessionManager.hasConnectedCastSession()
+	}
+	
 	func startCastSessionFromSession(session: GCKSession) {
 		let options = GCKCastOptions(receiverApplicationID: CHConstCastAppID())
 		self.castSession = GCKCastSession(device: session.device, sessionID: session.sessionID, castOptions: options)
@@ -72,10 +76,18 @@ public class CHCastManager: NSObject, GCKDiscoveryManagerListener, GCKSessionMan
 		
 		session.addChannel(self.channel)
 		self.applySettings()
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifCastSessionStarted(), object: nil)
 	}
 	
 	public func sessionManager(sessionManager: GCKSessionManager, didEndSession session: GCKSession, withError error: NSError?) {
 		print("Disconnected with error: \(error?.localizedDescription)")
 		self.sessionManager.endSessionAndStopCasting(true)
+	}
+	
+	public func sessionManager(sessionManager: GCKSessionManager, didEndCastSession session: GCKCastSession, withError error: NSError?) {
+		print("Disconnected cast session")
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifCastSessionEnded(), object: nil)
 	}
 }

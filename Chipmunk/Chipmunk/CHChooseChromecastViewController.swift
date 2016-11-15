@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import GoogleCast
 import CHCommon
+import CHHTTPServer
 
 class CHChooseChromecastViewController: UIViewController {
 	var config: CHSessionConfig!
@@ -18,7 +19,7 @@ class CHChooseChromecastViewController: UIViewController {
 	var messageButton: UIButton!
 	var textButton: UIButton!
 	
-	let castManager = CHCastManager()
+	let castManager = CHCastManager.sharedManager
 	
 	let images = ["http://i.imgur.com/Ac3jwuN.jpg", "https://thumbs.gfycat.com/PepperyVillainousBedlingtonterrier-size_restricted.gif", "https://thumbs.gfycat.com/OrangeInexperiencedDachshund-size_restricted.gif", "https://i.reddituploads.com/f82a71d325984de8a523ba69102edbdc?fit=max&h=1536&w=1536&s=5ecc78fe352a22ee9ac3a9d7e254f94d", "http://i.imgur.com/coes6Pd.jpg"]
 	var imageIndex = 0
@@ -31,6 +32,9 @@ class CHChooseChromecastViewController: UIViewController {
 		
 		self.config = config
 		self.castManager.config = self.config
+		
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CHChooseChromecastViewController.startServer), name: CHNotifCastSessionStarted(), object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CHChooseChromecastViewController.stopServer), name: CHNotifCastSessionEnded(), object: nil)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -104,6 +108,14 @@ class CHChooseChromecastViewController: UIViewController {
 	
 	func showCastDialog() {
 		GCKCastContext.sharedInstance().presentCastDialog()
+	}
+	
+	func startServer() {
+		CHWebServer.defaultServer.start()
+	}
+	
+	func stopServer() {
+		//CHWebServer.defaultServer.stop()
 	}
 	
 	func sendMessage() {
