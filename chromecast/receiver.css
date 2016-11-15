@@ -7,6 +7,7 @@
 
 .cell-text {
 	color: white;
+	text-align: center;
 }
 
 #title {
@@ -25,6 +26,7 @@
 	top: 0;
 	color: white;
 	float: right;
+	padding-right: 2%;
 }
 
 #info {
