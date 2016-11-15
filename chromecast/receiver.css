@@ -13,7 +13,8 @@
 }
 
 #logo {
-	height: 6%;
+	height: 8%;
+	margin-top: -0.75%;
 	margin-left: 47%;
 	position: absolute;
 }
@@ -40,4 +41,12 @@
 
 #info {
 	height: 8%;
+}
+
+#footer {
+	z-index: -1000;
+	font-size: 0.8em;
+	position: fixed;
+	bottom: 4px;
+	color: rgba(255,255,255,0.4);
 }
