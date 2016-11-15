@@ -9,6 +9,8 @@
 import Foundation
 import GCDWebServer
 import CHCommon
+//import Realm
+import RealmSwift
 
 public class CHWebServer: NSObject {
     var server: GCDWebServer = GCDWebServer()
@@ -20,6 +22,16 @@ public class CHWebServer: NSObject {
     }
     
     public func start() {
+        
+        let config = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {}})
+        
+        Realm.Configuration.defaultConfiguration = config
+        _ = try! Realm()
+        
+        
         server.addDefaultHandlerForMethod("GET",
                                           requestClass: GCDWebServerRequest.self,
                                           asyncProcessBlock: CHRouter.defaultHandler())

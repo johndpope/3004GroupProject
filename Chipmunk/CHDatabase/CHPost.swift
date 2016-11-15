@@ -14,9 +14,9 @@ public class CHPost: RLMObject {
     public var uuid: String?
     public var post_type: CHPostType?
     public var body: NSString?
-    public var image_url: NSURL?
+    public var image_url: NSString?
     public var image_data: NSData?
-    public var video_url: NSURL?
+    public var video_url: NSString?
     public var mod_status: Bool?
     public var submission_time: NSDate?
     public var mod_acceptance_time: NSDate? //time of acceptance from host
