@@ -40,7 +40,10 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = UITableViewCell(style: .Default, reuseIdentifier: "")
 		
+		cell.backgroundColor = UIColor.darkBackgroundColor()
+		
 		cell.textLabel?.text = self.services[indexPath.row].name
+		cell.textLabel?.textColor = UIColor.whiteColor()
 		
 		return cell
 	}

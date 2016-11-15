@@ -22,6 +22,7 @@
 		394B531B1DD7AB1800C249A5 /* CHStartSessionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */; };
 		394B531E1DD7BCDF00C249A5 /* CHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */; };
 		396F52D81DDB675E008EA109 /* CHJoinSessionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396F52D71DDB675E008EA109 /* CHJoinSessionView.xib */; };
+		396F52DA1DDB9449008EA109 /* CHGradientContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396F52D91DDB9449008EA109 /* CHGradientContainerView.swift */; };
 		39B4E34F1DD913F900B2AE0A /* CHChooseChromecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E34E1DD913F900B2AE0A /* CHChooseChromecastViewController.swift */; };
 		39B4E3531DDA486600B2AE0A /* CHBottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */; };
 		39B4E3551DDA499F00B2AE0A /* CHStartSessionCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B4E3541DDA499F00B2AE0A /* CHStartSessionCardView.xib */; };
@@ -156,6 +157,7 @@
 		394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHStartSessionCardView.swift; sourceTree = "<group>"; };
 		394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHAPIClient.swift; sourceTree = "<group>"; };
 		396F52D71DDB675E008EA109 /* CHJoinSessionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHJoinSessionView.xib; sourceTree = "<group>"; };
+		396F52D91DDB9449008EA109 /* CHGradientContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHGradientContainerView.swift; sourceTree = "<group>"; };
 		39B4E34C1DD9139B00B2AE0A /* CHCastChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHCastChannel.swift; path = ../Chipmunk/CHCastChannel.swift; sourceTree = "<group>"; };
 		39B4E34E1DD913F900B2AE0A /* CHChooseChromecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHChooseChromecastViewController.swift; sourceTree = "<group>"; };
 		39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHBottomBorderTextField.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				39E308D51DD6425700A1EA89 /* CHGenericCardView.swift */,
+				396F52D91DDB9449008EA109 /* CHGradientContainerView.swift */,
 				39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */,
 			);
 			name = "Common Views";
@@ -953,6 +956,7 @@
 				39E308CF1DD63E2F00A1EA89 /* UIButton+Chipmunk.swift in Sources */,
 				394B531E1DD7BCDF00C249A5 /* CHAPIClient.swift in Sources */,
 				39B4E3531DDA486600B2AE0A /* CHBottomBorderTextField.swift in Sources */,
+				396F52DA1DDB9449008EA109 /* CHGradientContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
