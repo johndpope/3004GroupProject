@@ -9,6 +9,8 @@
 import Foundation
 import GCDWebServer
 import CHDatabase
+import SwiftyJSON
+import RealmSwift
 
 public class CHRouter : NSObject {
     
@@ -38,15 +40,23 @@ public class CHRouter : NSObject {
             guard let dataReq = request as? GCDWebServerDataRequest else {
                 return
             }
-            print(dataReq.data)
+            let json = JSON(data: dataReq.data)
+            print(json.description)
+
             let newClient = CHClient()
-            newClient.username = "Victor"
             
+            newClient.username = json.dictionary!["username"]?.description
+            newClient.session_id = NSUUID().UUIDString
+            newClient.join_time = NSDate()
             
-            print(request)
-          //  GCDWebServerDataRequest
-            completion(GCDWebServerDataResponse(JSONObject: ["test":123]))
+            let resjson = JSON(newClient)
+            print(resjson.description)
+            CHDatabaseManager.addOrUpdateClient(newClient)
+            print(CHDatabaseManager.allClients())
             
+           // GCDWebServerDataResponse(JSONObject: AnyObject!)
+            let dict: [String: String] = ["username": newClient.username!, "uuid": newClient.uuid!, "session_id": newClient.session_id!, "join_time": (newClient.join_time?.description)!]
+            completion(GCDWebServerDataResponse(JSONObject: dict))
         }
     }
 }

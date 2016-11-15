@@ -14,4 +14,6 @@ end
 
 target 'CHHTTPServer' do
   pod "GCDWebServer", "~> 3.0"
+  pod "RealmSwift"
+  pod "SwiftyJSON", "~> 2.3.3"
 end

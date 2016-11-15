@@ -10,16 +10,14 @@ import Foundation
 import Realm
 import CHCommon
 
-public class CHClient: RLMObject {
-    public var username : String?
-    public var uuid : String?
-    public var session_id : String?
-    public var join_time : NSDate?
+public class CHClient: Object {
+    public dynamic var username : String?
+    public dynamic var uuid : String?
+    public dynamic var session_id : String?
+    public dynamic var join_time : NSDate?
     
-    
-    public override init() {
-        super.init()
+    override public static func primaryKey() -> String? {
+        return "uuid"
     }
-    
 }
 

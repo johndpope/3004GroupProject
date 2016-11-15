@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double RealmSwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char RealmSwiftVersionString[];
+FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
 
