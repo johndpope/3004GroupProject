@@ -10,6 +10,7 @@
 }
 
 #title {
+	font-size: 20pt;
 	left: 0;
 	width: 50%;
 	top: 0;
@@ -18,6 +19,7 @@
 }
 
 #password {
+	font-size: 20pt;
 	left: 50%;
 	width: 50%;
 	top: 0;
