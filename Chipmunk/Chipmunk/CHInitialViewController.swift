@@ -23,13 +23,14 @@ class CHInitialViewController: UIViewController {
 		self.edgesForExtendedLayout = UIRectEdge.None
 		self.title = "Chipmunk"
 		
+		self.startCard = CHStartSessionCardView.buildFromNib("Start a Chipmunk Session", controller: self.controller)
+		self.view.addSubview(self.startCard)
+		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperView(self.startCard, topSpace: 20, sideSpace: 20))
+		
 		self.joinCard = CHTableCardView(title: "Join a Chipmunk Session", tableDelegate: self.controller)
 		self.view.addSubview(self.joinCard)
-		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperView(self.joinCard, topSpace: 20, sideSpace: 20))
+		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperViewBottom(self.joinCard, space: 20))
 		
-		self.startCard = CHStartSessionCardView(title: "Start a Chipmunk Session", controller: self.controller)
-		self.view.addSubview(self.startCard)
-		self.view.addConstraints(NSLayoutConstraint.constraintsPinningViewInsideSuperViewBottom(self.startCard, space: 20))
 		
 		self.view.addConstraints(self.generateCardHeightConstraints(self.joinCard, start: self.startCard))
 		
@@ -37,6 +38,10 @@ class CHInitialViewController: UIViewController {
 	}
 	
 	func pushJoinSessionViewController(viewController: CHJoinSessionViewController) {
+		self.navigationController?.pushViewController(viewController, animated: true)
+	}
+	
+	func pushStartSessionViewController(viewController: CHStartSessionViewController) {
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 	

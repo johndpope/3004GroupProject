@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CHStartSessionCardView" customModule="Chipmunk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="577" height="336"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-na-5Oz" userLabel="Name Label">
+                    <rect key="frame" x="20" y="60" width="109" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.13725490196078433" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Required" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-Fp-cD2" userLabel="Name Field">
+                    <rect key="frame" x="20" y="101" width="537" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTP-Cc-OAI" userLabel="Pass label">
+                    <rect key="frame" x="20" y="171" width="74" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.13725490196078433" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="riQ-LX-474" userLabel="Pass Field">
+                    <rect key="frame" x="20" y="212" width="537" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSi-sl-mcH">
+                    <rect key="frame" x="523" y="286" width="34" height="30"/>
+                    <state key="normal" title="Start"/>
+                    <connections>
+                        <action selector="startSessionPressed" destination="iN0-l3-epB" eventType="touchUpInside" id="vLq-B3-qMf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EdF-Fp-cD2" firstAttribute="top" secondItem="Gin-na-5Oz" secondAttribute="bottom" constant="20" id="3GL-xE-jWT"/>
+                <constraint firstItem="riQ-LX-474" firstAttribute="top" secondItem="kTP-Cc-OAI" secondAttribute="bottom" constant="20" id="3pZ-DW-nEq"/>
+                <constraint firstAttribute="trailing" secondItem="riQ-LX-474" secondAttribute="trailing" constant="20" id="4Mz-DH-5RE"/>
+                <constraint firstItem="kTP-Cc-OAI" firstAttribute="top" secondItem="EdF-Fp-cD2" secondAttribute="bottom" constant="40" id="ApV-LW-rJM"/>
+                <constraint firstItem="Gin-na-5Oz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="KF1-5a-L2H"/>
+                <constraint firstItem="kTP-Cc-OAI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="LFf-0e-uNF"/>
+                <constraint firstItem="EdF-Fp-cD2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="QHB-Jn-jIM"/>
+                <constraint firstItem="riQ-LX-474" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="r0i-BS-dwY"/>
+                <constraint firstAttribute="trailing" secondItem="EdF-Fp-cD2" secondAttribute="trailing" constant="20" id="rjS-Va-lvI"/>
+                <constraint firstItem="PSi-sl-mcH" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-20" id="v6i-8f-Eqr"/>
+                <constraint firstItem="Gin-na-5Oz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="xo7-Xd-6m4"/>
+                <constraint firstItem="PSi-sl-mcH" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="-20" id="zB6-X8-ASq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="nameField" destination="EdF-Fp-cD2" id="hI7-Tv-BrH"/>
+                <outlet property="passField" destination="riQ-LX-474" id="fad-d7-dRC"/>
+            </connections>
+            <point key="canvasLocation" x="134.5" y="-112"/>
+        </view>
+    </objects>
+</document>

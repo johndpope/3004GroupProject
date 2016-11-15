@@ -11,45 +11,26 @@ import UIKit
 
 class CHStartSessionCardView: CHGenericCardView {
 	
-	var startButton: UIButton!
 	var controller: CHInitialController!
 	
-	init(title: String, controller: CHInitialController) {
-		super.init(title: title)
+	@IBOutlet weak var nameField: UITextField!
+	@IBOutlet weak var passField: UITextField!
+	
+	static func buildFromNib(title: String, controller: CHInitialController) -> CHStartSessionCardView {
+		let nib = UINib(nibName: "CHStartSessionCardView", bundle: nil).instantiateWithOwner(nil, options: nil)
+		let card = nib.first as! CHStartSessionCardView
 		
-		self.controller = controller
+		card.controller = controller
+		card.titleLabel.text = title
 		
-		self.startButton = self.generateStartButton()
-		self.addSubview(self.startButton)
-		self.addConstraints(self.generateInitialConstraints(self.startButton))
+		return card
 	}
 	
-	func startServerPressed(sender: UIButton) {
-		self.controller.startServerPressed()
-	}
-	
-	func generateStartButton() -> UIButton {
-		let butt = UIButton(frame: CGRectZero)
-		
-		butt.translatesAutoresizingMaskIntoConstraints = false
-		butt.setTitle("Start Server", forState: .Normal)
-		butt.setTitleColor(UIColor.appTintColor(), forState: .Normal)
-		
-		butt.addTarget(self, action: #selector(CHStartSessionCardView.startServerPressed(_:)), forControlEvents: .TouchUpInside)
-		
-		return butt
-	}
-	
-	func generateInitialConstraints(start: UIButton) -> [NSLayoutConstraint] {
-		var constraints = [NSLayoutConstraint]()
-		
-		constraints.append(NSLayoutConstraint(item: start, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
-		constraints.append(NSLayoutConstraint(item: start, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
-		
-		return constraints
+	@IBAction func startSessionPressed() {
+		self.controller.startSessionPressed(self.nameField.text!, password: self.passField.text!)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+		super.init(coder: aDecoder)
 	}
 }
