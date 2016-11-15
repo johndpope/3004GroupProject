@@ -67,7 +67,7 @@ function applySettings(settings) {
 	$("#title").append(settings.title);
 
 	$("#password").empty();
-	if (settings.password !== "" || settings !== undefined) {
+	if (settings.password.length > 0) {
 		$("#password").append("Password: " + settings.password);
 	}
 
