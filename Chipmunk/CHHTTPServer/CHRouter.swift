@@ -9,6 +9,7 @@
 import Foundation
 import GCDWebServer
 import CHDatabase
+import CHCommon
 import SwiftyJSON
 import RealmSwift
 
@@ -41,21 +42,37 @@ public class CHRouter : NSObject {
                 return
             }
             let json = JSON(data: dataReq.data)
-            print(json.description)
-
             let newClient = CHClient()
             
-            newClient.username = json.dictionary!["username"]?.description
+            newClient.username = json.dictionary!["username"]?.string
             newClient.session_id = NSUUID().UUIDString
             newClient.join_time = NSDate()
             
-            let resjson = JSON(newClient)
-            print(resjson.description)
             CHDatabaseManager.addOrUpdateClient(newClient)
-            print(CHDatabaseManager.allClients())
             
-           // GCDWebServerDataResponse(JSONObject: AnyObject!)
-            let dict: [String: String] = ["username": newClient.username!, "uuid": newClient.uuid!, "session_id": newClient.session_id!, "join_time": (newClient.join_time?.description)!]
+            let dict: [String: String] = ["username": newClient.username!,
+                                          "uuid": newClient.uuid!,
+                                          "session_id": newClient.session_id!,
+                                          "join_time": (newClient.join_time?.description)!]
+            
+            completion(GCDWebServerDataResponse(JSONObject: dict))
+        }
+    }
+    
+    static func postHandler() -> GCDWebServerAsyncProcessBlock {
+        return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
+            guard let dataReq = request as? GCDWebServerDataRequest else {
+                return
+            }
+            let json = JSON(data: dataReq.data)
+            CHPostType.text
+            
+            // at some point we'll need to check this so we don't break everything on each bad req
+            // json.dictionaryObject?.contains(<#T##predicate: ((String, AnyObject)) throws -> Bool##((String, AnyObject)) throws -> Bool#>)
+            
+            let dict: [String: AnyObject] = ["body": (json.dictionary!["body"]?.string)!,
+                                             "post_type": (json.dictionary!["post_type"]?.int)!]
+            
             completion(GCDWebServerDataResponse(JSONObject: dict))
         }
     }
