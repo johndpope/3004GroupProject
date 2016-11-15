@@ -28,9 +28,10 @@ class CHGenericCardView: UIView {
 	func setup(title: String?) {
 		self.translatesAutoresizingMaskIntoConstraints = false
 		
-		self.layer.borderWidth = 0.7
 		self.layer.cornerRadius = 4
-		self.layer.borderColor = UIColor.dullGreyColor().CGColor
+		self.clipsToBounds = true
+		
+		self.backgroundColor = UIColor.darkBackgroundColor()
 		
 		self.titleLabel = self.generateTitleView((title != nil) ? title! : "")
 		
@@ -41,6 +42,7 @@ class CHGenericCardView: UIView {
 	
 	func generateTitleView(title: String) -> UILabel {
 		let label = UILabel.st_flexibleTitleLabel(title)
+		label.textColor = UIColor.lightForegroundColor()
 		
 		return label
 	}
