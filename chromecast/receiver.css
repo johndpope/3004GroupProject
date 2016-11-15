@@ -3,11 +3,19 @@
 	background-size: contain;
 	background-repeat: no-repeat; 
 	background-position: center;
+	padding: 8px;
 }
 
 .cell-text {
 	color: white;
 	text-align: center;
+	border: 1%;
+}
+
+#logo {
+	height: 6%;
+	margin-left: 47%;
+	position: absolute;
 }
 
 #title {
@@ -16,6 +24,7 @@
 	width: 50%;
 	top: 0;
 	color: white;
+	padding-left: 0.5;
 }
 
 #password {
@@ -26,7 +35,7 @@
 	top: 0;
 	color: white;
 	float: right;
-	padding-right: 2%;
+	padding-right: 0.5%;
 }
 
 #info {
