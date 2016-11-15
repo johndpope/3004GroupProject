@@ -9,11 +9,11 @@
 import Foundation
 
 public func CHConstBonjourName() -> String {
-	return "com.CHreamit.httpserver"
+	return "com.chipmunk.httpserver"
 }
 
 public func CHConstBonjourType() -> String {
-	return "_CHreamit._tcp"
+	return "_chipmunk._tcp"
 }
 
 public func CHConstCastAppID() -> String {
@@ -25,9 +25,17 @@ public func CHConstCastNamespace() -> String {
 }
 
 public func CHNotifBonjourServiceAdded() -> String {
-	return "com.CHreamit.serviceadded"
+	return "com.chipmunk.serviceadded"
 }
 
 public func CHNotifBonjourServiceRemoved() -> String {
-	return "com.CHreamit.serviceremoved"
+	return "com.chipmunk.serviceremoved"
+}
+
+public func CHNotifCastSessionStarted() -> String {
+	return "com.chipmunk.caststarted"
+}
+
+public func CHNotifCastSessionEnded() -> String {
+	return "com.chipmunk.castended"
 }

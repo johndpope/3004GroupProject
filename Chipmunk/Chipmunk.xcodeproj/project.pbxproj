@@ -21,6 +21,7 @@
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
 		394B531B1DD7AB1800C249A5 /* CHStartSessionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */; };
 		394B531E1DD7BCDF00C249A5 /* CHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */; };
+		396F52D81DDB675E008EA109 /* CHJoinSessionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396F52D71DDB675E008EA109 /* CHJoinSessionView.xib */; };
 		39B4E34F1DD913F900B2AE0A /* CHChooseChromecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E34E1DD913F900B2AE0A /* CHChooseChromecastViewController.swift */; };
 		39B4E3531DDA486600B2AE0A /* CHBottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */; };
 		39B4E3551DDA499F00B2AE0A /* CHStartSessionCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B4E3541DDA499F00B2AE0A /* CHStartSessionCardView.xib */; };
@@ -43,7 +44,7 @@
 		39E308E91DD6461400A1EA89 /* CHCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39E308E11DD6461400A1EA89 /* CHCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39E308EE1DD6463900A1EA89 /* CHConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308ED1DD6463900A1EA89 /* CHConstants.swift */; };
 		39E308F01DD677E600A1EA89 /* CHTableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308EF1DD677E600A1EA89 /* CHTableCardView.swift */; };
-		39E308F31DD680DD00A1EA89 /* ChJoinSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F21DD680DD00A1EA89 /* ChJoinSessionViewController.swift */; };
+		39E308F31DD680DD00A1EA89 /* CHJoinSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F21DD680DD00A1EA89 /* CHJoinSessionViewController.swift */; };
 		3C2EB1891DD50F09000CC7FD /* CHDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EB1801DD50F09000CC7FD /* CHDatabase.framework */; };
 		3C2EB1901DD50F09000CC7FD /* CHDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2EB18F1DD50F09000CC7FD /* CHDatabaseTests.swift */; };
 		3C2EB1921DD50F09000CC7FD /* CHDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2EB1821DD50F09000CC7FD /* CHDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -154,6 +155,7 @@
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHStartSessionCardView.swift; sourceTree = "<group>"; };
 		394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHAPIClient.swift; sourceTree = "<group>"; };
+		396F52D71DDB675E008EA109 /* CHJoinSessionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHJoinSessionView.xib; sourceTree = "<group>"; };
 		39B4E34C1DD9139B00B2AE0A /* CHCastChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHCastChannel.swift; path = ../Chipmunk/CHCastChannel.swift; sourceTree = "<group>"; };
 		39B4E34E1DD913F900B2AE0A /* CHChooseChromecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHChooseChromecastViewController.swift; sourceTree = "<group>"; };
 		39B4E3521DDA486600B2AE0A /* CHBottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHBottomBorderTextField.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 		39E308E41DD6461400A1EA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E308ED1DD6463900A1EA89 /* CHConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHConstants.swift; sourceTree = "<group>"; };
 		39E308EF1DD677E600A1EA89 /* CHTableCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHTableCardView.swift; sourceTree = "<group>"; };
-		39E308F21DD680DD00A1EA89 /* ChJoinSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChJoinSessionViewController.swift; sourceTree = "<group>"; };
+		39E308F21DD680DD00A1EA89 /* CHJoinSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHJoinSessionViewController.swift; sourceTree = "<group>"; };
 		39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHSessionConfig.swift; path = ../Chipmunk/CHSessionConfig.swift; sourceTree = "<group>"; };
 		3C2EB1801DD50F09000CC7FD /* CHDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CHDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2EB1821DD50F09000CC7FD /* CHDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHDatabase.h; sourceTree = "<group>"; };
@@ -419,7 +421,8 @@
 		39E308F11DD680C700A1EA89 /* Join Session */ = {
 			isa = PBXGroup;
 			children = (
-				39E308F21DD680DD00A1EA89 /* ChJoinSessionViewController.swift */,
+				39E308F21DD680DD00A1EA89 /* CHJoinSessionViewController.swift */,
+				396F52D71DDB675E008EA109 /* CHJoinSessionView.xib */,
 			);
 			name = "Join Session";
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 			files = (
 				393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */,
 				39B4E35E1DDA649200B2AE0A /* CHStartSessionView.xib in Resources */,
+				396F52D81DDB675E008EA109 /* CHJoinSessionView.xib in Resources */,
 				39B4E3551DDA499F00B2AE0A /* CHStartSessionCardView.xib in Resources */,
 				393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */,
 				393F1A091DA2C89300A903DF /* Main.storyboard in Resources */,
@@ -939,7 +943,7 @@
 				39E308D01DD63E2F00A1EA89 /* UIColor+Chipmunk.swift in Sources */,
 				39B4E34F1DD913F900B2AE0A /* CHChooseChromecastViewController.swift in Sources */,
 				39E308D61DD6425700A1EA89 /* CHGenericCardView.swift in Sources */,
-				39E308F31DD680DD00A1EA89 /* ChJoinSessionViewController.swift in Sources */,
+				39E308F31DD680DD00A1EA89 /* CHJoinSessionViewController.swift in Sources */,
 				39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift in Sources */,
 				39E308F01DD677E600A1EA89 /* CHTableCardView.swift in Sources */,
 				3924E7631DC7C1D200B04C7F /* (null) in Sources */,
