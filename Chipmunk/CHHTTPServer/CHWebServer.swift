@@ -41,8 +41,13 @@ public class CHWebServer: NSObject {
                                    requestClass: GCDWebServerRequest.self,
                                    asyncProcessBlock: CHRouter.indexHandler())
 
-        server.addHandlerForMethod("POST", path: "/client/register", requestClass: GCDWebServerDataRequest.self,
+        server.addHandlerForMethod("POST", path: "/client/register",
+                                   requestClass: GCDWebServerDataRequest.self,
                                    asyncProcessBlock: CHRouter.clientHandler())
+
+        server.addHandlerForMethod("POST", path: "/post",
+                                   requestClass: GCDWebServerDataRequest.self,
+                                   asyncProcessBlock: CHRouter.postHandler())
         
         let options: [NSObject: AnyObject] =
             [GCDWebServerOption_BonjourName: CHConstBonjourName() + ".Jagger",
