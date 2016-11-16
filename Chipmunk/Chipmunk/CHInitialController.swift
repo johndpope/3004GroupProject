@@ -52,7 +52,7 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 		let title = self.services[indexPath.row].name
 		
 		let sessionConfig = CHSessionConfig(title: title, password: "", service: self.services[indexPath.row])
-		let joinSessionViewController = CHJoinSessionViewController(config: sessionConfig)
+		let joinSessionViewController = CHPostContentViewController(config: sessionConfig)
 		
 		if let del = self.delegate {
 			del.pushJoinSessionViewController(joinSessionViewController)

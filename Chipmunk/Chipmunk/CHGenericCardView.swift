@@ -43,6 +43,7 @@ class CHGenericCardView: UIView {
 	func generateTitleView(title: String) -> UILabel {
 		let label = UILabel.st_flexibleTitleLabel(title)
 		label.textColor = UIColor.lightForegroundColor()
+		label.font = UIFont.boldSystemFontOfSize(18)
 		
 		return label
 	}

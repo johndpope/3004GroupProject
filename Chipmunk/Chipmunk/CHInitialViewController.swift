@@ -16,6 +16,8 @@ class CHInitialViewController: UIViewController {
 	
 	var controller: CHInitialController!
 	
+	var navLogo: UIImageView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -44,11 +46,23 @@ class CHInitialViewController: UIViewController {
 		self.view.layoutSubviews()
 	}
 	
-	func pushJoinSessionViewController(viewController: CHJoinSessionViewController) {
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		self.animateNavLogoCenter()
+	}
+	
+	override func viewWillDisappear(animated: Bool) {
+		super.viewWillDisappear(animated)
+		
+		self.animateNavLogoRight()
+	}
+	
+	func pushJoinSessionViewController(viewController: CHPostContentViewController) {
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 	
 	func pushStartSessionViewController(viewController: CHStartSessionViewController) {
+		self.view.endEditing(true)
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 	
@@ -62,10 +76,22 @@ class CHInitialViewController: UIViewController {
 	}
 	
 	func addLogoToNav() {
-		let logo = UIImageView(frame: CGRect(x: self.view.frame.width/2 - 25, y: -5, width: 50, height: 50))
-		logo.image = UIImage(named: "chipmunk-white")
+		self.navLogo = UIImageView(frame: CGRect(x: self.view.frame.width/2 - 25, y: -5, width: 50, height: 50))
+		self.navLogo.image = UIImage(named: "chipmunk-white")
 		
-		self.navigationController?.navigationBar.addSubview(logo)
+		self.navigationController?.navigationBar.addSubview(self.navLogo)
+	}
+	
+	func animateNavLogoRight() {
+		UIView.animateWithDuration(0.5, animations: {() in
+			self.navLogo.frame = CGRect(x: self.view.frame.width - 60, y: -5, width: 50, height: 50)
+		})
+	}
+	
+	func animateNavLogoCenter() {
+		UIView.animateWithDuration(0.5, animations: {() in
+			self.navLogo.frame = CGRect(x: self.view.frame.width/2 - 25, y: -5, width: 50, height: 50)
+		})
 	}
 	
 	override func didReceiveMemoryWarning() {
