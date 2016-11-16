@@ -24,6 +24,11 @@ class CHStartSessionCardView: CHGenericCardView {
 		card.controller = controller
 		card.titleLabel.text = title
 		
+		card.nameField.textColor = UIColor.whiteColor()
+		card.nameField.delegate = card
+		card.passField.textColor = UIColor.whiteColor()
+		card.passField.delegate = card
+		
 		card.configureStartButton()
 		
 		return card
@@ -49,10 +54,28 @@ class CHStartSessionCardView: CHGenericCardView {
 	}
 	
 	func startSessionPressed() {
+		if (self.nameField.text == "") {
+			self.nameField.st_shake()
+			return
+		}
+		
 		self.controller.startSessionPressed(self.nameField.text!, password: self.passField.text!)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+	}
+}
+
+extension CHStartSessionCardView: UITextFieldDelegate {
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		if (textField == self.nameField) {
+			self.passField.becomeFirstResponder()
+		}
+		else {
+			self.startSessionPressed()
+		}
+		
+		return false
 	}
 }
