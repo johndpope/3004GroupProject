@@ -16,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-na-5Oz" userLabel="Name Label">
-                    <rect key="frame" x="15" y="70" width="109" height="21"/>
+                    <rect key="frame" x="15" y="60" width="109" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Required" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-Fp-cD2" userLabel="Name Field" customClass="CHBottomBorderTextField" customModule="Chipmunk" customModuleProvider="target">
-                    <rect key="frame" x="15" y="96" width="547" height="40"/>
+                    <rect key="frame" x="15" y="86" width="547" height="40"/>
                     <color key="tintColor" red="1" green="0.44705882349999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="qDm-tL-1pL"/>
@@ -32,13 +32,13 @@
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTP-Cc-OAI" userLabel="Pass label">
-                    <rect key="frame" x="15" y="156" width="74" height="21"/>
+                    <rect key="frame" x="15" y="146" width="74" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="riQ-LX-474" userLabel="Pass Field" customClass="CHBottomBorderTextField" customModule="Chipmunk" customModuleProvider="target">
-                    <rect key="frame" x="15" y="182" width="547" height="40"/>
+                    <rect key="frame" x="15" y="172" width="547" height="40"/>
                     <color key="tintColor" red="1" green="0.44705882349999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="b3K-PV-dkv"/>
@@ -59,7 +59,7 @@
                 <constraint firstItem="EdF-Fp-cD2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="QHB-Jn-jIM"/>
                 <constraint firstItem="riQ-LX-474" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="r0i-BS-dwY"/>
                 <constraint firstAttribute="trailing" secondItem="EdF-Fp-cD2" secondAttribute="trailing" constant="15" id="rjS-Va-lvI"/>
-                <constraint firstItem="Gin-na-5Oz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="xo7-Xd-6m4"/>
+                <constraint firstItem="Gin-na-5Oz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="xo7-Xd-6m4"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
