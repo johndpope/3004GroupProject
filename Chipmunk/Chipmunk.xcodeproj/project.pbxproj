@@ -20,6 +20,7 @@
 		393F1A0E1DA2C89300A903DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393F1A0C1DA2C89300A903DF /* LaunchScreen.storyboard */; };
 		394B531B1DD7AB1800C249A5 /* CHStartSessionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */; };
 		394B531E1DD7BCDF00C249A5 /* CHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */; };
+		395FA6591DDE159C00DEC696 /* CHSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395FA6581DDE159C00DEC696 /* CHSplashViewController.swift */; };
 		396F52D81DDB675E008EA109 /* CHPostContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396F52D71DDB675E008EA109 /* CHPostContentView.xib */; };
 		396F52DA1DDB9449008EA109 /* CHGradientContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396F52D91DDB9449008EA109 /* CHGradientContainerView.swift */; };
 		396F52DD1DDC0C09008EA109 /* CHPostContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396F52DC1DDC0C09008EA109 /* CHPostContentViewController.swift */; };
@@ -171,6 +172,7 @@
 		393F1A0F1DA2C89300A903DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHStartSessionCardView.swift; sourceTree = "<group>"; };
 		394B531D1DD7BCDF00C249A5 /* CHAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHAPIClient.swift; sourceTree = "<group>"; };
+		395FA6581DDE159C00DEC696 /* CHSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHSplashViewController.swift; sourceTree = "<group>"; };
 		396F52D71DDB675E008EA109 /* CHPostContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHPostContentView.xib; sourceTree = "<group>"; };
 		396F52D91DDB9449008EA109 /* CHGradientContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHGradientContainerView.swift; sourceTree = "<group>"; };
 		396F52DC1DDC0C09008EA109 /* CHPostContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHPostContentViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				39E308EF1DD677E600A1EA89 /* CHTableCardView.swift */,
 				394B531A1DD7AB1800C249A5 /* CHStartSessionCardView.swift */,
 				39B4E3541DDA499F00B2AE0A /* CHStartSessionCardView.xib */,
+				395FA6581DDE159C00DEC696 /* CHSplashViewController.swift */,
 			);
 			name = "Root UI";
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 				39E308DB1DD644B700A1EA89 /* CHBonjourManager.swift in Sources */,
 				393F1A041DA2C89300A903DF /* AppDelegate.swift in Sources */,
 				39E308D31DD63E2F00A1EA89 /* UIView+Chipmunk.swift in Sources */,
+				395FA6591DDE159C00DEC696 /* CHSplashViewController.swift in Sources */,
 				39B4E35C1DDA648500B2AE0A /* CHStartSessionViewController.swift in Sources */,
 				394B531B1DD7AB1800C249A5 /* CHStartSessionCardView.swift in Sources */,
 				396F52DD1DDC0C09008EA109 /* CHPostContentViewController.swift in Sources */,

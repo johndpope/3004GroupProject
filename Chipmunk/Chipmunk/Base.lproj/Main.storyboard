@@ -1,55 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eQ5-gj-tN6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hVc-df-RYj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Splash View-->
+        <scene sceneID="Tis-lL-P6y">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CHInitialViewController" customModule="Chipmunk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Splash View" id="hVc-df-RYj" customClass="CHSPlashViewController" customModule="Chipmunk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="ILY-pc-eDO"/>
+                        <viewControllerLayoutGuide type="bottom" id="MN4-IR-ODJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="n2f-yH-rZU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7A-wP-3FI" customClass="CHGradientContainerView" customModule="Chipmunk" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWl-oU-USD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chipmunk-white" translatesAutoresizingMaskIntoConstraints="NO" id="KNA-Kh-uFn">
+                                                <rect key="frame" x="87" y="273" width="200" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="KNA-Kh-uFn" secondAttribute="height" multiplier="2:1" id="J60-uU-MO7"/>
+                                                    <constraint firstAttribute="width" constant="200" id="oB7-3R-XcN"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="KNA-Kh-uFn" firstAttribute="centerY" secondItem="fWl-oU-USD" secondAttribute="centerY" id="4LA-MS-hWC"/>
+                                            <constraint firstItem="KNA-Kh-uFn" firstAttribute="centerX" secondItem="fWl-oU-USD" secondAttribute="centerX" id="l5e-K5-TGM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fWl-oU-USD" firstAttribute="leading" secondItem="q7A-wP-3FI" secondAttribute="leading" id="BPW-Qk-HSD"/>
+                                    <constraint firstItem="fWl-oU-USD" firstAttribute="top" secondItem="q7A-wP-3FI" secondAttribute="top" id="W0d-j9-SCc"/>
+                                    <constraint firstAttribute="bottom" secondItem="fWl-oU-USD" secondAttribute="bottom" id="erN-6y-lSX"/>
+                                    <constraint firstAttribute="trailing" secondItem="fWl-oU-USD" secondAttribute="trailing" id="wiV-xs-bZ8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q7A-wP-3FI" firstAttribute="centerY" secondItem="n2f-yH-rZU" secondAttribute="centerY" constant="10" id="GNG-2V-upe"/>
+                            <constraint firstItem="q7A-wP-3FI" firstAttribute="centerX" secondItem="n2f-yH-rZU" secondAttribute="centerX" id="GYg-kY-9p6"/>
+                            <constraint firstItem="q7A-wP-3FI" firstAttribute="width" secondItem="n2f-yH-rZU" secondAttribute="width" id="RHN-H9-yRn"/>
+                            <constraint firstItem="q7A-wP-3FI" firstAttribute="height" secondItem="n2f-yH-rZU" secondAttribute="height" constant="-20" id="lJh-L6-ynF"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SVq-uX-EUs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1186" y="791"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hdO-Zz-0kM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eQ5-gj-tN6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nGh-Pt-hcZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.44705882349999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Yef-iS-FzU"/>
+                        <outlet property="bottomConstraint" destination="erN-6y-lSX" id="Cra-0b-hBe"/>
+                        <outlet property="leadingConstraint" destination="BPW-Qk-HSD" id="f3Y-89-zlV"/>
+                        <outlet property="topConstraint" destination="W0d-j9-SCc" id="Tc4-B4-y5k"/>
+                        <outlet property="trailingConstraint" destination="wiV-xs-bZ8" id="l1J-JR-AWp"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2lN-0E-ZLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kke-Zu-rSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="791.15442278860576"/>
+            <point key="canvasLocation" x="663" y="986"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chipmunk-white" width="76" height="76"/>
+    </resources>
 </document>
