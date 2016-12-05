@@ -11,45 +11,71 @@ import UIKit
 
 class CHStartSessionCardView: CHGenericCardView {
 	
-	var startButton: UIButton!
 	var controller: CHInitialController!
 	
-	init(title: String, controller: CHInitialController) {
-		super.init(title: title)
+	@IBOutlet weak var nameField: UITextField!
+	@IBOutlet weak var passField: UITextField!
+	var startButton: UIButton!
+	
+	static func buildFromNib(title: String, controller: CHInitialController) -> CHStartSessionCardView {
+		let nib = UINib(nibName: "CHStartSessionCardView", bundle: nil).instantiateWithOwner(nil, options: nil)
+		let card = nib.first as! CHStartSessionCardView
 		
-		self.controller = controller
+		card.controller = controller
+		card.titleLabel.text = title
 		
-		self.startButton = self.generateStartButton()
+		card.nameField.textColor = UIColor.whiteColor()
+		card.nameField.delegate = card
+		card.passField.textColor = UIColor.whiteColor()
+		card.passField.delegate = card
+		
+		card.configureStartButton()
+		
+		return card
+	}
+	
+	func configureStartButton() {
+		self.startButton = UIButton(frame: CGRectZero)
+		self.startButton.translatesAutoresizingMaskIntoConstraints = false
+		self.startButton.setTitleColor(UIColor.darkBackgroundColor(), forState: .Normal)
+		self.startButton.setTitle("Start 🐿", forState: .Normal)
+		self.startButton.titleLabel?.font = UIFont.boldSystemFontOfSize(20)
+		self.startButton.layer.cornerRadius = 4
+		self.startButton.backgroundColor = UIColor.appTintColor()
+		self.startButton.addTarget(self, action: #selector(CHStartSessionCardView.startSessionPressed), forControlEvents: .TouchUpInside)
+		
 		self.addSubview(self.startButton)
-		self.addConstraints(self.generateInitialConstraints(self.startButton))
+		
+		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
+		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: -20))
+		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1, constant: -30))
+		
+		self.layoutSubviews()
 	}
 	
-	func startServerPressed(sender: UIButton) {
-		self.controller.startServerPressed()
-	}
-	
-	func generateStartButton() -> UIButton {
-		let butt = UIButton(frame: CGRectZero)
+	func startSessionPressed() {
+		if (self.nameField.text == "") {
+			self.nameField.st_shake()
+			return
+		}
 		
-		butt.translatesAutoresizingMaskIntoConstraints = false
-		butt.setTitle("Start Server", forState: .Normal)
-		butt.setTitleColor(UIColor.appTintColor(), forState: .Normal)
-		
-		butt.addTarget(self, action: #selector(CHStartSessionCardView.startServerPressed(_:)), forControlEvents: .TouchUpInside)
-		
-		return butt
-	}
-	
-	func generateInitialConstraints(start: UIButton) -> [NSLayoutConstraint] {
-		var constraints = [NSLayoutConstraint]()
-		
-		constraints.append(NSLayoutConstraint(item: start, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
-		constraints.append(NSLayoutConstraint(item: start, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
-		
-		return constraints
+		self.controller.startSessionPressed(self.nameField.text!, password: self.passField.text!)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+		super.init(coder: aDecoder)
+	}
+}
+
+extension CHStartSessionCardView: UITextFieldDelegate {
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		if (textField == self.nameField) {
+			self.passField.becomeFirstResponder()
+		}
+		else {
+			self.startSessionPressed()
+		}
+		
+		return false
 	}
 }

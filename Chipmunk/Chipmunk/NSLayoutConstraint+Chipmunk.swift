@@ -68,6 +68,17 @@ extension NSLayoutConstraint {
 		return constraints
 	}
 	
+	// Pins all four sides of 'view' to its super view.
+	static func constraintsFillingSuperViewWithView(view: UIView, padding: CGFloat) -> [NSLayoutConstraint] {
+		var constraints = [NSLayoutConstraint]()
+		
+		constraints +=  NSLayoutConstraint.constraintsWithVisualFormat("V:|-\(padding)-[view]-\(padding)-|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: ["view": view])
+		constraints +=  NSLayoutConstraint.constraintsWithVisualFormat("H:|-\(padding)-[view]-\(padding)-|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: ["view": view])
+		
+		return constraints
+	}
+	
+	
 	static func constraintsPinningToTopLeftOfSuperview(view: UIView, padding: CGFloat) -> [NSLayoutConstraint] {
 		var constraints = [NSLayoutConstraint]()
 		

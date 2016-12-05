@@ -40,7 +40,10 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = UITableViewCell(style: .Default, reuseIdentifier: "")
 		
+		cell.backgroundColor = UIColor.darkBackgroundColor()
+		
 		cell.textLabel?.text = self.services[indexPath.row].name
+		cell.textLabel?.textColor = UIColor.whiteColor()
 		
 		return cell
 	}
@@ -48,8 +51,8 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		let title = self.services[indexPath.row].name
 		
-		let sessionConfig = CHSessionConfig(title: title, service: self.services[indexPath.row])
-		let joinSessionViewController = CHJoinSessionViewController(config: sessionConfig)
+		let sessionConfig = CHSessionConfig(title: title, password: "", service: self.services[indexPath.row])
+		let joinSessionViewController = CHPostContentViewController(config: sessionConfig)
 		
 		if let del = self.delegate {
 			del.pushJoinSessionViewController(joinSessionViewController)
@@ -61,7 +64,10 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 
 // MARK - New Session Controller
 extension CHInitialController {
-	func startServerPressed() {
-		self.server.start()
+	func startSessionPressed(title: String, password: String) {
+		if let del = self.delegate {
+			let sessionConfig = CHSessionConfig(title: title, password: password, service: nil)
+			del.pushStartSessionViewController(CHStartSessionViewController(config: sessionConfig))
+		}
 	}
 }

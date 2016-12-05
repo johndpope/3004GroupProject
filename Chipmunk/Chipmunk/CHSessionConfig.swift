@@ -8,14 +8,18 @@
 
 import Foundation
 
-class CHSessionConfig {
+public class CHSessionConfig {
 	
-	var title: String
-	var service: NSNetService
+	public var title: String
+	public var password: String?
+	public var numCells: Int?
 	
+	public var service: NSNetService?
 	
-	init(title: String, service: NSNetService) {
+	public init(title: String, password: String?, service: NSNetService?) {
 		self.title = title
+		self.password = password
+		
 		self.service = service
 	}
 }

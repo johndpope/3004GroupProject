@@ -9,7 +9,6 @@
 import Foundation
 import GCDWebServer
 import CHCommon
-//import Realm
 import RealmSwift
 
 public class CHWebServer: NSObject {
@@ -41,8 +40,13 @@ public class CHWebServer: NSObject {
                                    requestClass: GCDWebServerRequest.self,
                                    asyncProcessBlock: CHRouter.indexHandler())
 
-        server.addHandlerForMethod("POST", path: "/client/register", requestClass: GCDWebServerDataRequest.self,
-                                   asyncProcessBlock: CHRouter.clientHandler())
+//        server.addHandlerForMethod("POST", path: "/client/register",
+//                                   requestClass: GCDWebServerDataRequest.self,
+//                                   asyncProcessBlock: CHRouter.clientHandler())
+
+        server.addHandlerForMethod("POST", path: "/post",
+                                   requestClass: GCDWebServerDataRequest.self,
+                                   asyncProcessBlock: CHRouter.postHandler())
         
         let options: [NSObject: AnyObject] =
             [GCDWebServerOption_BonjourName: CHConstBonjourName() + ".Jagger",
@@ -51,10 +55,14 @@ public class CHWebServer: NSObject {
              GCDWebServerOption_AutomaticallySuspendInBackground: false]
 
         do {
-            try server.startWithOptions(options)
+            try self.server.startWithOptions(options)
             
         } catch {
             print("We did something wrong")
         }
     }
+	
+	public func stop() {
+		self.server.stop()
+	}
 }

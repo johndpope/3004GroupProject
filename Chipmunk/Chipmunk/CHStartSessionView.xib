@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CHStartSessionViewController" customModule="Chipmunk" customModuleProvider="target">
+            <connections>
+                <outlet property="card" destination="CcS-RL-N96" id="uXm-kd-qWX"/>
+                <outlet property="castButton" destination="M1p-9C-Xys" id="XyI-ka-udf"/>
+                <outlet property="numCellsLabel" destination="1kX-Jz-naU" id="B6c-In-xJm"/>
+                <outlet property="passwordLabel" destination="Gkc-g4-r0P" id="ScA-6l-zdW"/>
+                <outlet property="stepper" destination="n4r-Af-nL1" id="l7J-xX-2CL"/>
+                <outlet property="view" destination="iN0-l3-epB" id="pNi-cv-xUL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvW-YQ-1og" customClass="CHGradientContainerView" customModule="Chipmunk" customModuleProvider="target">
+                    <rect key="frame" x="20" y="50" width="335" height="108"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-RL-N96" customClass="CHGenericCardView" customModule="Chipmunk" customModuleProvider="target">
+                            <rect key="frame" x="1.5" y="1.5" width="332" height="105"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkc-g4-r0P" userLabel="Password Label">
+                                    <rect key="frame" x="15" y="60" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="n4r-Af-nL1">
+                                    <rect key="frame" x="223" y="75" width="94" height="29"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="stepperValueChanged:" destination="-1" eventType="valueChanged" id="LTw-RQ-9WR"/>
+                                    </connections>
+                                </stepper>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-Jz-naU" userLabel="Num Cells Label">
+                                    <rect key="frame" x="15" y="90" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="1kX-Jz-naU" firstAttribute="top" secondItem="Gkc-g4-r0P" secondAttribute="bottom" constant="30" id="6xQ-K2-Spp"/>
+                                <constraint firstItem="1kX-Jz-naU" firstAttribute="leading" secondItem="CcS-RL-N96" secondAttribute="leading" constant="15" id="Ges-lt-xWb"/>
+                                <constraint firstAttribute="bottom" secondItem="1kX-Jz-naU" secondAttribute="bottom" constant="15" id="NZ6-d4-sfc"/>
+                                <constraint firstItem="Gkc-g4-r0P" firstAttribute="top" secondItem="CcS-RL-N96" secondAttribute="top" constant="60" id="b0d-To-8nK"/>
+                                <constraint firstItem="Gkc-g4-r0P" firstAttribute="leading" secondItem="CcS-RL-N96" secondAttribute="leading" constant="15" id="nSr-zK-FZ8"/>
+                                <constraint firstItem="n4r-Af-nL1" firstAttribute="trailing" secondItem="CcS-RL-N96" secondAttribute="trailing" constant="-15" id="rzL-oy-8j4"/>
+                                <constraint firstItem="n4r-Af-nL1" firstAttribute="centerY" secondItem="1kX-Jz-naU" secondAttribute="centerY" id="wVX-rb-rCO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="CcS-RL-N96" firstAttribute="leading" secondItem="BvW-YQ-1og" secondAttribute="leading" constant="1.5" id="Sts-ho-I4j"/>
+                        <constraint firstItem="CcS-RL-N96" firstAttribute="trailing" secondItem="BvW-YQ-1og" secondAttribute="trailing" constant="-1.5" id="Vu2-b5-ZTG"/>
+                        <constraint firstItem="CcS-RL-N96" firstAttribute="top" secondItem="BvW-YQ-1og" secondAttribute="top" constant="1.5" id="Vzb-u9-Zts"/>
+                        <constraint firstItem="CcS-RL-N96" firstAttribute="bottom" secondItem="BvW-YQ-1og" secondAttribute="bottom" constant="-1.5" id="qww-IN-dCm"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1p-9C-Xys">
+                    <rect key="frame" x="40" y="587" width="295" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fK4-pK-nWl"/>
+                    </constraints>
+                    <state key="normal" title="Cast">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="castPressed" destination="-1" eventType="touchUpInside" id="GF6-tl-SAO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="M1p-9C-Xys" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-40" id="MCG-L0-n3x"/>
+                <constraint firstAttribute="trailing" secondItem="M1p-9C-Xys" secondAttribute="trailing" constant="40" id="UGF-MZ-EUV"/>
+                <constraint firstItem="M1p-9C-Xys" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="WAx-75-FLb"/>
+                <constraint firstItem="BvW-YQ-1og" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="b0W-7N-awq"/>
+                <constraint firstItem="BvW-YQ-1og" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="hQL-gt-aGy"/>
+                <constraint firstAttribute="trailing" secondItem="BvW-YQ-1og" secondAttribute="trailing" constant="20" id="hlu-qL-6jC"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

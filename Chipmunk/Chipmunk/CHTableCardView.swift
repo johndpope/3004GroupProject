@@ -44,6 +44,9 @@ class CHTableCardView: CHGenericCardView {
 		table.delegate = self.tableDelegate
 		table.dataSource = self.tableDelegate
 		
+		table.backgroundColor = UIColor.darkBackgroundColor()
+		table.separatorColor = UIColor.lightForegroundColor()
+		
 		return table
 	}
 	
