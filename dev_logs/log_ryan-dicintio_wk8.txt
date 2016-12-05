@@ -1,0 +1,2 @@
+- wrote the database functions and queries to be used by the server 
+

@@ -1,0 +1,3 @@
+- discussed the architectural patterns and styles along with the design patterns of the system
+- documented these architectural and design qualities
+
