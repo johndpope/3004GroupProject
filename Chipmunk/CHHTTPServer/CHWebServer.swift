@@ -22,14 +22,14 @@ public class CHWebServer: NSObject {
     
     public func start() {
         
-//        let config = Realm.Configuration(
-//            schemaVersion: 1,
-//            migrationBlock: { migration, oldSchemaVersion in
-//                if (oldSchemaVersion < 1) {}})
-//        
-//        Realm.Configuration.defaultConfiguration = config
-//        _ = try! Realm()
-//        
+        let config = Realm.Configuration(
+            schemaVersion: 2,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {}})
+        
+        Realm.Configuration.defaultConfiguration = config
+        _ = try! Realm()
+        
         
         server.addDefaultHandlerForMethod("GET",
                                           requestClass: GCDWebServerRequest.self,
@@ -40,9 +40,9 @@ public class CHWebServer: NSObject {
                                    requestClass: GCDWebServerRequest.self,
                                    asyncProcessBlock: CHRouter.indexHandler())
 
-//        server.addHandlerForMethod("POST", path: "/client/register",
-//                                   requestClass: GCDWebServerDataRequest.self,
-//                                   asyncProcessBlock: CHRouter.clientHandler())
+        server.addHandlerForMethod("POST", path: "/client/register",
+                                   requestClass: GCDWebServerDataRequest.self,
+                                   asyncProcessBlock: CHRouter.clientHandler())
 
         server.addHandlerForMethod("POST", path: "/post",
                                    requestClass: GCDWebServerDataRequest.self,
