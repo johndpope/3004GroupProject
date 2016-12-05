@@ -8,7 +8,7 @@
 
 import Foundation
 import GCDWebServer
-//import CHDatabase
+import CHDatabase
 import SwiftyJSON
 import RealmSwift
 import CHCommon
@@ -36,28 +36,28 @@ public class CHRouter : NSObject {
         }
     }
     
-//    static func clientHandler() -> GCDWebServerAsyncProcessBlock {
-//        return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
-//            guard let dataReq = request as? GCDWebServerDataRequest else {
-//                return
-//            }
-//            let json = JSON(data: dataReq.data)
-//            let newClient = CHClient()
-//            
-//            newClient.username = json.dictionary!["username"]?.string
-//            newClient.session_id = NSUUID().UUIDString
-//            newClient.join_time = NSDate()
-//            
-//            CHDatabaseManager.addOrUpdateClient(newClient)
-//            
-//            let dict: [String: String] = ["username": newClient.username!,
-//                                          "uuid": newClient.uuid!,
-//                                          "session_id": newClient.session_id!,
-//                                          "join_time": (newClient.join_time?.description)!]
-//            
-//            completion(GCDWebServerDataResponse(JSONObject: dict))
-//        }
-//    }
+    static func clientHandler() -> GCDWebServerAsyncProcessBlock {
+        return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
+            guard let dataReq = request as? GCDWebServerDataRequest else {
+                return
+            }
+            let json = JSON(data: dataReq.data)
+            let newClient = CHClient()
+            
+            newClient.username = json.dictionary!["username"]?.string
+            newClient.session_id = NSUUID().UUIDString
+            newClient.join_time = NSDate()
+            
+            CHDatabaseManager.addOrUpdateClient(newClient)
+            
+            let dict: [String: String] = ["username": newClient.username!,
+                                          "uuid": newClient.uuid!,
+                                          "session_id": newClient.session_id!,
+                                          "join_time": (newClient.join_time?.description)!]
+            
+            completion(GCDWebServerDataResponse(JSONObject: dict))
+        }
+    }
 	
     static func postHandler() -> GCDWebServerAsyncProcessBlock {
         return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
@@ -72,14 +72,14 @@ public class CHRouter : NSObject {
 			let dict: [String: AnyObject] = ["content": ["src": (json.dictionary!["body"]?.stringValue)!,
                                              "type": (json.dictionary!["post_type"]?.stringValue)!]]
 			
-			let castJSON = JSON(dict)
+//			let castJSON = JSON(dict)
 			
 			dispatch_async(dispatch_get_main_queue(), {() in
-				let castManager = CHCastManager.sharedManager
-				
-				if (castManager.isConnected()) {
-					castManager.channel.sendTextMessage(castJSON.rawString()!, error: nil)
-				}
+//				let castManager = CHCastManager.sharedManager
+//				
+//				if (castManager.isConnected()) {
+//					castManager.channel.sendTextMessage(castJSON.rawString()!, error: nil)
+//				}
 				
 				completion(GCDWebServerDataResponse(JSONObject: dict))
 			})
