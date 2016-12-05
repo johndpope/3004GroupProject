@@ -10,20 +10,19 @@ import Foundation
 import Realm
 import CHCommon
 
-public class CHPost: RLMObject {
-    public var uuid: String?
+public class CHPost: Object {
+    public dynamic var uuid: String?
     public var post_type: CHPostType?
-    public var body: NSString?
-    public var image_url: NSString?
-    public var image_data: NSData?
-    public var video_url: NSString?
+    public dynamic var body: NSString?
+    public dynamic var image_url: NSString?
+    public dynamic var image_data: NSData?
+    public dynamic var video_url: NSString?
     public var mod_status: Bool?
-    public var submission_time: NSDate?
-    public var mod_acceptance_time: NSDate? //time of acceptance from host
+    public dynamic var submission_time: NSDate?
+    public dynamic var mod_acceptance_time: NSDate? //time of acceptance from host
     
-    
-    public override init() {
-        super.init()
+    override public static func primaryKey() -> String? {
+        return "uuid"
     }
     
 }

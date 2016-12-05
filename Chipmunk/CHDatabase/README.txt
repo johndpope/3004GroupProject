@@ -11,7 +11,7 @@ This API uses Realm DB framework to support Chipmunk's database layer. The API c
 
 Request:
 
-PUT  -  addOrUpdateClient(CHClients)
+PUT  -  addOrUpdateClient(CHClient)
 {
     "username" : "Victor"
 }
@@ -29,7 +29,7 @@ Response:
 
 Request:
 
-DELETE  -  deleteClient(CHClients)
+DELETE  -  deleteClient(CHClient)
 {
     "username" : "Victor",
     "uuid" : "1"
