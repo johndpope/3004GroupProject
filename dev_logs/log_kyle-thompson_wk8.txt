@@ -1,0 +1,3 @@
+Further developed the application.
+
+Added more features such as dynamic tiling for a variable number of content displays.

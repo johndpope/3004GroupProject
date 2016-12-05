@@ -1,0 +1,3 @@
+Developed the skeleton for our project.
+
+After much effort, there is now a working prototype.

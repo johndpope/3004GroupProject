@@ -57,7 +57,7 @@ function applySettings(settings) {
 		css += "left:" + (c-1)*(100/Math.ceil(num_cells/2)) + "%;";
 		css += "width:" + 100/Math.ceil(num_cells/2) + "%;";
 		css += "top:" + ((r-1)*50 + 5/r).toString() + "%;";
-		css += "height:" + (num_cells > 1 ? 47.5 : 95) + "%;";
+		css += "height:" + (num_cells > 1 ? 46 : 92) + "%;";
 		console.log("css: " + css);
 
 		return "<div class='cell' id='" + id + "' style='" + css + "'></div>";
@@ -67,7 +67,9 @@ function applySettings(settings) {
 	$("#title").append(settings.title);
 
 	$("#password").empty();
-	$("#password").append("Password: " + settings.password);
+	if (settings.password.length > 0) {
+		$("#password").append("Password: " + settings.password);
+	}
 
 	num_cells = settings.numcells;
 	cell = 0;

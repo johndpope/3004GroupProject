@@ -7,21 +7,46 @@
 
 .cell-text {
 	color: white;
+	text-align: center;
+	border: 1%;
+}
+
+#logo {
+	height: 8%;
+	margin-top: -0.75%;
+	margin-left: 47%;
+	position: absolute;
 }
 
 #title {
+	font-size: 20pt;
 	left: 0;
 	width: 50%;
 	top: 0;
-	height: 5%;
 	color: white;
+	padding-left: 0.5;
 }
 
 #password {
+	text-align: right;
+	font-size: 20pt;
 	left: 50%;
 	width: 50%;
 	top: 0;
-	height: 5%;
 	color: white;
 	float: right;
+	padding-right: 0.5%;
+}
+
+#info {
+	height: 8%;
+}
+
+#footer {
+	z-index: -1000;
+	font-size: 0.7em;
+	position: fixed;
+	bottom: 4px;
+	color: rgba(255,255,255,0.6);
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }

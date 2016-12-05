@@ -71,7 +71,7 @@
 		708623DC1DD65F3E006550DA /* CHHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708623C71DD65F3E006550DA /* CHHTTPServer.framework */; };
 		708623DD1DD65F3E006550DA /* CHHTTPServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708623C71DD65F3E006550DA /* CHHTTPServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		708623E51DD6608B006550DA /* CHWebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708623E41DD6608B006550DA /* CHWebServer.swift */; };
-		708623E81DD7A9E6006550DA /* CHRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708623E71DD7A9E6006550DA /* CHRouter.swift */; };
+		70D6AF791DF4C8F0009EE7D3 /* CHRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708623E71DD7A9E6006550DA /* CHRouter.swift */; };
 		79D8B8F55D5C3D11107972E4 /* Pods_Chipmunk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9B9EFD18A08555125E8EBB /* Pods_Chipmunk.framework */; };
 		992A20C51D164255F023A408 /* Pods_CHDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3706B376692C26940E4D5E1 /* Pods_CHDatabase.framework */; };
 		D57C51219381B88520C50E8A /* Pods_CHHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41EFE0D40DDF8E25B2AE602 /* Pods_CHHTTPServer.framework */; };
@@ -1030,7 +1030,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				708623E51DD6608B006550DA /* CHWebServer.swift in Sources */,
-				708623E81DD7A9E6006550DA /* CHRouter.swift in Sources */,
+				70D6AF791DF4C8F0009EE7D3 /* CHRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

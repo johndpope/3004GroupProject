@@ -1,0 +1,3 @@
+- updated database code where needed
+- designed the app logo
+- helped Kyle with some HTML, CSS, and JS for chromecast display
