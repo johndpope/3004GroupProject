@@ -34,6 +34,9 @@
 		39B4E35C1DDA648500B2AE0A /* CHStartSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B4E35B1DDA648500B2AE0A /* CHStartSessionViewController.swift */; };
 		39B4E35E1DDA649200B2AE0A /* CHStartSessionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B4E35D1DDA649200B2AE0A /* CHStartSessionView.xib */; };
 		39B4E35F1DDA68D100B2AE0A /* CHSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308F51DD6811200A1EA89 /* CHSessionConfig.swift */; };
+		39C5D5A01DF5048D005B62AA /* CHModerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5D59F1DF5048D005B62AA /* CHModerationViewController.swift */; };
+		39C5D5A21DF50B18005B62AA /* CHModerationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C5D5A11DF50B18005B62AA /* CHModerationView.xib */; };
+		39C5D5A41DF50F19005B62AA /* CHModerationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5D5A31DF50F19005B62AA /* CHModerationController.swift */; };
 		39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift */; };
 		39E308CF1DD63E2F00A1EA89 /* UIButton+Chipmunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308C91DD63E2F00A1EA89 /* UIButton+Chipmunk.swift */; };
 		39E308D01DD63E2F00A1EA89 /* UIColor+Chipmunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E308CA1DD63E2F00A1EA89 /* UIColor+Chipmunk.swift */; };
@@ -182,6 +185,9 @@
 		39B4E3561DDA4FA300B2AE0A /* CHCastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHCastManager.swift; sourceTree = "<group>"; };
 		39B4E35B1DDA648500B2AE0A /* CHStartSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHStartSessionViewController.swift; sourceTree = "<group>"; };
 		39B4E35D1DDA649200B2AE0A /* CHStartSessionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHStartSessionView.xib; sourceTree = "<group>"; };
+		39C5D59F1DF5048D005B62AA /* CHModerationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHModerationViewController.swift; sourceTree = "<group>"; };
+		39C5D5A11DF50B18005B62AA /* CHModerationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHModerationView.xib; sourceTree = "<group>"; };
+		39C5D5A31DF50F19005B62AA /* CHModerationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHModerationController.swift; sourceTree = "<group>"; };
 		39E308C81DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Chipmunk.swift"; sourceTree = "<group>"; };
 		39E308C91DD63E2F00A1EA89 /* UIButton+Chipmunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Chipmunk.swift"; sourceTree = "<group>"; };
 		39E308CA1DD63E2F00A1EA89 /* UIColor+Chipmunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Chipmunk.swift"; sourceTree = "<group>"; };
@@ -402,6 +408,16 @@
 			name = Chromecast;
 			sourceTree = "<group>";
 		};
+		39C5D5A51DF50F20005B62AA /* Moderation */ = {
+			isa = PBXGroup;
+			children = (
+				39C5D5A31DF50F19005B62AA /* CHModerationController.swift */,
+				39C5D59F1DF5048D005B62AA /* CHModerationViewController.swift */,
+				39C5D5A11DF50B18005B62AA /* CHModerationView.xib */,
+			);
+			name = Moderation;
+			sourceTree = "<group>";
+		};
 		39E308D41DD6424300A1EA89 /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +463,7 @@
 			children = (
 				39B4E35B1DDA648500B2AE0A /* CHStartSessionViewController.swift */,
 				39B4E35D1DDA649200B2AE0A /* CHStartSessionView.xib */,
+				39C5D5A51DF50F20005B62AA /* Moderation */,
 			);
 			name = "Start Session";
 			sourceTree = "<group>";
@@ -762,6 +779,7 @@
 				39B4E3551DDA499F00B2AE0A /* CHStartSessionCardView.xib in Resources */,
 				393F1A0B1DA2C89300A903DF /* Assets.xcassets in Resources */,
 				393F1A091DA2C89300A903DF /* Main.storyboard in Resources */,
+				39C5D5A21DF50B18005B62AA /* CHModerationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,12 +972,14 @@
 				395FA6591DDE159C00DEC696 /* CHSplashViewController.swift in Sources */,
 				39B4E35C1DDA648500B2AE0A /* CHStartSessionViewController.swift in Sources */,
 				394B531B1DD7AB1800C249A5 /* CHStartSessionCardView.swift in Sources */,
+				39C5D5A01DF5048D005B62AA /* CHModerationViewController.swift in Sources */,
 				396F52DD1DDC0C09008EA109 /* CHPostContentViewController.swift in Sources */,
 				39E308D21DD63E2F00A1EA89 /* UILabel+Chipmunk.swift in Sources */,
 				3924E7651DC7C20500B04C7F /* (null) in Sources */,
 				39E308D81DD6447900A1EA89 /* CHInitialController.swift in Sources */,
 				39E308D01DD63E2F00A1EA89 /* UIColor+Chipmunk.swift in Sources */,
 				39E308D61DD6425700A1EA89 /* CHGenericCardView.swift in Sources */,
+				39C5D5A41DF50F19005B62AA /* CHModerationController.swift in Sources */,
 				39E308F31DD680DD00A1EA89 /* CHJoinSessionViewController.swift in Sources */,
 				39E308CE1DD63E2F00A1EA89 /* NSLayoutConstraint+Chipmunk.swift in Sources */,
 				39E308F01DD677E600A1EA89 /* CHTableCardView.swift in Sources */,

@@ -17,6 +17,7 @@ class CHPostContentViewController: UIViewController {
 	
 	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var sendButton: UIButton!
+	@IBOutlet weak var sendImageButton: UIButton!
 	
 	init(config: CHSessionConfig) {
 		super.init(nibName: "CHPostContentView", bundle: nil)
@@ -36,6 +37,9 @@ class CHPostContentViewController: UIViewController {
 		self.textView.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
 		
 		self.sendButton.backgroundColor = UIColor.appTintColor()
+		self.sendButton.layer.cornerRadius = 4
+		self.sendImageButton.backgroundColor = UIColor.appTintColor()
+		self.sendImageButton.layer.cornerRadius = 4
 		
 		self.textView.becomeFirstResponder()
 	}
@@ -51,12 +55,16 @@ class CHPostContentViewController: UIViewController {
 				self.textView.text = ""
 			})
 		}
-//		else if (self.linkField.text != "") {
-//			let postJSON = JSON(["post_type": "image", "body": self.linkField.text!])
-//			APIClient.sendPost(postJSON, completion: {(response: String) in
-//				print(response)
-//			})
-//		}
+	}
+	
+	@IBAction func sendImagePressed(sender: AnyObject) {
+		let APIClient = CHAPIClient(service: self.config.service!)
+		if (self.textView.text != "") {
+			let postJSON = JSON(["post_type": "image", "body": self.textView.text!])
+			APIClient.sendPost(postJSON, completion: {(response: String) in
+				print(response)
+			})
+		}
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
