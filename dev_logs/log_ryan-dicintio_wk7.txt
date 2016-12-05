@@ -1,0 +1,2 @@
+- brainstormed possible queries for the database
+
