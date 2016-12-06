@@ -1,0 +1,3 @@
+Week 8:
+	Made small adjustments to Chromecast layer look-and-feel
+	Worked on demo report

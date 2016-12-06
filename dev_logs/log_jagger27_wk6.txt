@@ -1,0 +1,3 @@
+Week 6:
+	Began learning how to use GCDAsyncWebServer and how it interacts in strange ways with Swift as it is an Obj-C framework
+	Fighting with Xcode and git

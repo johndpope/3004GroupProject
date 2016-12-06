@@ -1,0 +1,3 @@
+Weeks 1 through 5
+	Consistent with other log files.
+	I was assigned to work on the web server portion of the project using GCDAsyncWebServer

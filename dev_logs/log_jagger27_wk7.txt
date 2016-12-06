@@ -1,0 +1,5 @@
+Week 7:
+	Implemented GCDAsyncWebServer in main app
+	Built a custom routing module with some preliminary DB hook-ins
+	Contributed to Chromecast interface design
+	Did tons of living room testing with the group

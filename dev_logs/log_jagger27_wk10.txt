@@ -1,0 +1,4 @@
+Week 10:
+	Finished demo report
+	Gave demo
+	Planned API for moderation on the web server side
