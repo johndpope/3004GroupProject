@@ -39,3 +39,15 @@ public func CHNotifCastSessionStarted() -> String {
 public func CHNotifCastSessionEnded() -> String {
 	return "com.chipmunk.castended"
 }
+
+public func CHNotifWebServerStarted() -> String {
+	return "com.chipmunk.serverstarted"
+}
+
+public func CHNotifWebServerStopped() -> String {
+	return "com.chipmunk.serverstopped"
+}
+
+public func CHNotifPostsToModerateChanged() -> String {
+	return "com.chipmunk.posttomoderateadded"
+}

@@ -7,17 +7,17 @@
 //
 
 import Foundation
-import Realm
+import RealmSwift
 import CHCommon
 
 public class CHPost: Object {
     public dynamic var uuid: String?
-    public var post_type: CHPostType?
+    public dynamic var post_type: String? // This needs to go back to CHPostType when we figure out Realm's shit
     public dynamic var body: NSString?
     public dynamic var image_url: NSString?
     public dynamic var image_data: NSData?
     public dynamic var video_url: NSString?
-    public var mod_status: Bool?
+    public dynamic var mod_status: Bool = false
     public dynamic var submission_time: NSDate?
     public dynamic var mod_acceptance_time: NSDate? //time of acceptance from host
     

@@ -379,7 +379,7 @@
 				393F1A031DA2C89300A903DF /* AppDelegate.swift */,
 				3924E7681DC7C7BD00B04C7F /* Root UI */,
 				39E308F11DD680C700A1EA89 /* Join Session */,
-				39E308F41DD6810200A1EA89 /* Start Session */,
+				39E308F41DD6810200A1EA89 /* Host Session */,
 				39E308D41DD6424300A1EA89 /* Common Views */,
 				394B531C1DD7BCB400C249A5 /* API */,
 				39E308D91DD6447F00A1EA89 /* Bonjour */,
@@ -458,14 +458,14 @@
 			name = "Join Session";
 			sourceTree = "<group>";
 		};
-		39E308F41DD6810200A1EA89 /* Start Session */ = {
+		39E308F41DD6810200A1EA89 /* Host Session */ = {
 			isa = PBXGroup;
 			children = (
 				39B4E35B1DDA648500B2AE0A /* CHStartSessionViewController.swift */,
 				39B4E35D1DDA649200B2AE0A /* CHStartSessionView.xib */,
 				39C5D5A51DF50F20005B62AA /* Moderation */,
 			);
-			name = "Start Session";
+			name = "Host Session";
 			sourceTree = "<group>";
 		};
 		3C2EB1811DD50F09000CC7FD /* CHDatabase */ = {

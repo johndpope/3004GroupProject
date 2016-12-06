@@ -49,7 +49,7 @@ public class CHRouter : NSObject {
                 newClient.session_id = NSUUID().UUIDString
                 newClient.join_time = NSDate()
                 
-                CHDatabaseManager.addOrUpdateClient(newClient)
+                CHDatabaseManager.defaultManager.addOrUpdateClient(newClient)
                 
                 let dict: [String: String] = ["username": newClient.username!,
                                               "uuid": newClient.uuid!,
@@ -64,34 +64,26 @@ public class CHRouter : NSObject {
     static func postHandler() -> GCDWebServerAsyncProcessBlock {
         return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
 			
-            //              let castJSON = JSON(dict)
-            //				let castManager = CHCastManager.sharedManager
-            //
-            //				if (castManager.isConnected()) {
-            //					castManager.channel.sendTextMessage(castJSON.rawString()!, error: nil)
-            //				}
-            
-            
 			dispatch_async(dispatch_get_main_queue(), {() in
                 guard let dataReq = request as? GCDWebServerDataRequest else {
                     return
                 }
                 let json = JSON(data: dataReq.data)
-                
-                // at some point we'll need to check this so we don't break everything on each bad req
-                // json.dictionaryObject?.contains(<#T##predicate: ((String, AnyObject)) throws -> Bool##((String, AnyObject)) throws -> Bool#>)
-                
-                let dict: [String: AnyObject] = ["content": ["src": (json.dictionary!["body"]?.stringValue)!,
-                    "type": (json.dictionary!["post_type"]?.stringValue)!]]
-                
+				
                 let post = CHPost()
                 post.body = json.dictionaryValue["body"]?.string
-                post.post_type = CHPostType.init(rawValue: json.dictionaryValue["post_type"]!.intValue)
+				post.post_type = json.dictionaryValue["post_type"]!.stringValue
 
-                CHDatabaseManager.addOrUpdatePost(post)
+                CHDatabaseManager.defaultManager.addOrUpdatePost(post)
                 
                 // this should probably return something more useful to the client devices
+				// at some point we'll need to check this so we don't break everything on each bad req
+				// json.dictionaryObject?.contains(<#T##predicate: ((String, AnyObject)) throws -> Bool##((String, AnyObject)) throws -> Bool#>)
+				let dict: [String: AnyObject] = ["content": ["src": (json.dictionary!["body"]?.stringValue)!,
+					"type": (json.dictionary!["post_type"]?.stringValue)!]]
 				completion(GCDWebServerDataResponse(JSONObject: dict))
+				
+				NSNotificationCenter.defaultCenter().postNotificationName(CHNotifPostsToModerateChanged(), object: post)
 			})
         }
     }

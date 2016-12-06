@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Realm
+import RealmSwift
 import CHCommon
 
 public class CHClient: Object {

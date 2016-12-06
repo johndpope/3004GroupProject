@@ -27,13 +27,13 @@
                     <rect key="frame" x="20" y="100" width="335" height="400"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D70-Vg-50y">
-                            <rect key="frame" x="2" y="2" width="331" height="400"/>
+                            <rect key="frame" x="2" y="2" width="331" height="396"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="D70-Vg-50y" secondAttribute="bottom" constant="-2" id="A8q-mJ-h0D"/>
+                        <constraint firstItem="D70-Vg-50y" firstAttribute="bottom" secondItem="DZO-wo-Ie4" secondAttribute="bottom" constant="-2" id="A8q-mJ-h0D"/>
                         <constraint firstAttribute="trailing" secondItem="D70-Vg-50y" secondAttribute="trailing" constant="2" id="R4N-0Z-SJb"/>
                         <constraint firstItem="D70-Vg-50y" firstAttribute="top" secondItem="DZO-wo-Ie4" secondAttribute="top" constant="2" id="mL6-81-Nqo"/>
                         <constraint firstItem="D70-Vg-50y" firstAttribute="leading" secondItem="DZO-wo-Ie4" secondAttribute="leading" constant="2" id="o4n-Ry-EAJ"/>
@@ -43,14 +43,20 @@
                     <rect key="frame" x="0.0" y="540" width="187.5" height="54"/>
                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                     <state key="normal" title="✅"/>
+                    <connections>
+                        <action selector="acceptPressed:" destination="-1" eventType="touchUpInside" id="Hkn-vU-CFt"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jag-bf-gKq">
                     <rect key="frame" x="187.5" y="540" width="187.5" height="54"/>
                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                     <state key="normal" title="❌"/>
+                    <connections>
+                        <action selector="rejectPressed:" destination="-1" eventType="touchUpInside" id="cwe-39-adY"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="DZO-wo-Ie4" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.6" id="HNp-yB-eoZ"/>
                 <constraint firstItem="md9-mm-Wbb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Mkh-Ve-nlZ"/>

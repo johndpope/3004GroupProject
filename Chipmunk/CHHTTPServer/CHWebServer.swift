@@ -56,6 +56,7 @@ public class CHWebServer: NSObject {
 
         do {
             try self.server.startWithOptions(options)
+			NSNotificationCenter.defaultCenter().postNotificationName(CHNotifWebServerStarted(), object: nil)
             
         } catch {
             print("We did something wrong")
@@ -64,5 +65,6 @@ public class CHWebServer: NSObject {
 	
 	public func stop() {
 		self.server.stop()
+		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifWebServerStopped(), object: nil)
 	}
 }

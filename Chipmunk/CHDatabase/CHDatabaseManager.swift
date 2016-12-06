@@ -11,57 +11,82 @@ import RealmSwift
 import CHCommon
 
 public class CHDatabaseManager {
-    static let realm = try! Realm()
-    static let defaultManager = CHDatabaseManager()
+	
+	let realm = try! Realm()
+	
+    public static let defaultManager = CHDatabaseManager()
     
     //function to add or update submission to realm
-    public static func addOrUpdatePost(newSubmission: CHPost) {
+    public func addOrUpdatePost(newSubmission: CHPost) {
         if (newSubmission.uuid == nil) {
             newSubmission.uuid = NSUUID().UUIDString
         }
-        print(newSubmission)
+       
         try! self.realm.write {
             self.realm.add(newSubmission)
         }
     }
     
-    //function to delete submission
-    public static func deletePost(submission: CHPost) {
-        if (submission.uuid != nil) {
-            self.realm.delete(submission)
-        } else {
-            print("submission does not exist")
-        }
-    }
-    
     //function returning entire collection
-    public static func getAllPosts() -> Results<CHPost> {
+    public func getAllPosts() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
         return posts
     }
     
     //function returning submissions marked as accepted
-    public static func getAllModeratedPosts() -> Results<CHPost> {
+    public func getAllModeratedPosts() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
         return posts.filter("mod_status = 'true'")
     }
     
     
     //function returning submissions ordered by acceptance time
-    public static func getPostsAcceptanceTimeSorted() -> Results<CHPost> {
+    public func getPostsAcceptanceTimeSorted() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
         return posts.sorted("mod_acceptance_time", ascending: false)
     }
     
     
     //function returning submissions marked as NOT accepted (sorted in order of most recent submission first)
-    public static func getAllPostsToModerate() -> Results<CHPost> {
+    public func getAllPostsToModerate() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
-        return posts.sorted("submission_time", ascending: false)
+        return posts.filter("mod_status = false").sorted("submission_time", ascending: false)
     }
+	
+	public func deletePost(uuid: String) {
+		let post = self.realm.objectForPrimaryKey(CHPost.self, key: uuid)!
+		
+		do {
+			try self.realm.write {
+				self.realm.delete(post)
+			}
+		}
+		catch {
+			let err = error as NSError
+			print(err.localizedDescription)
+		}
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifPostsToModerateChanged(), object: nil)
+	}
+	
+	public func setPostAccepted(uuid: String) {
+		let post = self.realm.objectForPrimaryKey(CHPost.self, key: uuid)!
+		
+		do {
+			try self.realm.write {
+				post.mod_status = true
+			}
+		}
+		catch {
+			let err = error as NSError
+			print(err.localizedDescription)
+		}
+		
+		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifPostsToModerateChanged(), object: nil)
+	}
 
     //function adding new client
-    public static func addOrUpdateClient(newClient: CHClient) {
+    public func addOrUpdateClient(newClient: CHClient) {
         if (newClient.uuid == nil) {
             newClient.uuid = NSUUID().UUIDString
         }
@@ -72,7 +97,7 @@ public class CHDatabaseManager {
     }
     
     //function deleting client
-    public static func deleteClient(client: CHClient) {
+    public func deleteClient(client: CHClient) {
         if (client.uuid != nil) {
             self.realm.delete(client)
         } else {
@@ -81,30 +106,30 @@ public class CHDatabaseManager {
     }
     
     //function returning all existing clients in session
-    public static func allClients() -> Results<CHClient> {
+    public func allClients() -> Results<CHClient> {
         return self.realm.objects(CHClient.self)
     }
     
     //function returning all clients sorted by username
-    public static func allClientsByName() -> Results<CHClient> {
+    public func allClientsByName() -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
         return clients.sorted("name", ascending: true)
     }
     
     //function returning all clients sorted by join time
-    public static func allClientsByJoinTime() -> Results<CHClient> {
+    public func allClientsByJoinTime() -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
         return clients.sorted("join_time", ascending: false)
     }
     
     //function returning all clients in a particular session
-    public static func allClientsInSession(id: String) -> Results<CHClient> {
+    public func allClientsInSession(id: String) -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
         return clients.filter("session_id = '\(id)'")
     }
 
     //function returning results that have the same username
-    public static func findClientsByName(username: String) -> Results<CHClient> {
+    public func findClientsByName(username: String) -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
         return clients.filter("username = '\(username)'")
     }

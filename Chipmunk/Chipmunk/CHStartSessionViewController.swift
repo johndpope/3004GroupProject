@@ -27,12 +27,13 @@ class CHStartSessionViewController: UIViewController {
 	init(config: CHSessionConfig) {
 		super.init(nibName: "CHStartSessionView", bundle: nil)
 		
-		self.title = "Configure Session"
+		self.title = "Configure"
 		
 		self.config = config
 		self.config.numCells = 4
 		
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CHStartSessionViewController.startWebServer), name: CHNotifCastSessionStarted(), object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CHStartSessionViewController.showModeration), name: CHNotifWebServerStarted(), object: nil)
 	}
 	
 	override func viewDidLoad() {
@@ -68,5 +69,10 @@ class CHStartSessionViewController: UIViewController {
 	
 	func startWebServer() {
 		CHWebServer.defaultServer.start()
+	}
+	
+	func showModeration() {
+		let moderationViewController = CHModerationViewController(config: self.config)
+		self.navigationController?.pushViewController(moderationViewController, animated: true)
 	}
 }

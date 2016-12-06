@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		GCKCastContext.sharedInstance().discoveryManager.passiveScan = false
 		
 		GCKLogger.sharedInstance().delegate = self
-        CHWebServer.defaultServer.start()
         
 		return true
 	}

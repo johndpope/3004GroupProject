@@ -5,11 +5,11 @@ PODS:
   - google-cast-sdk (3.2.0):
     - google-cast-sdk/Core (= 3.2.0)
   - google-cast-sdk/Core (3.2.0)
-  - Realm (2.0.3):
-    - Realm/Headers (= 2.0.3)
-  - Realm/Headers (2.0.3)
-  - RealmSwift (2.0.3):
-    - Realm (= 2.0.3)
+  - Realm (2.1.1):
+    - Realm/Headers (= 2.1.1)
+  - Realm/Headers (2.1.1)
+  - RealmSwift (2.1.1):
+    - Realm (= 2.1.1)
   - SwiftyJSON (2.3.3)
 
 DEPENDENCIES:
@@ -21,8 +21,8 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   GCDWebServer: 1c39a1f0763e4eb492bee021e4270fce097d3555
   google-cast-sdk: f4c2a14214ad486cc26a8f8837e8481c906a0ea8
-  Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
-  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
+  Realm: a55959c0b171a5fe5267406d17f314fec3cefaae
+  RealmSwift: 749fd955bf8d6471c21d218b9389a47aaeccfe3f
   SwiftyJSON: 0fd0a115a3c0c09b277d2ab801df154902b942c3
 
 PODFILE CHECKSUM: 8139c45f79d50a1fe88dd28dac8404d57e3eb86b
