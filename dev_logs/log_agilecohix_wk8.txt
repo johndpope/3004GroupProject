@@ -1,0 +1,5 @@
+Week 8:
+	Implemented posting UI
+	Implemented session configuration UI
+	Worked on demo report
+	Made entire app pretty

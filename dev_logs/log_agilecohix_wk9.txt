@@ -1,0 +1,4 @@
+Week 9:
+	Implemented full wrapper for sending messages to chromecast
+	Implemented basic UI for all remaining screens
+	Created business logic for moderation

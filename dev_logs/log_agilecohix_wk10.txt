@@ -1,0 +1,6 @@
+Week 10:
+	Finished demo report
+	Gave demo
+	Implemented pretty UI for all screens
+	Began moderation UI
+	Refactored common code into common framework

@@ -1,0 +1,4 @@
+Week 11:
+	Did project interview
+	Moderation wasn't ready for interview but was completed later that day
+	Continued to refactor code into proper frameworks

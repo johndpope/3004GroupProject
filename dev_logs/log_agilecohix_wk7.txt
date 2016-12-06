@@ -1,2 +1,4 @@
 Week 7:
-	
+	Implemented cast extension and developed workflow for developing chromecast sender and receiver apps
+	Implemented custom UI elements for ios app
+	Implemented full bonjour wrapper for initiating and joining sessions
