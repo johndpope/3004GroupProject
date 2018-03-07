@@ -19,7 +19,7 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 	
 	var server = CHWebServer() // TODO: Singleton this bitch
 	
-	var services: [NSNetService] {
+	var services: [NetService] {
 		return self.bonjourManager.services
 	}
 	
@@ -29,26 +29,26 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 		self.delegate = delegate
 	}
 	
-	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
 	
-	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return self.services.count
 	}
 	
-	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = UITableViewCell(style: .Default, reuseIdentifier: "")
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = UITableViewCell(style: .default, reuseIdentifier: "")
 		
 		cell.backgroundColor = UIColor.darkBackgroundColor()
 		
 		cell.textLabel?.text = self.services[indexPath.row].name
-		cell.textLabel?.textColor = UIColor.whiteColor()
+		cell.textLabel?.textColor = UIColor.white
 		
 		return cell
 	}
 	
-	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let title = self.services[indexPath.row].name
 		
 		let sessionConfig = CHSessionConfig(title: title, password: "", service: self.services[indexPath.row])
@@ -58,13 +58,13 @@ class CHInitialController: NSObject, UITableViewDataSource, UITableViewDelegate 
 			del.pushJoinSessionViewController(joinSessionViewController)
 		}
 		
-		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
 
 // MARK - New Session Controller
 extension CHInitialController {
-	func startSessionPressed(title: String, password: String) {
+	func startSessionPressed(_ title: String, password: String) {
 		if let del = self.delegate {
 			let sessionConfig = CHSessionConfig(title: title, password: password, service: nil)
 			del.pushStartSessionViewController(CHStartSessionViewController(config: sessionConfig))

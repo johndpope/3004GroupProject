@@ -30,16 +30,16 @@ class CHTableCardView: CHGenericCardView {
 	}
 	
 	func subscribe() {
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CHTableCardView.reloadTableData(_:)), name: CHNotifBonjourServiceAdded(), object: nil)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CHTableCardView.reloadTableData(_:)), name: CHNotifBonjourServiceRemoved(), object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(CHTableCardView.reloadTableData(_:)), name: NSNotification.Name(rawValue: CHNotifBonjourServiceAdded()),  object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(CHTableCardView.reloadTableData(_:)), name: NSNotification.Name(rawValue: CHNotifBonjourServiceRemoved()) , object: nil)
 	}
 	
-	func reloadTableData(sender: NSNotification) {
+	func reloadTableData(_ sender: Notification) {
 		self.tableView.reloadData()
 	}
 	
 	func generateTableView() -> UITableView {
-		let table = UITableView(frame: CGRectZero)
+		let table = UITableView(frame: CGRect.zero)
 		table.translatesAutoresizingMaskIntoConstraints = false
 		table.delegate = self.tableDelegate
 		table.dataSource = self.tableDelegate

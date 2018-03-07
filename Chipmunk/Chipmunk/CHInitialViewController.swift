@@ -23,10 +23,10 @@ class CHInitialViewController: UIViewController {
 		
 		self.controller = CHInitialController(delegate: self)
 		
-		UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+		UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
 		
 		self.view.backgroundColor = UIColor.darkBackgroundColor()
-		self.edgesForExtendedLayout = UIRectEdge.None
+		self.edgesForExtendedLayout = UIRectEdge()
 		
 		self.addLogoToNav()
 		
@@ -46,31 +46,31 @@ class CHInitialViewController: UIViewController {
 		self.view.layoutSubviews()
 	}
 	
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.animateNavLogoCenter()
 	}
 	
-	override func viewWillDisappear(animated: Bool) {
+	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		
 		self.animateNavLogoRight()
 	}
 	
-	func pushJoinSessionViewController(viewController: CHPostContentViewController) {
+	func pushJoinSessionViewController(_ viewController: CHPostContentViewController) {
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 	
-	func pushStartSessionViewController(viewController: CHStartSessionViewController) {
+	func pushStartSessionViewController(_ viewController: CHStartSessionViewController) {
 		self.view.endEditing(true)
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 	
-	func generateCardHeightConstraints(join: CHGradientContainerView, start: CHGradientContainerView) -> [NSLayoutConstraint] {
+	func generateCardHeightConstraints(_ join: CHGradientContainerView, start: CHGradientContainerView) -> [NSLayoutConstraint] {
 		var constraints = [NSLayoutConstraint]()
 		
-		constraints.append(NSLayoutConstraint(item: join, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 0.5, constant: -20))
-		constraints.append(NSLayoutConstraint(item: start, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 0.5, constant: -20))
+		constraints.append(NSLayoutConstraint(item: join, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.5, constant: -20))
+		constraints.append(NSLayoutConstraint(item: start, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.5, constant: -20))
 		
 		return constraints
 	}
@@ -83,13 +83,13 @@ class CHInitialViewController: UIViewController {
 	}
 	
 	func animateNavLogoRight() {
-		UIView.animateWithDuration(0.5, animations: {() in
+		UIView.animate(withDuration: 0.5, animations: {() in
 			self.navLogo.frame = CGRect(x: self.view.frame.width - 60, y: -5, width: 50, height: 50)
 		})
 	}
 	
 	func animateNavLogoCenter() {
-		UIView.animateWithDuration(0.5, animations: {() in
+		UIView.animate(withDuration: 0.5, animations: {() in
 			self.navLogo.frame = CGRect(x: self.view.frame.width/2 - 25, y: -5, width: 50, height: 50)
 		})
 	}

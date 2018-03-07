@@ -12,10 +12,10 @@ import UIKit
 extension UIButton {
 	
 	// I essentially stole this from Stack Overflow, translated it to Swift, and tweaked it for our use case.
-	static func backButtonWithTitle(title: String, flexible: Bool) -> UIButton {
-		let button = UIButton(type: .Custom)
-		button.setTitle(title, forState: .Normal)
-		button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+	static func backButtonWithTitle(_ title: String, flexible: Bool) -> UIButton {
+		let button = UIButton(type: .custom)
+		button.setTitle(title, for: UIControlState())
+		button.setTitleColor(UIColor.white, for: UIControlState())
 		
 		button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
 		
@@ -29,7 +29,7 @@ extension UIButton {
 		}
 		
 		let backImage = UIImage(named: "backchevron")!
-		button.setImage(backImage, forState: .Normal)
+		button.setImage(backImage, for: UIControlState())
 		button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
 		
 		return button

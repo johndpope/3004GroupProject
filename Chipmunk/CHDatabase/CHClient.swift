@@ -10,13 +10,13 @@ import Foundation
 import Realm
 import CHCommon
 
-public class CHClient: Object {
-    public dynamic var username : String?
-    public dynamic var uuid : String?
-    public dynamic var session_id : String?
-    public dynamic var join_time : NSDate?
+open class CHClient: Object {
+    open dynamic var username : String?
+    open dynamic var uuid : String?
+    open dynamic var session_id : String?
+    open dynamic var join_time : Date?
     
-    override public static func primaryKey() -> String? {
+    override open static func primaryKey() -> String? {
         return "uuid"
     }
 }

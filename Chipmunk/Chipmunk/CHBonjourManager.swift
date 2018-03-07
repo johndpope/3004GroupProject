@@ -9,13 +9,13 @@
 import Foundation
 import CHCommon
 
-class CHBonjourManager: NSObject, NSNetServiceBrowserDelegate {
+class CHBonjourManager: NSObject, NetServiceBrowserDelegate {
 	
-	private let serviceBrowser = NSNetServiceBrowser()
+	fileprivate let serviceBrowser = NetServiceBrowser()
 	
 	
-	private var unresolvedServices = [NSNetService]()
-	var services = [NSNetService]()
+	fileprivate var unresolvedServices = [NetService]()
+	var services = [NetService]()
 	
 	
 	static let sharedManager = CHBonjourManager()
@@ -26,18 +26,18 @@ class CHBonjourManager: NSObject, NSNetServiceBrowserDelegate {
 		self.startBrowser()
 	}
 	
-	private func startBrowser() {
+	fileprivate func startBrowser() {
 		self.serviceBrowser.delegate = self
 		
-		self.serviceBrowser.searchForServicesOfType("_http._tcp", inDomain: "")
+		self.serviceBrowser.searchForServices(ofType: "_http._tcp", inDomain: "")
 	}
 	
-	func netServiceBrowser(browser: NSNetServiceBrowser, didFindService service: NSNetService, moreComing: Bool) {
+	func netServiceBrowser(_ browser: NetServiceBrowser, didFind service: NetService, moreComing: Bool) {
 		service.delegate = self
-		service.resolveWithTimeout(3000)
+		service.resolve(withTimeout: 3000)
 	}
 	
-	func netServiceBrowser(browser: NSNetServiceBrowser, didRemoveService service: NSNetService, moreComing: Bool) {
+	func netServiceBrowser(_ browser: NetServiceBrowser, didRemove service: NetService, moreComing: Bool) {
 		var indexToDelete = 0
 		
 		for i in 0 ..< self.services.count {
@@ -47,16 +47,16 @@ class CHBonjourManager: NSObject, NSNetServiceBrowserDelegate {
 			}
 		}
 		
-		self.services.removeAtIndex(indexToDelete)
+		self.services.remove(at: indexToDelete)
 		
-		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifBonjourServiceRemoved(), object: service)
+		NotificationCenter.default.post(name: Notification.Name(rawValue: CHNotifBonjourServiceRemoved()), object: service)
 	}
 }
 
-extension CHBonjourManager: NSNetServiceDelegate {
-	func netServiceWillResolve(sender: NSNetService) {
+extension CHBonjourManager: NetServiceDelegate {
+	func netServiceWillResolve(_ sender: NetService) {
 		self.services.append(sender)
 		
-		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifBonjourServiceAdded(), object: sender)
+		NotificationCenter.default.post(name: Notification.Name(rawValue: CHNotifBonjourServiceAdded()), object: sender)
 	}
 }

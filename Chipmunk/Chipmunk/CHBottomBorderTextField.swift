@@ -15,7 +15,7 @@ class CHBottomBorderTextField: UITextField {
 	var shapeLayer: CAShapeLayer?
 	
 	init(placeholder: String) {
-		super.init(frame: CGRectZero)
+		super.init(frame: CGRect.zero)
 		
 		self.translatesAutoresizingMaskIntoConstraints = false
 		
@@ -30,8 +30,8 @@ class CHBottomBorderTextField: UITextField {
 	}
 	
 	func setup() {
-		self.borderStyle = .None
-		self.font = UIFont.systemFontOfSize(18)
+		self.borderStyle = .none
+		self.font = UIFont.systemFont(ofSize: 18)
 		self.clipsToBounds = true
 		self.layer.cornerRadius = 4
 		
@@ -46,7 +46,7 @@ class CHBottomBorderTextField: UITextField {
 		self.drawBorder()
 	}
 	
-	private func drawBorder() {
+	fileprivate func drawBorder() {
 		if let lay = self.shapeLayer {
 			lay.removeFromSuperlayer()
 		}
@@ -55,19 +55,19 @@ class CHBottomBorderTextField: UITextField {
 		// over the same line because removing layers causes
 		// 'message sent to deallocated instance' issues
 		let path = UIBezierPath()
-		path.moveToPoint(CGPoint(x: 0, y: self.frame.height - 2))
-		path.addLineToPoint(CGPoint(x: self.frame.width, y: self.frame.height - 2))
+		path.move(to: CGPoint(x: 0, y: self.frame.height - 2))
+		path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height - 2))
 		
 		self.shapeLayer = CAShapeLayer()
-		self.shapeLayer!.path = path.CGPath
-		self.shapeLayer!.strokeColor = UIColor.appTintColor().CGColor
-		self.shapeLayer!.lineWidth = 2.0 / UIScreen.mainScreen().scale
+		self.shapeLayer!.path = path.cgPath
+		self.shapeLayer!.strokeColor = UIColor.appTintColor().cgColor
+		self.shapeLayer!.lineWidth = 2.0 / UIScreen.main.scale
 		
 		self.layer.addSublayer(self.shapeLayer!)
 	}
 	
-	override func drawRect(rect: CGRect) {
-		super.drawRect(rect)
+	override func draw(_ rect: CGRect) {
+		super.draw(rect)
 		
 		self.drawBorder()
 	}
@@ -75,11 +75,11 @@ class CHBottomBorderTextField: UITextField {
 
 extension CHBottomBorderTextField: UITextFieldDelegate {
 	
-	override func textRectForBounds(bounds: CGRect) -> CGRect {
-		return CGRectInset(bounds, 0, 5)
+	override func textRect(forBounds bounds: CGRect) -> CGRect {
+		return bounds.insetBy(dx: 0, dy: 5)
 	}
 	
-	override func editingRectForBounds(bounds: CGRect) -> CGRect {
-		return CGRectInset(bounds, 0, 5)
+	override func editingRect(forBounds bounds: CGRect) -> CGRect {
+		return bounds.insetBy(dx: 0, dy: 5)
 	}
 }

@@ -9,38 +9,38 @@
 import Foundation
 import GoogleCast
 
-public class CHCastManager: NSObject, GCKDiscoveryManagerListener, GCKSessionManagerListener {
+open class CHCastManager: NSObject, GCKDiscoveryManagerListener, GCKSessionManagerListener {
 	
 	var discoveryManager: GCKDiscoveryManager!
 	var sessionManager: GCKSessionManager!
 	
 	var castSession: GCKCastSession?
 	
-	public var channel: CHCastChannel!
+	open var channel: CHCastChannel!
 	
-	public var config: CHSessionConfig?
+	open var config: CHSessionConfig?
 	
-	public static var sharedManager = CHCastManager()
+	open static var sharedManager = CHCastManager()
 	
 	override public init() {
 		super.init()
 		
 		self.discoveryManager = GCKCastContext.sharedInstance().discoveryManager
 		self.discoveryManager.stopDiscovery() // TODO: Check later to see if this isn't needed
-		self.discoveryManager.addListener(self)
+		self.discoveryManager.add(self)
 		self.discoveryManager.startDiscovery()
 		
 		self.sessionManager = GCKCastContext.sharedInstance().sessionManager
-		self.sessionManager.addListener(self)
+		self.sessionManager.add(self)
 		
 		self.channel = CHCastChannel(namespace: CHConstCastNamespace())
 	}
 	
-	public func isConnected() -> Bool {
+	open func isConnected() -> Bool {
 		return self.sessionManager.hasConnectedCastSession()
 	}
 	
-	func startCastSessionFromSession(session: GCKSession) {
+	func startCastSessionFromSession(_ session: GCKSession) {
 		let options = GCKCastOptions(receiverApplicationID: CHConstCastAppID())
 		self.castSession = GCKCastSession(device: session.device, sessionID: session.sessionID, castOptions: options)
 		
@@ -53,41 +53,41 @@ public class CHCastManager: NSObject, GCKDiscoveryManagerListener, GCKSessionMan
 		}
 	}
 	
-	public func didUpdateDeviceList() {
+	open func didUpdateDeviceList() {
 		print("Devices: \(self.discoveryManager.deviceCount)")
 	}
 	
-	public func sessionManager(sessionManager: GCKSessionManager, willStartSession session: GCKSession) {
+	open func sessionManager(_ sessionManager: GCKSessionManager, willStart session: GCKSession) {
 		print("Will start session: \(self.sessionManager.currentSession?.device.friendlyName)")
 	}
 	
-	public func sessionManager(sessionManager: GCKSessionManager, didFailToStartSession session: GCKSession, withError error: NSError) {
+	open func sessionManager(_ sessionManager: GCKSessionManager, didFailToStart session: GCKSession, withError error: NSError) {
 		print("Failed to start session: \(session.device.friendlyName)")
 	}
 	
-	public func sessionManager(sessionManager: GCKSessionManager, didStartSession session: GCKSession) {
+	open func sessionManager(_ sessionManager: GCKSessionManager, didStart session: GCKSession) {
 		print("Session Started: \(self.sessionManager.currentSession?.device.friendlyName)")
 		
 		self.startCastSessionFromSession(session)
 	}
 	
-	public func sessionManager(sessionManager: GCKSessionManager, didStartCastSession session: GCKCastSession) {
+	open func sessionManager(_ sessionManager: GCKSessionManager, didStart session: GCKCastSession) {
 		print("Did start cast session: \(self.sessionManager.currentSession?.device.friendlyName)")
 		
-		session.addChannel(self.channel)
+		session.add(self.channel)
 		self.applySettings()
 		
-		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifCastSessionStarted(), object: nil)
+		NotificationCenter.default.post(name: Notification.Name(rawValue: CHNotifCastSessionStarted()), object: nil)
 	}
 	
-	public func sessionManager(sessionManager: GCKSessionManager, didEndSession session: GCKSession, withError error: NSError?) {
+	open func sessionManager(_ sessionManager: GCKSessionManager, didEnd session: GCKSession, withError error: NSError?) {
 		print("Disconnected with error: \(error?.localizedDescription)")
 		self.sessionManager.endSessionAndStopCasting(true)
 	}
 	
-	public func sessionManager(sessionManager: GCKSessionManager, didEndCastSession session: GCKCastSession, withError error: NSError?) {
+    open func sessionManager(_ sessionManager: GCKSessionManager, didEnd session: GCKCastSession, withError error: Error?) {
 		print("Disconnected cast session")
 		
-		NSNotificationCenter.defaultCenter().postNotificationName(CHNotifCastSessionEnded(), object: nil)
+		NotificationCenter.default.post(name: Notification.Name(rawValue: CHNotifCastSessionEnded()), object: nil)
 	}
 }

@@ -11,16 +11,16 @@ import GCDWebServer
 import CHCommon
 import RealmSwift
 
-public class CHWebServer: NSObject {
+open class CHWebServer: NSObject {
     var server: GCDWebServer = GCDWebServer()
 
-    public static var defaultServer = CHWebServer()
+    open static var defaultServer = CHWebServer()
     
     public override init() {
         super.init()
     }
     
-    public func start() {
+    open func start() {
         
         let config = Realm.Configuration(
             schemaVersion: 2,
@@ -31,38 +31,38 @@ public class CHWebServer: NSObject {
         _ = try! Realm()
         
         
-        server.addDefaultHandlerForMethod("GET",
-                                          requestClass: GCDWebServerRequest.self,
+        server.addDefaultHandler(forMethod: "GET",
+                                          request: GCDWebServerRequest.self,
                                           asyncProcessBlock: CHRouter.defaultHandler())
         
         
-        server.addHandlerForMethod("GET", path: "/",
-                                   requestClass: GCDWebServerRequest.self,
+        server.addHandler(forMethod: "GET", path: "/",
+                                   request: GCDWebServerRequest.self,
                                    asyncProcessBlock: CHRouter.indexHandler())
 
-        server.addHandlerForMethod("POST", path: "/client/register",
-                                   requestClass: GCDWebServerDataRequest.self,
+        server.addHandler(forMethod: "POST", path: "/client/register",
+                                   request: GCDWebServerDataRequest.self,
                                    asyncProcessBlock: CHRouter.clientHandler())
 
-        server.addHandlerForMethod("POST", path: "/post",
-                                   requestClass: GCDWebServerDataRequest.self,
+        server.addHandler(forMethod: "POST", path: "/post",
+                                   request: GCDWebServerDataRequest.self,
                                    asyncProcessBlock: CHRouter.postHandler())
         
-        let options: [NSObject: AnyObject] =
+        let options: [AnyHashable: Any] =
             [GCDWebServerOption_BonjourName: CHConstBonjourName() + ".Jagger",
              //GCDWebServerOption_BonjourType: "_streamit_.tcp", // STConstBonjourType()
              GCDWebServerOption_Port: 10000,
              GCDWebServerOption_AutomaticallySuspendInBackground: false]
 
         do {
-            try self.server.startWithOptions(options)
+            try self.server.start(options: options)
             
         } catch {
             print("We did something wrong")
         }
     }
 	
-	public func stop() {
+	open func stop() {
 		self.server.stop()
 	}
 }

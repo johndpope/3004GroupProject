@@ -16,7 +16,7 @@ class CHGradientContainerView: UIView {
 	var faded: Bool = false
 	
 	init(view: UIView) {
-		super.init(frame: CGRectZero)
+		super.init(frame: CGRect.zero)
 		self.translatesAutoresizingMaskIntoConstraints = false
 		
 		self.setup()
@@ -50,16 +50,16 @@ class CHGradientContainerView: UIView {
 		}
 		
 		self.gradientLayer = CAGradientLayer()
-		self.gradientLayer!.colors = self.faded ? [UIColor.gradient1ColorFaded().CGColor, UIColor.gradient2ColorFaded().CGColor] : [UIColor.gradient1Color().CGColor, UIColor.gradient2Color().CGColor]
+		self.gradientLayer!.colors = self.faded ? [UIColor.gradient1ColorFaded().cgColor, UIColor.gradient2ColorFaded().cgColor] : [UIColor.gradient1Color().cgColor, UIColor.gradient2Color().cgColor]
 		self.gradientLayer!.locations = [0.2, 0.8]
 		// This goddamn view is never layed out properly when the layer is added so we have to force the frame size. Dumb.
 		self.gradientLayer!.frame = CGRect(x: -20, y: -20, width: self.bounds.width + 40, height: self.bounds.height + 40)
 		
-		self.layer.insertSublayer(self.gradientLayer, atIndex: 0)
+		self.layer.insertSublayer(self.gradientLayer, at: 0)
 	}
 	
-	override func drawRect(rect: CGRect) {
-		super.drawRect(rect)
+	override func draw(_ rect: CGRect) {
+		super.draw(rect)
 		
 		self.addGradient()
 	}

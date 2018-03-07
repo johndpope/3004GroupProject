@@ -23,14 +23,14 @@ class CHPostContentViewController: UIViewController {
 		
 		self.config = config
 		
-		let titleComponents = self.config.title.componentsSeparatedByString(".")
+		let titleComponents = self.config.title.components(separatedBy: ".")
 		self.title = titleComponents.last
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.edgesForExtendedLayout = UIRectEdge.None
+		self.edgesForExtendedLayout = UIRectEdge()
 		
 		self.textView.backgroundColor = UIColor.darkBackgroundColor()
 		self.textView.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)

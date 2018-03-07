@@ -32,12 +32,12 @@ class CHStartSessionViewController: UIViewController {
 		self.config = config
 		self.config.numCells = 4
 		
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CHStartSessionViewController.startWebServer), name: CHNotifCastSessionStarted(), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CHStartSessionViewController.startWebServer), name: NSNotification.Name(rawValue: CHNotifCastSessionStarted()), object: nil)
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.edgesForExtendedLayout = UIRectEdge.None
+		self.edgesForExtendedLayout = UIRectEdge()
 		
 		stepper.maximumValue = 12
 		stepper.minimumValue = 4
@@ -61,7 +61,7 @@ class CHStartSessionViewController: UIViewController {
 		GCKCastContext.sharedInstance().presentCastDialog()
 	}
 	
-	@IBAction func stepperValueChanged(sender: UIStepper) {
+	@IBAction func stepperValueChanged(_ sender: UIStepper) {
 		self.config!.numCells = Int(sender.value)
 		self.numCellsLabel.text = "Items on screen: \(Int(sender.value))"
 	}

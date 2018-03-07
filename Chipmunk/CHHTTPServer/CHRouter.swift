@@ -13,17 +13,17 @@ import SwiftyJSON
 import RealmSwift
 import CHCommon
 
-public class CHRouter : NSObject {
+open class CHRouter : NSObject {
     
     static func helloWorldHandler() -> GCDWebServerAsyncProcessBlock {
         return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
-            completion(GCDWebServerDataResponse(HTML: "<html><p>Hello, World!</p></html>")!)
+            completion(GCDWebServerDataResponse(html: "<html><p>Hello, World!</p></html>")!)
         }
     }
     
     static func defaultHandler() -> GCDWebServerAsyncProcessBlock {
         return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
-            let res: GCDWebServerResponse = GCDWebServerErrorResponse(HTML: "404 Page not found")
+            let res: GCDWebServerResponse = GCDWebServerErrorResponse(html: "404 Page not found")!
             res.statusCode = 404
             completion(res)
         }
@@ -31,23 +31,26 @@ public class CHRouter : NSObject {
     
     static func indexHandler() -> GCDWebServerAsyncProcessBlock {
         return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
-            completion(GCDWebServerDataResponse(HTML:
+            completion(GCDWebServerDataResponse(html:
                 "<p style='font-family:sans-serif'>Let's call it Chipmunk.</p>"))
         }
     }
     
     static func clientHandler() -> GCDWebServerAsyncProcessBlock {
         return {(request: GCDWebServerRequest!, completion: GCDWebServerCompletionBlock!) in
-            dispatch_async(dispatch_get_main_queue(), {() in
+            DispatchQueue.main.async(execute: {() in
                 guard let dataReq = request as? GCDWebServerDataRequest else {
                     return
                 }
-                let json = JSON(data: dataReq.data)
+                
+                var  json = try! JSON(data: dataReq.data)
+               
+                
                 let newClient = CHClient()
                 
                 newClient.username = json.dictionary!["username"]?.string
-                newClient.session_id = NSUUID().UUIDString
-                newClient.join_time = NSDate()
+                newClient.session_id = UUID().uuidString
+                newClient.join_time = Date()
                 
                 CHDatabaseManager.addOrUpdateClient(newClient)
                 
@@ -56,8 +59,8 @@ public class CHRouter : NSObject {
                                               "session_id": newClient.session_id!,
                                               "join_time": (newClient.join_time?.description)!]
                 
-                completion(GCDWebServerDataResponse(JSONObject: dict))
-            })
+                completion(GCDWebServerDataResponse(jsonObject: dict))
+                } as @convention(block) () -> Void)
         }
     }
 	
@@ -72,26 +75,26 @@ public class CHRouter : NSObject {
             //				}
             
             
-			dispatch_async(dispatch_get_main_queue(), {() in
+			DispatchQueue.main.async(execute: {() in
                 guard let dataReq = request as? GCDWebServerDataRequest else {
                     return
                 }
-                let json = JSON(data: dataReq.data)
+                let json = try! JSON(data: dataReq.data)
                 
                 // at some point we'll need to check this so we don't break everything on each bad req
                 // json.dictionaryObject?.contains(<#T##predicate: ((String, AnyObject)) throws -> Bool##((String, AnyObject)) throws -> Bool#>)
                 
-                let dict: [String: AnyObject] = ["content": ["src": (json.dictionary!["body"]?.stringValue)!,
+                let dict: [String: Any] = ["content": ["src": (json.dictionary!["body"]?.stringValue)!,
                     "type": (json.dictionary!["post_type"]?.stringValue)!]]
                 
                 let post = CHPost()
-                post.body = json.dictionaryValue["body"]?.string
+                post.body = json.dictionaryValue["body"]?.string as! NSString
                 post.post_type = CHPostType.init(rawValue: json.dictionaryValue["post_type"]!.intValue)
 
                 CHDatabaseManager.addOrUpdatePost(post)
                 
                 // this should probably return something more useful to the client devices
-				completion(GCDWebServerDataResponse(JSONObject: dict))
+				completion(GCDWebServerDataResponse(jsonObject: dict))
 			})
         }
     }

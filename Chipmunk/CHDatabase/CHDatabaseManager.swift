@@ -10,14 +10,14 @@ import Foundation
 import RealmSwift
 import CHCommon
 
-public class CHDatabaseManager {
+open class CHDatabaseManager {
     static let realm = try! Realm()
     static let defaultManager = CHDatabaseManager()
     
     //function to add or update submission to realm
-    public static func addOrUpdatePost(newSubmission: CHPost) {
+    open static func addOrUpdatePost(_ newSubmission: CHPost) {
         if (newSubmission.uuid == nil) {
-            newSubmission.uuid = NSUUID().UUIDString
+            newSubmission.uuid = UUID().uuidString
         }
         print(newSubmission)
         try! self.realm.write {
@@ -26,7 +26,7 @@ public class CHDatabaseManager {
     }
     
     //function to delete submission
-    public static func deletePost(submission: CHPost) {
+    open static func deletePost(_ submission: CHPost) {
         if (submission.uuid != nil) {
             self.realm.delete(submission)
         } else {
@@ -35,35 +35,35 @@ public class CHDatabaseManager {
     }
     
     //function returning entire collection
-    public static func getAllPosts() -> Results<CHPost> {
+    open static func getAllPosts() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
         return posts
     }
     
     //function returning submissions marked as accepted
-    public static func getAllModeratedPosts() -> Results<CHPost> {
+    open static func getAllModeratedPosts() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
         return posts.filter("mod_status = 'true'")
     }
     
     
     //function returning submissions ordered by acceptance time
-    public static func getPostsAcceptanceTimeSorted() -> Results<CHPost> {
+    open static func getPostsAcceptanceTimeSorted() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
-        return posts.sorted("mod_acceptance_time", ascending: false)
+        return posts.sorted(byKeyPath: "mod_acceptance_time", ascending: false)
     }
     
     
     //function returning submissions marked as NOT accepted (sorted in order of most recent submission first)
-    public static func getAllPostsToModerate() -> Results<CHPost> {
+    open static func getAllPostsToModerate() -> Results<CHPost> {
         let posts = self.realm.objects(CHPost.self)
-        return posts.sorted("submission_time", ascending: false)
+        return posts.sorted(byKeyPath: "submission_time", ascending: false)
     }
 
     //function adding new client
-    public static func addOrUpdateClient(newClient: CHClient) {
+    open static func addOrUpdateClient(_ newClient: CHClient) {
         if (newClient.uuid == nil) {
-            newClient.uuid = NSUUID().UUIDString
+            newClient.uuid = UUID().uuidString
         }
         print(newClient)
         try! self.realm.write {
@@ -72,7 +72,7 @@ public class CHDatabaseManager {
     }
     
     //function deleting client
-    public static func deleteClient(client: CHClient) {
+    open static func deleteClient(_ client: CHClient) {
         if (client.uuid != nil) {
             self.realm.delete(client)
         } else {
@@ -81,30 +81,30 @@ public class CHDatabaseManager {
     }
     
     //function returning all existing clients in session
-    public static func allClients() -> Results<CHClient> {
+    open static func allClients() -> Results<CHClient> {
         return self.realm.objects(CHClient.self)
     }
     
     //function returning all clients sorted by username
-    public static func allClientsByName() -> Results<CHClient> {
+    open static func allClientsByName() -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
-        return clients.sorted("name", ascending: true)
+        return clients.sorted(byKeyPath: "name", ascending: true)
     }
     
     //function returning all clients sorted by join time
-    public static func allClientsByJoinTime() -> Results<CHClient> {
+    open static func allClientsByJoinTime() -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
-        return clients.sorted("join_time", ascending: false)
+        return clients.sorted(byKeyPath: "join_time", ascending: false)
     }
     
     //function returning all clients in a particular session
-    public static func allClientsInSession(id: String) -> Results<CHClient> {
+    open static func allClientsInSession(_ id: String) -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
         return clients.filter("session_id = '\(id)'")
     }
 
     //function returning results that have the same username
-    public static func findClientsByName(username: String) -> Results<CHClient> {
+    open static func findClientsByName(_ username: String) -> Results<CHClient> {
         let clients = self.realm.objects(CHClient.self)
         return clients.filter("username = '\(username)'")
     }

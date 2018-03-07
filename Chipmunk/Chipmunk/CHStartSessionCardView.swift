@@ -17,16 +17,16 @@ class CHStartSessionCardView: CHGenericCardView {
 	@IBOutlet weak var passField: UITextField!
 	var startButton: UIButton!
 	
-	static func buildFromNib(title: String, controller: CHInitialController) -> CHStartSessionCardView {
-		let nib = UINib(nibName: "CHStartSessionCardView", bundle: nil).instantiateWithOwner(nil, options: nil)
+	static func buildFromNib(_ title: String, controller: CHInitialController) -> CHStartSessionCardView {
+		let nib = UINib(nibName: "CHStartSessionCardView", bundle: nil).instantiate(withOwner: nil, options: nil)
 		let card = nib.first as! CHStartSessionCardView
 		
 		card.controller = controller
 		card.titleLabel.text = title
 		
-		card.nameField.textColor = UIColor.whiteColor()
+		card.nameField.textColor = UIColor.white
 		card.nameField.delegate = card
-		card.passField.textColor = UIColor.whiteColor()
+		card.passField.textColor = UIColor.white
 		card.passField.delegate = card
 		
 		card.configureStartButton()
@@ -35,20 +35,20 @@ class CHStartSessionCardView: CHGenericCardView {
 	}
 	
 	func configureStartButton() {
-		self.startButton = UIButton(frame: CGRectZero)
+		self.startButton = UIButton(frame: CGRect.zero)
 		self.startButton.translatesAutoresizingMaskIntoConstraints = false
-		self.startButton.setTitleColor(UIColor.darkBackgroundColor(), forState: .Normal)
-		self.startButton.setTitle("Start 🐿", forState: .Normal)
-		self.startButton.titleLabel?.font = UIFont.boldSystemFontOfSize(20)
+		self.startButton.setTitleColor(UIColor.darkBackgroundColor(), for: UIControlState())
+		self.startButton.setTitle("Start 🐿", for: UIControlState())
+		self.startButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
 		self.startButton.layer.cornerRadius = 4
 		self.startButton.backgroundColor = UIColor.appTintColor()
-		self.startButton.addTarget(self, action: #selector(CHStartSessionCardView.startSessionPressed), forControlEvents: .TouchUpInside)
+		self.startButton.addTarget(self, action: #selector(CHStartSessionCardView.startSessionPressed), for: .touchUpInside)
 		
 		self.addSubview(self.startButton)
 		
-		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
-		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: -20))
-		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1, constant: -30))
+		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
+		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: -20))
+		self.addConstraint(NSLayoutConstraint(item: self.startButton, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1, constant: -30))
 		
 		self.layoutSubviews()
 	}
@@ -68,7 +68,7 @@ class CHStartSessionCardView: CHGenericCardView {
 }
 
 extension CHStartSessionCardView: UITextFieldDelegate {
-	func textFieldShouldReturn(textField: UITextField) -> Bool {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		if (textField == self.nameField) {
 			self.passField.becomeFirstResponder()
 		}

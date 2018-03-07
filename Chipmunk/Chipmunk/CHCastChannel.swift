@@ -11,9 +11,9 @@ import GoogleCast
 
 // [START custom-channel-1]
 // This custom channel class extends GCKCastChannel.
-public class CHCastChannel : GCKCastChannel {
+open class CHCastChannel : GCKCastChannel {
 	
-	override public func didReceiveTextMessage(message: String) {
+	override open func didReceiveTextMessage(_ message: String) {
 		print("Received message: \(message)")
 	}
 }

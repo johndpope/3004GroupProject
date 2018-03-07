@@ -10,72 +10,74 @@ import Foundation
 import SwiftyJSON
 
 class CHAPIClient: NSObject {
-	var service: NSNetService!
+	var service: NetService!
 	
-	init(service: NSNetService) {
+	init(service: NetService) {
 		super.init()
 		
 		self.service = service
 	}
 	
-	func getRootURLString(completion: (String) -> Void) {
+	func getRootURLString(_ completion: @escaping (String) -> Void) {
 		self.get(self.baseURL(), completionOnMain: completion)
 	}
 	
-	func sendPost(body: JSON, completion: (String) -> Void) {
-		let postUrl = self.baseURL().URLByAppendingPathComponent("post")
-		self.post(postUrl!, body: body, completionOnMain: completion)
+    func sendPost(_ body: JSON, completion: @escaping (String) -> Void) {
+		let postUrl = self.baseURL().appendingPathComponent("post")
+        self.post(postUrl, body: body, completionOnMain: completion)
 	}
 	
-	func baseURL() -> NSURL {
+	func baseURL() -> URL {
 		var properHostname = self.service.hostName!
-		properHostname.removeAtIndex(properHostname.endIndex.predecessor())
+		properHostname.remove(at: properHostname.characters.index(before: properHostname.endIndex))
 		
-		return NSURL(string: "http://\(properHostname):\(self.service.port)")!
+		return URL(string: "http://\(properHostname):\(self.service.port)")!
 	}
 	
-	func get(url: NSURL, completionOnMain: (String) -> Void) {
-		let session = NSURLSession.sharedSession()
-		let request = NSURLRequest(URL: url)
+	func get(_ url: URL, completionOnMain: @escaping (String) -> Void) {
+		let session = URLSession.shared
+		let request = URLRequest(url: url)
 		
-		let task = session.dataTaskWithRequest(request, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?) in
+		let task = session.dataTask(with: request, completionHandler: {(data: Data?, response: URLResponse?, error: NSError?) in
 			if let err = error {
-				dispatch_async(dispatch_get_main_queue(), {() in
+				DispatchQueue.main.async(execute: {() in
 					completionOnMain(err.localizedDescription)
 				})
 			}
 			else if let body = data {
-				dispatch_async(dispatch_get_main_queue(), {() in
-					completionOnMain(NSString(data: body, encoding: NSUTF8StringEncoding) as! String)
+				DispatchQueue.main.async(execute: {() in
+					completionOnMain(NSString(data: body, encoding: String.Encoding.utf8.rawValue) as! String)
 				})
 			}
-		})
+		} as! (Data?, URLResponse?, Error?) -> Void)
 		
 		task.resume()
 	}
 	
-	func post(url: NSURL, body: JSON, completionOnMain: (String) -> Void) {
-		let session = NSURLSession.sharedSession()
-		let request = NSMutableURLRequest(URL: url)
-		request.HTTPMethod = "POST"
+	func post(_ url: URL, body: JSON, completionOnMain: @escaping (String) -> Void) {
+		let session = URLSession.shared
+		var request = URLRequest(url: url)
+		request.httpMethod = "POST"
 		
 		do {
-			request.HTTPBody = try body.rawData()
+			request.httpBody = try body.rawData()
 		}
 		catch {
 			let err = error as NSError
 			print(err.localizedDescription)
 		}
 		
-		let task = session.dataTaskWithRequest(request, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?) in
+        
+        
+		let task = session.dataTask(with: request, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) in
 			if let err = error {
-				dispatch_async(dispatch_get_main_queue(), {() in
+				DispatchQueue.main.async(execute: {() in
 					completionOnMain(err.localizedDescription)
 				})
 			}
 			else if let body = data {
-				dispatch_async(dispatch_get_main_queue(), {() in
-					completionOnMain(NSString(data: body, encoding: NSUTF8StringEncoding) as! String)
+				DispatchQueue.main.async(execute: {() in
+                    completionOnMain(NSString(data: body, encoding: String.Encoding.utf8.rawValue)! as String)
 				})
 			}
 		})

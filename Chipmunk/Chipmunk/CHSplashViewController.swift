@@ -16,7 +16,7 @@ class CHSPlashViewController: UIViewController {
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 	
 	override func viewDidLoad() {
-		UIView.animateWithDuration(3000, animations: {() in
+		UIView.animate(withDuration: 3000, animations: {() in
 			self.topConstraint.constant = 5
 			self.bottomConstraint.constant = 5
 			self.leadingConstraint.constant = 5
@@ -24,15 +24,15 @@ class CHSPlashViewController: UIViewController {
 		})
 
 		
-		let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2.0 * Double(NSEC_PER_SEC)))
+		let delayTime = DispatchTime.now() + Double(Int64(2.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
 		
-		dispatch_after(delayTime, dispatch_get_main_queue(), {() in
+		DispatchQueue.main.asyncAfter(deadline: delayTime, execute: {() in
 			let navController = UINavigationController(rootViewController: CHInitialViewController())
 			navController.navigationBar.barTintColor = UIColor.darkBackgroundColor()
 			navController.navigationBar.tintColor = UIColor.appTintColor()
-			navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+			navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
 			
-			self.presentViewController(navController, animated: true, completion: nil)
+			self.present(navController, animated: true, completion: nil)
 		})
 	}
 }

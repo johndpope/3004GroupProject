@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-	static func flexibleImageView(named: String, contentMode: UIViewContentMode) -> UIImageView {
+	static func flexibleImageView(_ named: String, contentMode: UIViewContentMode) -> UIImageView {
 		let image = UIImageView(image: UIImage(named: named))
 		image.translatesAutoresizingMaskIntoConstraints = false
 		image.contentMode = contentMode
@@ -18,8 +18,8 @@ extension UIImageView {
 		return image
 	}
 	
-	func setImageWithURLRequest(urlRequest: NSURLRequest, placeholderImage: UIImage?, success: ((UIImage) -> Void)?, failure: ((NSError) -> Void)?) {
-		let downloadTask = NSURLSession.sharedSession().dataTaskWithRequest(urlRequest, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?) in
+	func setImageWithURLRequest(_ urlRequest: URLRequest, placeholderImage: UIImage?, success: ((UIImage) -> Void)?, failure: ((NSError) -> Void)?) {
+		let downloadTask = URLSession.shared.dataTask(with: urlRequest, completionHandler: {(data: Data?, response: URLResponse?, error: NSError?) in
 			if let err = error {
 				print("Failed to download image error: \(err.localizedDescription)")
 				failure?(err)
@@ -29,7 +29,7 @@ extension UIImageView {
 				
 				success?(image)
 			}
-		})
+		} as! (Data?, URLResponse?, Error?) -> Void)
 		
 		downloadTask.resume()
 		

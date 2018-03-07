@@ -11,33 +11,33 @@ import UIKit
 
 extension UILabel {
 	
-	static func st_flexibleTitleLabel(text: String) -> UILabel {
-		let label = UILabel(frame: CGRectZero)
+	static func st_flexibleTitleLabel(_ text: String) -> UILabel {
+		let label = UILabel(frame: CGRect.zero)
 		label.translatesAutoresizingMaskIntoConstraints = false
-		label.font = UIFont.boldSystemFontOfSize(14)
+		label.font = UIFont.boldSystemFont(ofSize: 14)
 		label.numberOfLines = 0
-		label.lineBreakMode = .ByWordWrapping
+		label.lineBreakMode = .byWordWrapping
 		label.text = text
 		
 		return label
 	}
 	
-	static func st_flexibleSubtitleLabel(text: String) -> UILabel {
-		let label = UILabel(frame: CGRectZero)
+	static func st_flexibleSubtitleLabel(_ text: String) -> UILabel {
+		let label = UILabel(frame: CGRect.zero)
 		label.translatesAutoresizingMaskIntoConstraints = false
-		label.font = UIFont.systemFontOfSize(12)
+		label.font = UIFont.systemFont(ofSize: 12)
 		label.numberOfLines = 0
-		label.lineBreakMode = .ByWordWrapping
+		label.lineBreakMode = .byWordWrapping
 		label.text = text
 		
 		return label
 	}
 	
-	static func st_flexibleCenteredLabel(text: String) -> UILabel {
-		let label = UILabel(frame: CGRectZero)
+	static func st_flexibleCenteredLabel(_ text: String) -> UILabel {
+		let label = UILabel(frame: CGRect.zero)
 		label.translatesAutoresizingMaskIntoConstraints = false
-		label.textAlignment = .Center
-		label.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+		label.textAlignment = .center
+		label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
 		label.text = text
 		
 		return label
